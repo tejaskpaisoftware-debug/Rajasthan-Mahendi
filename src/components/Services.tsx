@@ -1,0 +1,122 @@
+'use client';
+
+import { ArrowRight, Sparkles, Feather, Shield, HeartHandshake } from 'lucide-react';
+
+interface ServicesProps {
+  onOpenBooking: () => void;
+}
+
+export default function Services({ onOpenBooking }: ServicesProps) {
+  const servicesList = [
+    {
+      id: 'custom-tattoos',
+      title: 'Custom Tattoos',
+      desc: 'Unique and meaningful single-needle and geometric designs.',
+      image: '/images/tattoos/fine-line.jpg',
+      icon: Feather,
+    },
+    {
+      id: 'bridal-mehndi',
+      title: 'Bridal Dulhan Mehndi',
+      desc: 'Traditional Marwari and Rajwadi royal dulhan wedding henna.',
+      image: '/images/home/bridal-mehndi.jpg',
+      icon: Sparkles,
+    },
+    {
+      id: 'cover-up-tattoos',
+      title: 'Cover Up Tattoos',
+      desc: 'Transform old tattoos with bold black-and-grey creative art.',
+      image: '/images/tattoos/cover-up.jpg',
+      icon: Shield,
+    },
+    {
+      id: 'mehndi-events',
+      title: 'Mehndi for Events',
+      desc: 'Afghani & Arabic floral henna for weddings and celebrations.',
+      image: '/images/home/event-mehndi.jpg',
+      icon: HeartHandshake,
+    },
+  ];
+
+  return (
+    <section id="services" className="py-20 md:py-28 bg-[#FAF8F5] text-[#0F1015]">
+      <div className="container-center-lock">
+        
+        {/* Header Row */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+          <div>
+            <span className="text-xs uppercase tracking-[0.3em] font-mono text-[#C5A059] font-semibold block mb-2">
+              OUR SERVICES
+            </span>
+            <h2 className="font-serif-heading text-3xl sm:text-5xl font-bold tracking-tight text-[#0F1015] flex items-center gap-3">
+              What We Do <span className="text-[#C5A059] font-light">—</span>
+            </h2>
+          </div>
+
+          <div className="flex items-center gap-4">
+            <p className="text-xs md:text-sm text-[#0F1015]/70 max-w-md font-sans">
+              From bold tattoos to elegant mehndi, we create designs that match your style and story.
+            </p>
+            <button
+              onClick={onOpenBooking}
+              className="w-10 h-10 rounded-full border border-[#0F1015]/20 flex items-center justify-center hover:bg-[#0F1015] hover:text-white transition-colors shrink-0 hidden sm:flex"
+            >
+              <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+
+        {/* 4 Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {servicesList.map((service) => {
+            const IconComponent = service.icon;
+            return (
+              <div
+                key={service.id}
+                className="bg-white rounded-2xl overflow-hidden border border-[#0F1015]/10 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between"
+              >
+                <div>
+                  {/* Image Container with Fixed Aspect Ratio & Floating Icon Badge */}
+                  <div className="relative w-full aspect-[4/3] overflow-hidden bg-gray-200">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    
+                    {/* Floating Circular Icon Badge on Bottom Left */}
+                    <div className="absolute bottom-3 left-3 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-[#0F1015] group-hover:bg-[#0F1015] group-hover:text-white transition-colors border border-gray-100">
+                      <IconComponent className="w-4 h-4" />
+                    </div>
+                  </div>
+
+                  {/* Card Info */}
+                  <div className="p-6 space-y-2">
+                    <h3 className="font-serif-heading text-lg font-bold text-[#0F1015] group-hover:text-[#C5A059] transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-xs text-[#0F1015]/70 leading-relaxed font-sans">
+                      {service.desc}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Explore Button */}
+                <div className="px-6 pb-6 pt-2">
+                  <button
+                    onClick={onOpenBooking}
+                    className="text-xs font-bold uppercase tracking-wider text-[#0F1015] group-hover:text-[#C5A059] transition-colors flex items-center gap-2"
+                  >
+                    <span>EXPLORE</span>
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+      </div>
+    </section>
+  );
+}

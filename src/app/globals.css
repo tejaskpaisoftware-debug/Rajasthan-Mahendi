@@ -1,0 +1,222 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-dark: #0F1015;
+    --bg-dark-card: #161820;
+    --bg-light: #FAF8F5;
+    --bg-light-card: #FFFFFF;
+    --accent-sand: #E2C799;
+    --accent-gold: #C5A059;
+  }
+
+  * {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+  body {
+    background-color: #0F1015;
+    color: #FAF8F5;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  ::selection {
+    background-color: #E2C799;
+    color: #0F1015;
+  }
+}
+
+/* Strict Centered Layout Container Lock */
+.container-center-lock {
+  width: 100%;
+  max-width: 80rem; /* 1280px / 7xl */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .container-center-lock {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-center-lock {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* Typography Helpers */
+.font-serif-heading {
+  font-family: 'Cinzel', Georgia, serif !important;
+}
+
+.font-script-accent {
+  font-family: 'Alex Brush', cursive !important;
+}
+
+/* Luxury Gold Metallic Gradients & Text */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FAF6E8 0%, #E2C799 45%, #C5A059 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #E2C799 0%, #C5A059 100%);
+}
+
+.gold-gradient-border {
+  border-image: linear-gradient(135deg, #E2C799, #C5A059) 1;
+}
+
+/* Glassmorphism & Luxury Cards */
+.glass-panel-dark {
+  background: rgba(22, 24, 32, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(15, 16, 21, 0.08);
+}
+
+.gold-glow-hover:hover {
+  box-shadow: 0 0 25px rgba(226, 199, 153, 0.35);
+  border-color: rgba(226, 199, 153, 0.6);
+}
+
+/* Shimmer & Glow Animations */
+@keyframes goldPulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.03);
+  }
+}
+
+.animate-gold-pulse {
+  animation: goldPulse 4s ease-in-out infinite;
+}
+
+/* Image Hover Zoom Effects */
+.image-zoom-container {
+  overflow: hidden;
+}
+
+.image-zoom-container img {
+  transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.image-zoom-container:hover img {
+  transform: scale(1.08);
+}
+
+/* Dynamic Soft Metallic Gold & Warm Subtle Glow Mehndi Border Effect */
+@keyframes spin-gradient {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes softGlowPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(226, 199, 153, 0.3), 0 0 30px rgba(197, 160, 89, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(226, 199, 153, 0.5), 0 0 45px rgba(226, 199, 153, 0.25);
+  }
+}
+
+@keyframes softBacklightPulse {
+  0%, 100% {
+    opacity: 0.25;
+    transform: scale(0.99);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(1.02);
+  }
+}
+
+.animate-soft-backlight {
+  animation: softBacklightPulse 4s ease-in-out infinite;
+}
+
+.animated-white-border-wrapper {
+  position: relative;
+  padding: 2.5px;
+  border-radius: 2rem;
+  overflow: hidden;
+  animation: softGlowPulse 4s ease-in-out infinite;
+}
+
+.animated-white-border-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    #E2C799,
+    #C5A059,
+    #FAF6E8,
+    #C5A059,
+    #E2C799
+  );
+  animation: spin-gradient 6s linear infinite;
+  z-index: 0;
+}
+
+.animated-white-border-content {
+  position: relative;
+  z-index: 1;
+  border-radius: 1.85rem;
+  overflow: hidden;
+  background-color: #0F1015;
+}
+
+/* Custom Premium Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0F1015;
+}
+::-webkit-scrollbar-thumb {
+  background: #E2C799;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A059;
+}
+
+

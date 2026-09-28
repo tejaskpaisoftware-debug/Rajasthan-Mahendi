@@ -1,0 +1,90 @@
+'use client';
+
+import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+
+export default function AboutUs() {
+  return (
+    <section id="about" className="py-20 md:py-28 bg-[#0F1015] text-[#FAF8F5] relative overflow-hidden">
+      <div className="container-center-lock">
+        
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          {/* Left Column Content */}
+          <div className="lg:col-span-6 space-y-6">
+            <span className="text-xs uppercase tracking-[0.3em] font-mono text-[#E2C799] font-medium block">
+              ABOUT US
+            </span>
+
+            <h2 className="font-serif-heading text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight">
+              More Than <br />A Studio
+            </h2>
+
+            <p className="text-sm md:text-base text-white/70 max-w-lg leading-relaxed font-sans font-light">
+              At InkAura, we believe tattoos and mehndi are more than just art — they are expressions of your journey, memories and individuality. Our goal is to provide a safe, creative and comfortable space where you can turn your ideas into timeless art.
+            </p>
+
+            <div className="pt-2">
+              <Link
+                href="/about"
+                className="px-6 py-3 rounded-full border border-white/30 hover:border-[#E2C799] text-white hover:text-[#E2C799] text-xs uppercase tracking-wider font-semibold transition-all duration-300 inline-flex items-center gap-2 group"
+              >
+                <span>Our Story</span>
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Right Column Overlapping Collage */}
+          <div className="lg:col-span-6 relative flex justify-center mt-6 lg:mt-0">
+            
+            {/* Background Studio Interior Photo */}
+            <div className="relative w-full h-[320px] sm:h-[420px] rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+              <Image
+                src="/images/home/studio-craft.jpg"
+                alt="Studio Craft"
+                fill
+                className="object-cover brightness-75"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0F1015] via-transparent to-transparent opacity-80" />
+            </div>
+
+            {/* Overlapping Floating Polaroid Cards on the Right */}
+            <div className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 flex flex-col gap-3 sm:gap-4 z-20">
+              
+              {/* Card 1: Mehndi Detail */}
+              <div className="w-28 sm:w-44 h-36 sm:h-56 rounded-xl sm:rounded-2xl overflow-hidden border-2 border-white/20 shadow-2xl rotate-6 hover:rotate-0 transition-transform duration-500 relative">
+                <Image
+                  src="/images/home/bridal-mehndi.jpg"
+                  alt="Bridal Dulhan Mehndi"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              {/* Card 2: Calligraphy Tattoo */}
+              <div className="w-28 sm:w-44 h-36 sm:h-56 rounded-xl sm:rounded-2xl overflow-hidden border-2 border-white/20 shadow-2xl -rotate-6 hover:rotate-0 transition-transform duration-500 relative -mt-12 sm:-mt-20 self-end">
+                <Image
+                  src="/images/tattoos/calligraphy.jpg"
+                  alt="Sanskrit Calligraphy Tattoo"
+                  fill
+                  className="object-cover"
+                />
+                
+                {/* Script Sticker Accent */}
+                <div className="absolute bottom-1.5 right-1.5 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full bg-black/80 backdrop-blur-md border border-[#E2C799]/40 text-[8px] sm:text-[10px] font-script-accent text-[#E2C799]">
+                  Heritage Art
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  );
+}

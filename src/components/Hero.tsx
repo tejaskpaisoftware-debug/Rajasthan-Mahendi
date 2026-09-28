@@ -1,0 +1,112 @@
+'use client';
+
+import { ArrowRight, Play, ArrowDown, Sparkles } from 'lucide-react';
+
+interface HeroProps {
+  onOpenBooking: () => void;
+}
+
+export default function Hero({ onOpenBooking }: HeroProps) {
+  return (
+    <section id="home" className="relative pt-24 sm:pt-28 md:pt-36 pb-12 sm:pb-16 md:pb-24 bg-[#0F1015] overflow-hidden">
+      <div className="container-center-lock">
+        
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
+          
+          {/* Left Column Content */}
+          <div className="lg:col-span-6 space-y-6 sm:space-y-8 z-10 text-left">
+            
+            {/* Tagline */}
+            <span className="text-[10px] sm:text-xs uppercase tracking-[0.25em] sm:tracking-[0.3em] font-mono text-[#E2C799] font-medium block">
+              MORE THAN INK • SINCE 2007
+            </span>
+
+            {/* Main Headline */}
+            <div className="space-y-1">
+              <h1 className="font-serif-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white uppercase leading-[1.08]">
+                TATTOOS & MEHNDI
+              </h1>
+              <p className="font-script-accent text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-[#E2C799] font-normal pt-1">
+                That Tell Your Story
+              </p>
+            </div>
+
+            {/* Subtext */}
+            <p className="text-xs sm:text-sm md:text-base text-white/70 max-w-lg leading-relaxed font-sans font-light">
+              Custom designs, Skilled master artists, A luxury studio space where body art meets your memories.
+            </p>
+
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-6 pt-1 sm:pt-2">
+              <button
+                onClick={onOpenBooking}
+                className="px-6 sm:px-7 py-3.5 rounded-full bg-[#E2C799] hover:bg-[#F0D8AA] text-[#0F1015] font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-3 shadow-lg hover:scale-105"
+              >
+                <span>Book Appointment</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+
+              <a
+                href="tel:9537157153"
+                className="flex items-center justify-center gap-3 text-xs uppercase tracking-wider text-white hover:text-[#E2C799] transition-colors py-2 group"
+              >
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/30 group-hover:border-[#E2C799] flex items-center justify-center transition-colors shrink-0">
+                  <Play className="w-3.5 h-3.5 text-white group-hover:text-[#E2C799] fill-white group-hover:fill-[#E2C799] ml-0.5" />
+                </div>
+                <span className="font-medium">Call Vishambar Ji</span>
+              </a>
+            </div>
+
+            {/* Stats Bar */}
+            <div className="pt-6 sm:pt-8 border-t border-white/10 grid grid-cols-3 gap-2 sm:gap-4">
+              <div>
+                <h3 className="font-serif-heading text-lg sm:text-2xl font-bold text-white">1000+</h3>
+                <p className="text-[9px] sm:text-[11px] text-white/60 uppercase tracking-wider">Happy Clients</p>
+              </div>
+              <div>
+                <h3 className="font-serif-heading text-lg sm:text-2xl font-bold text-white">17+</h3>
+                <p className="text-[9px] sm:text-[11px] text-white/60 uppercase tracking-wider">Years Exp.</p>
+              </div>
+              <div>
+                <h3 className="font-serif-heading text-lg sm:text-2xl font-bold text-white">100%</h3>
+                <p className="text-[9px] sm:text-[11px] text-white/60 uppercase tracking-wider">Stain Guarantee</p>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Right Column Dynamic Animated Mehndi Image Banner */}
+          <div className="lg:col-span-6 relative mt-4 lg:mt-0">
+            
+            {/* Subtle Soft Ambient Backlight Aura Behind Box */}
+            <div className="absolute -inset-2 bg-gradient-to-tr from-[#E2C799]/20 via-white/30 to-[#E2C799]/20 rounded-[3rem] blur-2xl opacity-40 animate-soft-backlight pointer-events-none z-0" />
+
+            {/* Main Outer Box with Metallic Gold Dynamic Rotating Border */}
+            <div className="relative z-10 animated-white-border-wrapper shadow-lg">
+              <div className="animated-white-border-content relative h-[360px] sm:h-[480px] md:h-[580px] w-full group">
+                <img
+                  src="/images/home/hero-mehndi.jpg"
+                  alt="Rajasthan Mahendi Royal Henna Art"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                
+                {/* Subtle Bottom Vignette Gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0F1015]/60 via-transparent to-transparent" />
+
+                {/* Vertical Side Text Accent */}
+                <div className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 hidden sm:flex flex-col items-center opacity-70">
+                  <span className="text-[9px] sm:text-[10px] uppercase font-mono tracking-[0.4em] text-[#E2C799] rotate-90 whitespace-nowrap drop-shadow-md">
+                    HERITAGE • MEHNDI • ART
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  );
+}
