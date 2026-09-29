@@ -36,9 +36,9 @@ export default function WhyChooseUs() {
           
           {/* Left Column Artist Photo */}
           <motion.div
-            initial={{ opacity: 0, x: -40, scale: 0.95 }}
-            whileInView={{ opacity: 1, x: 0, scale: 1 }}
-            viewport={{ once: false, amount: 0.2 }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, amount: 0.05 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-5 relative"
           >
@@ -55,9 +55,9 @@ export default function WhyChooseUs() {
 
           {/* Right Column Content */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.05 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-7 space-y-8"
           >
@@ -79,10 +79,10 @@ export default function WhyChooseUs() {
                 return (
                   <motion.div
                     key={item.title}
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: false, amount: 0.2 }}
-                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                    viewport={{ once: true, amount: 0.05 }}
+                    transition={{ duration: 0.5, delay: idx * 0.08 }}
                     className="p-6 rounded-2xl bg-[#161820]/90 border border-white/10 hover:border-[#E2C799]/50 transition-all duration-300 space-y-3 group shadow-md"
                   >
                     <div className="w-10 h-10 rounded-xl bg-[#E2C799]/10 border border-[#E2C799]/30 flex items-center justify-center text-[#E2C799] group-hover:bg-[#E2C799] group-hover:text-[#0F1015] transition-colors">

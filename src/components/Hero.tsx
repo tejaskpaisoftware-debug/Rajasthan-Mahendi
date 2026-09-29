@@ -16,19 +16,17 @@ export default function Hero({ onOpenBooking }: HeroProps) {
           
           {/* Left Column Content */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-6 space-y-6 sm:space-y-8 z-10 text-left"
           >
             
             {/* Tagline */}
             <motion.span
               initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: false }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
               className="text-[10px] sm:text-xs uppercase tracking-[0.25em] sm:tracking-[0.3em] font-mono text-[#E2C799] font-medium inline-flex items-center gap-2"
             >
               <Sparkles className="w-3.5 h-3.5 text-[#E2C799] animate-spin-slow" />
@@ -91,10 +89,9 @@ export default function Hero({ onOpenBooking }: HeroProps) {
 
           {/* Right Column Dynamic Animated Mehndi Image Banner */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.92, y: 40 }}
-            whileInView={{ opacity: 1, scale: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-6 relative mt-4 lg:mt-0"
           >
             

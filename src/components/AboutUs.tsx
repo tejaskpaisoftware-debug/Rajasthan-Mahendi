@@ -14,10 +14,10 @@ export default function AboutUs() {
           
           {/* Left Column Content */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: false, amount: 0.2 }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            viewport={{ once: true, amount: 0.05 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-6 space-y-6"
           >
             <span className="text-xs uppercase tracking-[0.3em] font-mono text-[#E2C799] font-medium inline-flex items-center gap-2">
@@ -46,10 +46,10 @@ export default function AboutUs() {
 
           {/* Right Column Overlapping Collage */}
           <motion.div
-            initial={{ opacity: 0, x: 40, scale: 0.95 }}
-            whileInView={{ opacity: 1, x: 0, scale: 1 }}
-            viewport={{ once: false, amount: 0.2 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, amount: 0.05 }}
+            transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-6 relative flex justify-center mt-6 lg:mt-0"
           >
             

@@ -13,10 +13,10 @@ export default function CTABanner({ onOpenBooking }: CTABannerProps) {
       <div className="container-center-lock">
         
         <motion.div
-          initial={{ opacity: 0, scale: 0.95, y: 30 }}
+          initial={{ opacity: 0, scale: 0.96, y: 20 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.2 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          viewport={{ once: true, amount: 0.05 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="relative rounded-3xl bg-[#0F1015] p-8 md:p-14 overflow-hidden border border-[#E2C799]/30 shadow-2xl flex flex-col md:flex-row items-center justify-between gap-8"
         >
           

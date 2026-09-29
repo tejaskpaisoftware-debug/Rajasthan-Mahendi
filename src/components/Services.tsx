@@ -47,7 +47,7 @@ export default function Services({ onOpenBooking }: ServicesProps) {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.05 }}
           transition={{ duration: 0.6 }}
           className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12"
         >
@@ -80,10 +80,10 @@ export default function Services({ onOpenBooking }: ServicesProps) {
             return (
               <motion.div
                 key={service.id}
-                initial={{ opacity: 0, y: 40 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false, amount: 0.2 }}
-                transition={{ duration: 0.6, delay: idx * 0.12, ease: [0.22, 1, 0.36, 1] }}
+                viewport={{ once: true, amount: 0.05 }}
+                transition={{ duration: 0.5, delay: idx * 0.1, ease: [0.22, 1, 0.36, 1] }}
                 className="bg-white rounded-2xl overflow-hidden border border-[#0F1015]/10 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group flex flex-col justify-between"
               >
                 <div>

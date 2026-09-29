@@ -64,7 +64,7 @@ export default function Gallery({ onSelectItem }: GalleryProps) {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.05 }}
           transition={{ duration: 0.6 }}
           className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-10"
         >
@@ -109,10 +109,10 @@ export default function Gallery({ onSelectItem }: GalleryProps) {
           {filteredItems.map((item, idx) => (
             <motion.div
               key={item.id}
-              initial={{ opacity: 0, scale: 0.9, y: 30 }}
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              viewport={{ once: false, amount: 0.2 }}
-              transition={{ duration: 0.5, delay: idx * 0.08, ease: [0.22, 1, 0.36, 1] }}
+              viewport={{ once: true, amount: 0.05 }}
+              transition={{ duration: 0.5, delay: idx * 0.06, ease: [0.22, 1, 0.36, 1] }}
               onClick={() => onSelectItem(item)}
               className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden group cursor-pointer border border-[#0F1015]/10 shadow-sm bg-gray-200"
             >
