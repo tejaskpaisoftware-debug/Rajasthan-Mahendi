@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import SplashScreen from "@/components/SplashScreen";
 
 export const metadata: Metadata = {
   title: "Rajasthan Mahendi Art & Piercing | Vishambar Ji (Since 2007)",
@@ -21,8 +20,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
       </head>
-      <body className="bg-[#FFF0F3] text-[#4A0E2E] antialiased min-h-screen">
-        <SplashScreen />
+      <body className="bg-[#D81B60] text-white antialiased min-h-screen">
         {children}
         <WhatsAppButton />
       </body>

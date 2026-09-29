@@ -41,8 +41,8 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
         className="fixed inset-0 bg-[#4A0E2E]/50 backdrop-blur-sm transition-opacity"
       />
 
-      {/* Modal Container */}
-      <div className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto bg-[#FFF0F3] text-[#4A0E2E] p-6 sm:p-8 rounded-2xl sm:rounded-3xl z-10 border border-[#F8BBD0] shadow-2xl">
+      {/* Modal Container Box */}
+      <div className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto bg-white text-[#3D0C20] p-6 sm:p-8 rounded-2xl sm:rounded-3xl z-10 border border-[#D81B60]/20 shadow-2xl">
         
         {/* Close Button */}
         <button

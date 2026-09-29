@@ -20,8 +20,8 @@ export default function LightboxModal({ item, onClose, onOpenBooking }: Lightbox
         className="fixed inset-0 bg-[#4A0E2E]/50 backdrop-blur-sm"
       />
 
-      {/* Modal Container */}
-      <div className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-[#FFF0F3] text-[#4A0E2E] p-5 sm:p-8 rounded-2xl sm:rounded-3xl z-10 border border-[#F8BBD0] shadow-2xl flex flex-col md:flex-row gap-6">
+      {/* Modal Container Box */}
+      <div className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-white text-[#3D0C20] p-5 sm:p-8 rounded-2xl sm:rounded-3xl z-10 border border-[#D81B60]/20 shadow-2xl flex flex-col md:flex-row gap-6">
         
         {/* Close Button */}
         <button
