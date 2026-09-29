@@ -131,27 +131,27 @@ export default function GalleryPage() {
     : galleryData.filter((item) => item.category === activeFilter);
 
   return (
-    <main className="min-h-screen bg-[#1F0712] text-[#FFF0F5] pt-24">
+    <main className="min-h-screen bg-[#FFF0F3] text-[#4A0E2E] pt-24">
       <Navbar onOpenBooking={() => setBookingOpen(true)} />
 
       {/* Hero Header */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-[#2B0B1D] to-[#1F0712] border-b border-white/5 relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-[#FFF0F3] border-b border-[#FCE4EC] relative overflow-hidden text-center">
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 text-center">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#F8C8DC]/10 border border-[#F8C8DC]/30 text-[#F8C8DC] text-xs font-mono uppercase tracking-[0.3em] mb-4">
-            <Sparkles className="w-3.5 h-3.5" />
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FCE4EC] border border-[#F8BBD0] text-[#D81B60] text-xs font-mono uppercase tracking-[0.3em] mb-4 font-semibold shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-[#D81B60]" />
             Curated Masterpiece Portfolio
           </span>
-          <h1 className="font-serif-heading text-4xl sm:text-6xl font-bold tracking-tight text-white mb-6">
+          <h1 className="font-serif-heading text-4xl sm:text-6xl font-bold tracking-tight text-[#4A0E2E] mb-6">
             Rajasthan Mahendi Art Gallery
           </h1>
-          <p className="text-base sm:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-[#4A0E2E]/80 max-w-2xl mx-auto leading-relaxed font-medium">
             Explore our curated showcase of custom ink tattoos and authentic organic henna creations crafted by Vishambar Ji and master artisans.
           </p>
         </div>
       </section>
 
       {/* Gallery Showcase */}
-      <section className="py-16 bg-[#FFF0F3] text-[#1F0712]">
+      <section className="py-16 bg-white text-[#4A0E2E]">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           
           {/* Filters Bar */}
@@ -162,11 +162,11 @@ export default function GalleryPage() {
                 onClick={() => setActiveFilter(f)}
                 className={`px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all duration-300 flex items-center gap-2 ${
                   activeFilter === f
-                    ? 'bg-[#1F0712] text-[#F8C8DC] shadow-lg scale-105'
-                    : 'bg-white text-[#1F0712]/80 hover:bg-[#1F0712]/10 border border-[#1F0712]/15'
+                    ? 'bg-gradient-to-r from-[#D81B60] to-[#AD1457] text-white shadow-lg scale-105'
+                    : 'bg-[#FFF0F3] text-[#4A0E2E]/80 hover:bg-[#FCE4EC] border border-[#FCE4EC]'
                 }`}
               >
-                {activeFilter === f && <Filter className="w-3 h-3 text-[#F8C8DC]" />}
+                {activeFilter === f && <Filter className="w-3 h-3 text-white" />}
                 {f}
               </button>
             ))}
@@ -178,10 +178,10 @@ export default function GalleryPage() {
               <div
                 key={item.id}
                 onClick={() => setSelectedItem(item)}
-                className="group relative bg-white rounded-3xl overflow-hidden border border-[#1F0712]/10 shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer flex flex-col"
+                className="group relative bg-[#FFF0F3] rounded-3xl overflow-hidden border border-[#FCE4EC] shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer flex flex-col"
               >
                 {/* Image Container */}
-                <div className="relative aspect-[4/5] w-full overflow-hidden bg-rose-50">
+                <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#FCE4EC]">
                   <img
                     src={item.image}
                     alt={item.title}
@@ -190,33 +190,33 @@ export default function GalleryPage() {
                   
                   {/* Category Pill */}
                   <div className="absolute top-4 left-4 z-10">
-                    <span className="px-3 py-1 rounded-full bg-[#1F0712]/80 backdrop-blur-md text-[#F8C8DC] text-[10px] uppercase font-mono tracking-widest font-semibold border border-[#F8C8DC]/30">
+                    <span className="px-3 py-1 rounded-full bg-[#D81B60] text-white text-[10px] uppercase font-mono tracking-widest font-semibold shadow-md">
                       {item.category}
                     </span>
                   </div>
 
                   {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-[#1F0712]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <div className="w-12 h-12 rounded-full bg-[#F8C8DC] text-[#1F0712] flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-xl">
-                      <Eye className="w-5 h-5" />
+                  <div className="absolute inset-0 bg-[#4A0E2E]/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#D81B60] to-[#AD1457] text-white flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-xl">
+                      <Eye className="w-5 h-5 text-white" />
                     </div>
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="p-6 flex flex-col justify-between flex-1 bg-white">
+                <div className="p-6 flex flex-col justify-between flex-1 bg-[#FFF0F3]">
                   <div>
-                    <h3 className="font-serif-heading text-xl font-bold text-[#1F0712] group-hover:text-[#D81B60] transition-colors">
+                    <h3 className="font-serif-heading text-xl font-bold text-[#4A0E2E] group-hover:text-[#D81B60] transition-colors">
                       {item.title}
                     </h3>
-                    <p className="text-xs text-[#1F0712]/70 font-sans mt-2 line-clamp-2 leading-relaxed">
+                    <p className="text-xs text-[#4A0E2E]/80 font-sans mt-2 line-clamp-2 leading-relaxed font-medium">
                       {item.description}
                     </p>
                   </div>
 
-                  <div className="mt-6 pt-4 border-t border-[#1F0712]/10 flex items-center justify-between text-xs text-[#1F0712]/60 font-mono">
-                    <span>Artist: <strong className="text-[#1F0712]">{item.artist}</strong></span>
-                    <span>Session: <strong className="text-[#1F0712]">{item.time}</strong></span>
+                  <div className="mt-6 pt-4 border-t border-[#FCE4EC] flex items-center justify-between text-xs text-[#4A0E2E]/70 font-mono">
+                    <span>Artist: <strong className="text-[#880E4F]">{item.artist}</strong></span>
+                    <span>Session: <strong className="text-[#880E4F]">{item.time}</strong></span>
                   </div>
                 </div>
               </div>

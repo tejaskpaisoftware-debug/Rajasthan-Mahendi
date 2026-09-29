@@ -17,7 +17,7 @@ export default function Home() {
   const [selectedGalleryItem, setSelectedGalleryItem] = useState<any | null>(null);
 
   return (
-    <main className="relative min-h-screen bg-[#1F0712] text-[#FFF0F5] selection:bg-[#F8C8DC]/30 selection:text-white">
+    <main className="relative min-h-screen bg-[#FFF0F3] text-[#4A0E2E] selection:bg-[#D81B60]/20 selection:text-[#880E4F]">
       {/* 1. Header Navigation Bar */}
       <Navbar onOpenBooking={() => setIsBookingOpen(true)} />
 

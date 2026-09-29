@@ -54,44 +54,44 @@ export default function ArtistsPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#1F0712] text-[#FFF0F5] pt-24">
+    <main className="min-h-screen bg-[#FFF0F3] text-[#4A0E2E] pt-24">
       <Navbar onOpenBooking={() => setBookingOpen(true)} />
 
       {/* Hero Header */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-[#2B0B1D] to-[#1F0712] border-b border-white/5 relative">
+      <section className="py-16 md:py-24 bg-[#FFF0F3] border-b border-[#FCE4EC] relative">
         <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#F8C8DC]/10 border border-[#F8C8DC]/30 text-[#F8C8DC] text-xs font-mono uppercase tracking-[0.3em] mb-4">
-            <Sparkles className="w-3.5 h-3.5" />
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FCE4EC] border border-[#F8BBD0] text-[#D81B60] text-xs font-mono uppercase tracking-[0.3em] mb-4 font-semibold shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-[#D81B60]" />
             The Craftsmen of Rajasthan Mahendi Art
           </span>
-          <h1 className="font-serif-heading text-4xl sm:text-6xl font-bold tracking-tight text-white mb-6">
+          <h1 className="font-serif-heading text-4xl sm:text-6xl font-bold tracking-tight text-[#4A0E2E] mb-6">
             Meet Our Master Artists
           </h1>
-          <p className="text-base sm:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-[#4A0E2E]/80 max-w-2xl mx-auto leading-relaxed font-medium">
             Every line, curve, and shade is executed by seasoned professionals dedicated to hygiene, artistry, and bespoke storytelling.
           </p>
         </div>
       </section>
 
       {/* Artist Profiles Section */}
-      <section className="py-20 bg-[#FFF0F3] text-[#1F0712]">
+      <section className="py-20 bg-white text-[#4A0E2E]">
         <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-16">
           {artists.map((artist, idx) => (
             <div
               key={artist.name}
-              className={`flex flex-col lg:flex-row items-center gap-10 lg:gap-16 bg-white p-8 md:p-12 rounded-3xl border border-[#1F0712]/10 shadow-lg ${
+              className={`flex flex-col lg:flex-row items-center gap-10 lg:gap-16 bg-[#FFF0F3] p-8 md:p-12 rounded-3xl border border-[#FCE4EC] shadow-md ${
                 idx % 2 === 1 ? 'lg:flex-row-reverse' : ''
               }`}
             >
               {/* Photo */}
-              <div className="w-full lg:w-5/12 aspect-[4/5] relative rounded-2xl overflow-hidden shadow-xl bg-rose-50 shrink-0">
+              <div className="w-full lg:w-5/12 aspect-[4/5] relative rounded-2xl overflow-hidden shadow-lg bg-[#FCE4EC] shrink-0 border border-[#F8BBD0]">
                 <img
                   src={artist.image}
                   alt={artist.name}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="px-3.5 py-1.5 rounded-full bg-[#1F0712]/90 backdrop-blur-md text-[#F8C8DC] text-[10px] font-mono uppercase tracking-widest font-semibold">
+                  <span className="px-3.5 py-1.5 rounded-full bg-[#D81B60] text-white text-[10px] font-mono uppercase tracking-widest font-semibold shadow-md">
                     {artist.experience}
                   </span>
                 </div>
@@ -103,25 +103,25 @@ export default function ArtistsPage() {
                   <span className="text-xs uppercase font-mono tracking-[0.25em] text-[#D81B60] font-bold block mb-1">
                     {artist.role}
                   </span>
-                  <h2 className="font-serif-heading text-3xl sm:text-4xl font-bold text-[#1F0712]">
+                  <h2 className="font-serif-heading text-3xl sm:text-4xl font-bold text-[#4A0E2E]">
                     {artist.name}
                   </h2>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-[#FFF0F3] border border-[#1F0712]/10 font-mono text-xs text-[#1F0712]/80 space-y-1">
-                  <div><strong className="text-[#1F0712]">Specialty:</strong> {artist.specialty}</div>
+                <div className="p-4 rounded-2xl bg-white border border-[#FCE4EC] font-mono text-xs text-[#4A0E2E]/85 space-y-1 shadow-sm">
+                  <div><strong className="text-[#880E4F]">Specialty:</strong> {artist.specialty}</div>
                 </div>
 
-                <p className="text-sm sm:text-base text-[#1F0712]/75 leading-relaxed font-sans">
+                <p className="text-sm sm:text-base text-[#4A0E2E]/80 leading-relaxed font-sans font-medium">
                   {artist.bio}
                 </p>
 
                 {/* Awards */}
                 <div className="space-y-2">
-                  <span className="text-xs uppercase font-mono text-[#1F0712]/60 font-semibold block">Recognitions & Accolades:</span>
+                  <span className="text-xs uppercase font-mono text-[#880E4F] font-bold block">Recognitions & Accolades:</span>
                   <div className="flex flex-wrap gap-2">
                     {artist.awards.map((award) => (
-                      <span key={award} className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#1F0712]/5 text-[#1F0712] text-xs font-medium border border-[#1F0712]/10">
+                      <span key={award} className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white text-[#4A0E2E] text-xs font-semibold border border-[#FCE4EC] shadow-sm">
                         <Award className="w-3.5 h-3.5 text-[#D81B60]" />
                         {award}
                       </span>
@@ -130,10 +130,10 @@ export default function ArtistsPage() {
                 </div>
 
                 {/* Actions */}
-                <div className="pt-4 border-t border-[#1F0712]/10 flex flex-wrap items-center gap-4">
+                <div className="pt-4 border-t border-[#FCE4EC] flex flex-wrap items-center gap-4">
                   <button
                     onClick={() => setBookingOpen(true)}
-                    className="px-6 py-3 rounded-full bg-[#1F0712] hover:bg-[#D81B60] text-white font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center gap-2 shadow-md"
+                    className="px-6 py-3 rounded-full bg-gradient-to-r from-[#D81B60] to-[#AD1457] hover:from-[#AD1457] hover:to-[#880E4F] text-white font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center gap-2 shadow-md hover:shadow-lg"
                   >
                     <span>Book Session With {artist.name.split(' ')[0]}</span>
                     <ArrowRight className="w-4 h-4" />
@@ -143,7 +143,7 @@ export default function ArtistsPage() {
                     href={artist.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-11 h-11 rounded-full border border-[#1F0712]/20 flex items-center justify-center text-[#1F0712] hover:bg-[#1F0712] hover:text-white transition-colors"
+                    className="w-11 h-11 rounded-full border border-[#F8BBD0] bg-white flex items-center justify-center text-[#880E4F] hover:bg-[#D81B60] hover:text-white transition-colors shadow-sm"
                   >
                     <Instagram className="w-4 h-4" />
                   </a>
@@ -155,44 +155,44 @@ export default function ArtistsPage() {
       </section>
 
       {/* Safety & Hygiene Guarantee Section */}
-      <section className="py-20 bg-[#2B0B1D] text-white border-t border-white/5">
+      <section className="py-20 bg-[#FFF0F3] text-[#4A0E2E] border-t border-[#FCE4EC]">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="text-xs uppercase font-mono tracking-[0.3em] text-[#F8C8DC] font-medium block mb-2">
+            <span className="text-xs uppercase font-mono tracking-[0.3em] text-[#D81B60] font-semibold block mb-2">
               UNCOMPROMISING STANDARDS
             </span>
-            <h2 className="font-serif-heading text-3xl sm:text-4xl font-bold text-white">
+            <h2 className="font-serif-heading text-3xl sm:text-4xl font-bold text-[#4A0E2E]">
               Studio Safety & Organic Quality
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-8 rounded-3xl bg-[#1F0712] border border-white/10 space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-[#F8C8DC]/10 border border-[#F8C8DC]/30 flex items-center justify-center text-[#F8C8DC]">
+            <div className="p-8 rounded-3xl bg-white border border-[#FCE4EC] space-y-4 shadow-sm">
+              <div className="w-12 h-12 rounded-2xl bg-[#FCE4EC] border border-[#F8BBD0] flex items-center justify-center text-[#D81B60]">
                 <ShieldCheck className="w-6 h-6" />
               </div>
-              <h3 className="font-serif-heading text-xl font-bold text-white">100% Sterile Medical Grade</h3>
-              <p className="text-xs text-white/70 leading-relaxed">
+              <h3 className="font-serif-heading text-xl font-bold text-[#4A0E2E]">100% Sterile Medical Grade</h3>
+              <p className="text-xs text-[#4A0E2E]/80 leading-relaxed font-medium">
                 Single-use disposable needles opened in front of you. Autoclaved grips and hospital-grade surface sanitization before every session.
               </p>
             </div>
 
-            <div className="p-8 rounded-3xl bg-[#1F0712] border border-white/10 space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-[#F8C8DC]/10 border border-[#F8C8DC]/30 flex items-center justify-center text-[#F8C8DC]">
+            <div className="p-8 rounded-3xl bg-white border border-[#FCE4EC] space-y-4 shadow-sm">
+              <div className="w-12 h-12 rounded-2xl bg-[#FCE4EC] border border-[#F8BBD0] flex items-center justify-center text-[#D81B60]">
                 <Heart className="w-6 h-6" />
               </div>
-              <h3 className="font-serif-heading text-xl font-bold text-white">100% Organic Rajasthani Henna</h3>
-              <p className="text-xs text-white/70 leading-relaxed">
+              <h3 className="font-serif-heading text-xl font-bold text-[#4A0E2E]">100% Organic Rajasthani Henna</h3>
+              <p className="text-xs text-[#4A0E2E]/80 leading-relaxed font-medium">
                 Zero synthetic dyes, PPD, or chemical add-ins. Freshly hand-mixed daily with pure Sojat henna leaf powder and natural eucalyptus essential oils.
               </p>
             </div>
 
-            <div className="p-8 rounded-3xl bg-[#1F0712] border border-white/10 space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-[#F8C8DC]/10 border border-[#F8C8DC]/30 flex items-center justify-center text-[#F8C8DC]">
+            <div className="p-8 rounded-3xl bg-white border border-[#FCE4EC] space-y-4 shadow-sm">
+              <div className="w-12 h-12 rounded-2xl bg-[#FCE4EC] border border-[#F8BBD0] flex items-center justify-center text-[#D81B60]">
                 <Calendar className="w-6 h-6" />
               </div>
-              <h3 className="font-serif-heading text-xl font-bold text-white">1-on-1 Artist Consultations</h3>
-              <p className="text-xs text-white/70 leading-relaxed">
+              <h3 className="font-serif-heading text-xl font-bold text-[#4A0E2E]">1-on-1 Artist Consultations</h3>
+              <p className="text-xs text-[#4A0E2E]/80 leading-relaxed font-medium">
                 Personal stencil trial runs, placement testing, and dedicated aftercare guidance provided for every tattoo and bridal mehendi package.
               </p>
             </div>

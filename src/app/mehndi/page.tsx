@@ -123,27 +123,27 @@ export default function MehndiPage() {
     : mehendiCollection.filter((item) => item.category === activeFilter);
 
   return (
-    <main className="min-h-screen bg-[#1F0712] text-[#FFF0F5]">
+    <main className="min-h-screen bg-[#FFF0F3] text-[#4A0E2E]">
       <Navbar onOpenBooking={() => setIsBookingOpen(true)} />
 
       {/* Hero Banner */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-[#2B0B1D] to-[#1F0712] border-b border-white/10 text-center">
+      <section className="pt-32 pb-16 bg-[#FFF0F3] border-b border-[#FCE4EC] text-center">
         <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-4">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#F8C8DC]/10 border border-[#F8C8DC]/30 text-[#F8C8DC] text-xs font-mono uppercase tracking-[0.3em]">
-            <Sparkles className="w-3.5 h-3.5" />
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FCE4EC] border border-[#F8BBD0] text-[#D81B60] text-xs font-mono uppercase tracking-[0.3em] font-semibold shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-[#D81B60]" />
             SINCE 2007 • VISHAMBAR JI MAHENDI ART
           </span>
-          <h1 className="font-serif-heading text-4xl sm:text-6xl font-bold tracking-tight text-white uppercase">
+          <h1 className="font-serif-heading text-4xl sm:text-6xl font-bold tracking-tight text-[#4A0E2E] uppercase">
             Rajasthan Mahendi Collection
           </h1>
-          <p className="text-sm md:text-base text-white/70 max-w-2xl mx-auto leading-relaxed font-sans font-light">
+          <p className="text-sm md:text-base text-[#4A0E2E]/80 max-w-2xl mx-auto leading-relaxed font-sans font-medium">
             100% pure organic Sojat henna leaf powder freshly mixed with Nilgiri eucalyptus essential oils. Color & design full guarantee with free home service across Vadodara.
           </p>
         </div>
       </section>
 
       {/* Mehndi Collection Catalog Section */}
-      <section className="py-20 bg-[#FFF0F3] text-[#1F0712]">
+      <section className="py-20 bg-white text-[#4A0E2E]">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           
           {/* Header */}
@@ -152,12 +152,12 @@ export default function MehndiPage() {
               <span className="text-xs uppercase tracking-[0.3em] font-mono text-[#D81B60] font-semibold block mb-2">
                 100% REALISTIC MEHNDI COLLECTION
               </span>
-              <h2 className="font-serif-heading text-3xl sm:text-5xl font-bold tracking-tight text-[#1F0712]">
+              <h2 className="font-serif-heading text-3xl sm:text-5xl font-bold tracking-tight text-[#4A0E2E]">
                 Our Signature Designs (10+ Styles)
               </h2>
             </div>
             
-            <div className="flex items-center gap-2 text-xs font-mono text-[#1F0712]/70 bg-white px-4 py-2 rounded-full border border-[#1F0712]/10 shadow-sm">
+            <div className="flex items-center gap-2 text-xs font-mono text-[#880E4F] bg-[#FCE4EC] px-4 py-2 rounded-full border border-[#F8BBD0] shadow-sm font-semibold">
               <ShieldCheck className="w-4 h-4 text-[#D81B60]" />
               <span>Color & Stain Full Guarantee</span>
             </div>
@@ -171,11 +171,11 @@ export default function MehndiPage() {
                 onClick={() => setActiveFilter(f)}
                 className={`px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all duration-300 flex items-center gap-2 ${
                   activeFilter === f
-                    ? 'bg-[#1F0712] text-[#F8C8DC] shadow-lg scale-105'
-                    : 'bg-white text-[#1F0712]/80 hover:bg-[#1F0712]/10 border border-[#1F0712]/15'
+                    ? 'bg-gradient-to-r from-[#D81B60] to-[#AD1457] text-white shadow-lg scale-105'
+                    : 'bg-[#FFF0F3] text-[#4A0E2E]/80 hover:bg-[#FCE4EC] border border-[#FCE4EC]'
                 }`}
               >
-                {activeFilter === f && <Filter className="w-3 h-3 text-[#F8C8DC]" />}
+                {activeFilter === f && <Filter className="w-3 h-3 text-white" />}
                 {f}
               </button>
             ))}
@@ -187,10 +187,10 @@ export default function MehndiPage() {
               <div
                 key={item.id}
                 onClick={() => setSelectedItem(item)}
-                className="group bg-white rounded-3xl overflow-hidden border border-[#1F0712]/10 shadow-md hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500 cursor-pointer flex flex-col justify-between"
+                className="group bg-[#FFF0F3] rounded-3xl overflow-hidden border border-[#FCE4EC] shadow-md hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500 cursor-pointer flex flex-col justify-between"
               >
                 {/* Image Container */}
-                <div className="relative aspect-[4/3] w-full overflow-hidden bg-rose-50 image-zoom-container">
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#FCE4EC] image-zoom-container">
                   <img
                     src={item.image}
                     alt={item.title}
@@ -198,14 +198,14 @@ export default function MehndiPage() {
                   />
                   
                   {/* Category Pill */}
-                  <span className="absolute top-3.5 left-3.5 px-3.5 py-1 rounded-full text-[10px] uppercase font-mono tracking-widest bg-[#1F0712]/90 backdrop-blur-md text-[#F8C8DC] border border-[#F8C8DC]/40 font-semibold shadow-lg">
+                  <span className="absolute top-3.5 left-3.5 px-3.5 py-1 rounded-full text-[10px] uppercase font-mono tracking-widest bg-[#D81B60] text-white border border-[#AD1457] font-semibold shadow-md">
                     {item.category}
                   </span>
 
                   {/* Hover Eye Overlay */}
-                  <div className="absolute inset-0 bg-[#1F0712]/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <div className="w-12 h-12 rounded-full bg-[#F8C8DC] text-[#1F0712] flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-xl">
-                      <Eye className="w-5 h-5" />
+                  <div className="absolute inset-0 bg-[#4A0E2E]/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#D81B60] to-[#AD1457] text-white flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-xl">
+                      <Eye className="w-5 h-5 text-white" />
                     </div>
                   </div>
                 </div>
@@ -213,10 +213,10 @@ export default function MehndiPage() {
                 {/* Info Content */}
                 <div className="p-6 flex flex-col justify-between flex-1 space-y-4">
                   <div>
-                    <h3 className="font-serif-heading text-xl font-bold text-[#1F0712] group-hover:text-[#D81B60] transition-colors">
+                    <h3 className="font-serif-heading text-xl font-bold text-[#4A0E2E] group-hover:text-[#D81B60] transition-colors">
                       {item.title}
                     </h3>
-                    <p className="text-xs text-[#1F0712]/75 leading-relaxed font-sans mt-2">
+                    <p className="text-xs text-[#4A0E2E]/80 leading-relaxed font-sans mt-2 font-medium">
                       {item.description}
                     </p>
                   </div>
@@ -224,15 +224,15 @@ export default function MehndiPage() {
                   {/* Highlights Badges */}
                   <div className="flex flex-wrap gap-1.5 pt-1">
                     {item.highlights.map((h) => (
-                      <span key={h} className="px-2.5 py-0.5 rounded-md bg-[#FFF0F3] border border-[#1F0712]/10 text-[10px] text-[#1F0712]/80 font-mono">
+                      <span key={h} className="px-2.5 py-0.5 rounded-md bg-white border border-[#FCE4EC] text-[10px] text-[#880E4F] font-mono font-medium shadow-sm">
                         ✓ {h}
                       </span>
                     ))}
                   </div>
 
                   {/* Footer Meta */}
-                  <div className="pt-4 border-t border-[#1F0712]/10 flex items-center justify-between text-xs font-mono">
-                    <div className="flex items-center gap-1.5 text-[#1F0712]/70">
+                  <div className="pt-4 border-t border-[#FCE4EC] flex items-center justify-between text-xs font-mono">
+                    <div className="flex items-center gap-1.5 text-[#4A0E2E]/70 font-medium">
                       <Clock className="w-3.5 h-3.5 text-[#D81B60]" />
                       <span>{item.time}</span>
                     </div>
@@ -242,7 +242,7 @@ export default function MehndiPage() {
                         e.stopPropagation();
                         setIsBookingOpen(true);
                       }}
-                      className="px-4 py-1.5 rounded-full bg-[#1F0712] text-[#F8C8DC] group-hover:bg-[#D81B60] group-hover:text-[#1F0712] font-bold text-[10px] uppercase tracking-wider transition-colors flex items-center gap-1"
+                      className="px-4 py-1.5 rounded-full bg-gradient-to-r from-[#D81B60] to-[#AD1457] text-white hover:from-[#AD1457] hover:to-[#880E4F] font-bold text-[10px] uppercase tracking-wider transition-colors flex items-center gap-1 shadow-sm"
                     >
                       <span>Book Design</span>
                       <ArrowRight className="w-3 h-3" />

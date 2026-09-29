@@ -14,25 +14,25 @@ export default function LightboxModal({ item, onClose, onOpenBooking }: Lightbox
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-      {/* Dark Backdrop */}
+      {/* Light Blur Backdrop */}
       <div
         onClick={onClose}
-        className="fixed inset-0 bg-[#1F0712]/85 backdrop-blur-md"
+        className="fixed inset-0 bg-[#4A0E2E]/50 backdrop-blur-sm"
       />
 
       {/* Modal Container */}
-      <div className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-[#2B0B1D] p-5 sm:p-8 rounded-2xl sm:rounded-3xl z-10 border border-white/10 shadow-2xl flex flex-col md:flex-row gap-6">
+      <div className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-[#FFF0F3] text-[#4A0E2E] p-5 sm:p-8 rounded-2xl sm:rounded-3xl z-10 border border-[#F8BBD0] shadow-2xl flex flex-col md:flex-row gap-6">
         
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white/70 hover:text-white"
+          className="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-white border border-[#F8BBD0] flex items-center justify-center text-[#880E4F] hover:bg-[#FCE4EC]"
         >
           <X className="w-4 h-4" />
         </button>
 
         {/* Image Display */}
-        <div className="relative w-full md:w-1/2 h-72 md:h-96 rounded-2xl overflow-hidden bg-rose-950 border border-white/10">
+        <div className="relative w-full md:w-1/2 h-72 md:h-96 rounded-2xl overflow-hidden bg-[#FCE4EC] border border-[#F8BBD0]">
           <Image
             src={item.image}
             alt={item.title}
@@ -44,24 +44,24 @@ export default function LightboxModal({ item, onClose, onOpenBooking }: Lightbox
         {/* Info */}
         <div className="w-full md:w-1/2 flex flex-col justify-between space-y-4 py-2">
           <div className="space-y-3">
-            <span className="text-[10px] uppercase font-mono tracking-widest px-3 py-1 rounded-full bg-[#F8C8DC] text-[#1F0712] font-bold inline-block">
+            <span className="text-[10px] uppercase font-mono tracking-widest px-3 py-1 rounded-full bg-[#FCE4EC] text-[#880E4F] border border-[#F8BBD0] font-bold inline-block">
               {item.category}
             </span>
-            <h3 className="font-serif-heading text-2xl font-bold text-white">
+            <h3 className="font-serif-heading text-2xl font-bold text-[#4A0E2E]">
               {item.title}
             </h3>
-            <p className="text-xs text-white/70 leading-relaxed font-sans">
+            <p className="text-xs text-[#4A0E2E]/80 leading-relaxed font-sans font-medium">
               Handcrafted with surgical precision by Rajasthan Mahendi Art master artists. Custom stencils, medical-grade hygiene, and premium organic henna.
             </p>
           </div>
 
-          <div className="space-y-3 pt-4 border-t border-white/10">
+          <div className="space-y-3 pt-4 border-t border-[#F8BBD0]">
             <button
               onClick={() => {
                 onClose();
                 onOpenBooking();
               }}
-              className="w-full py-3 rounded-full bg-[#F8C8DC] text-[#1F0712] font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-[#FFF0F5] transition-colors"
+              className="w-full py-3 rounded-full bg-gradient-to-r from-[#D81B60] via-[#E91E63] to-[#AD1457] hover:from-[#AD1457] hover:to-[#880E4F] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md hover:shadow-lg transition-all"
             >
               <span>Get Similar Custom Piece</span>
               <ArrowRight className="w-4 h-4" />

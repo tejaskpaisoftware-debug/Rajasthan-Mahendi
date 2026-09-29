@@ -59,27 +59,27 @@ export default function ContactPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#1F0712] text-[#FFF0F5] pt-24">
+    <main className="min-h-screen bg-[#FFF0F3] text-[#4A0E2E] pt-24">
       <Navbar onOpenBooking={() => setBookingOpen(true)} />
 
       {/* Hero Header */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-[#2B0B1D] to-[#1F0712] border-b border-white/5 text-center">
+      <section className="py-16 md:py-24 bg-[#FFF0F3] border-b border-[#FCE4EC] text-center">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#F8C8DC]/10 border border-[#F8C8DC]/30 text-[#F8C8DC] text-xs font-mono uppercase tracking-[0.3em] mb-4">
-            <Sparkles className="w-3.5 h-3.5" />
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FCE4EC] border border-[#F8BBD0] text-[#D81B60] text-xs font-mono uppercase tracking-[0.3em] mb-4 font-semibold shadow-sm">
+            <Sparkles className="w-3.5 h-3.5 text-[#D81B60]" />
             Connect With Rajasthan Mahendi Art
           </span>
-          <h1 className="font-serif-heading text-4xl sm:text-6xl font-bold tracking-tight text-white mb-6">
+          <h1 className="font-serif-heading text-4xl sm:text-6xl font-bold tracking-tight text-[#4A0E2E] mb-6">
             Get In Touch
           </h1>
-          <p className="text-base sm:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg text-[#4A0E2E]/80 max-w-2xl mx-auto leading-relaxed font-medium">
             Have questions about a tattoo design or bridal mehendi booking? Visit our luxury studio or reach out to Vishambar Ji directly.
           </p>
         </div>
       </section>
 
       {/* Studios Info + Contact Form Grid */}
-      <section className="py-20 bg-[#FFF0F3] text-[#1F0712]">
+      <section className="py-20 bg-white text-[#4A0E2E]">
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12">
           
           {/* Left Column: Studio Locations */}
@@ -88,36 +88,36 @@ export default function ContactPage() {
               <span className="text-xs uppercase font-mono tracking-[0.25em] text-[#D81B60] font-bold block mb-2">
                 OUR STUDIOS
               </span>
-              <h2 className="font-serif-heading text-3xl font-bold text-[#1F0712]">
+              <h2 className="font-serif-heading text-3xl font-bold text-[#4A0E2E]">
                 Visit Us In Person
               </h2>
             </div>
 
             {/* Studio 1: Vadodara Main Studio */}
-            <div className="bg-white p-8 rounded-3xl border border-[#1F0712]/10 shadow-md space-y-4">
+            <div className="bg-[#FFF0F3] p-8 rounded-3xl border border-[#FCE4EC] shadow-md space-y-4">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="font-serif-heading text-xl font-bold text-[#1F0712]">
+                  <h3 className="font-serif-heading text-xl font-bold text-[#4A0E2E]">
                     Rajasthan Mahendi & Piercing
                   </h3>
                   <span className="text-xs text-[#D81B60] font-mono font-bold block mt-0.5">
                     Vishambar ji: +91 95371 57153 (Since 2007)
                   </span>
                 </div>
-                <span className="px-3 py-1 rounded-full bg-[#1F0712] text-[#F8C8DC] text-[10px] uppercase font-mono font-bold tracking-wider">
+                <span className="px-3 py-1 rounded-full bg-[#D81B60] text-white text-[10px] uppercase font-mono font-bold tracking-wider shadow-sm">
                   Vadodara
                 </span>
               </div>
-              <p className="text-xs text-[#1F0712]/75 flex items-start gap-2 leading-relaxed font-sans">
+              <p className="text-xs text-[#4A0E2E]/80 flex items-start gap-2 leading-relaxed font-sans font-medium">
                 <MapPin className="w-4 h-4 text-[#D81B60] shrink-0 mt-0.5" />
                 <span>Reliance Smart Bazaar, Gangam Plaza, Canal Road, Opp. McDonalds, Sama Savli Road, Vemali, Vadodara - 390024</span>
               </p>
-              <div className="pt-3 border-t border-[#1F0712]/10 grid grid-cols-2 gap-3 text-xs font-mono text-[#1F0712]/80">
+              <div className="pt-3 border-t border-[#FCE4EC] grid grid-cols-2 gap-3 text-xs font-mono text-[#4A0E2E]/80">
                 <a href="tel:9537157153" className="flex items-center gap-2 hover:text-[#D81B60]">
                   <Phone className="w-3.5 h-3.5 text-[#D81B60]" />
-                  <strong className="text-[#1F0712]">95371 57153</strong>
+                  <strong className="text-[#880E4F]">95371 57153</strong>
                 </a>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 font-semibold">
                   <Clock className="w-3.5 h-3.5 text-[#D81B60]" />
                   <span>9 AM - 10 PM</span>
                 </div>
@@ -125,80 +125,80 @@ export default function ContactPage() {
             </div>
 
             {/* Quick Action Box */}
-            <div className="p-6 rounded-3xl bg-[#1F0712] text-white flex items-center justify-between">
+            <div className="p-6 rounded-3xl bg-gradient-to-r from-[#D81B60] via-[#E91E63] to-[#AD1457] text-white flex items-center justify-between shadow-lg">
               <div>
                 <h4 className="font-serif-heading text-lg font-bold text-white">Free Home Service Available</h4>
-                <p className="text-xs text-white/60">Special arrangements for marriage parties & sangeet functions.</p>
+                <p className="text-xs text-white/90 font-medium">Special arrangements for marriage parties & sangeet functions.</p>
               </div>
               <a
                 href="https://wa.me/919537157153"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-5 py-2.5 rounded-full bg-[#F8C8DC] text-[#1F0712] font-bold text-xs uppercase tracking-wider hover:bg-[#FFF0F5] transition-colors shrink-0 flex items-center gap-2"
+                className="px-5 py-2.5 rounded-full bg-white text-[#D81B60] font-bold text-xs uppercase tracking-wider hover:bg-[#FCE4EC] transition-colors shrink-0 flex items-center gap-2 shadow-md"
               >
-                <MessageSquare className="w-4 h-4" />
+                <MessageSquare className="w-4 h-4 text-[#D81B60]" />
                 WhatsApp
               </a>
             </div>
           </div>
 
           {/* Right Column: Interactive Form */}
-          <div className="lg:col-span-7 bg-white p-8 md:p-12 rounded-3xl border border-[#1F0712]/10 shadow-xl">
+          <div className="lg:col-span-7 bg-[#FFF0F3] p-8 md:p-12 rounded-3xl border border-[#FCE4EC] shadow-xl">
             {!formSubmitted ? (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <span className="text-xs uppercase font-mono tracking-[0.25em] text-[#D81B60] font-bold block mb-1">
                     APPOINTMENT & INQUIRY
                   </span>
-                  <h2 className="font-serif-heading text-3xl font-bold text-[#1F0712]">
+                  <h2 className="font-serif-heading text-3xl font-bold text-[#4A0E2E]">
                     Send Us A Message
                   </h2>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-xs font-mono uppercase text-[#1F0712]/70 block mb-1">Full Name *</label>
+                    <label className="text-xs font-mono uppercase text-[#880E4F] font-semibold block mb-1">Full Name *</label>
                     <input
                       type="text"
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       placeholder="e.g. Priya Sharma"
-                      className="w-full bg-[#FFF0F3] border border-[#1F0712]/15 rounded-xl p-3 text-sm text-[#1F0712] outline-none focus:border-[#D81B60]"
+                      className="w-full bg-white border border-[#F8BBD0] rounded-xl p-3 text-sm text-[#4A0E2E] outline-none focus:border-[#D81B60] shadow-sm"
                     />
                   </div>
 
                   <div>
-                    <label className="text-xs font-mono uppercase text-[#1F0712]/70 block mb-1">Phone / WhatsApp *</label>
+                    <label className="text-xs font-mono uppercase text-[#880E4F] font-semibold block mb-1">Phone / WhatsApp *</label>
                     <input
                       type="tel"
                       required
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="+91 98765 43210"
-                      className="w-full bg-[#FFF0F3] border border-[#1F0712]/15 rounded-xl p-3 text-sm text-[#1F0712] outline-none focus:border-[#D81B60]"
+                      className="w-full bg-white border border-[#F8BBD0] rounded-xl p-3 text-sm text-[#4A0E2E] outline-none focus:border-[#D81B60] shadow-sm"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-xs font-mono uppercase text-[#1F0712]/70 block mb-1">Email Address</label>
+                    <label className="text-xs font-mono uppercase text-[#880E4F] font-semibold block mb-1">Email Address</label>
                     <input
                       type="email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="name@domain.com"
-                      className="w-full bg-[#FFF0F3] border border-[#1F0712]/15 rounded-xl p-3 text-sm text-[#1F0712] outline-none focus:border-[#D81B60]"
+                      className="w-full bg-white border border-[#F8BBD0] rounded-xl p-3 text-sm text-[#4A0E2E] outline-none focus:border-[#D81B60] shadow-sm"
                     />
                   </div>
 
                   <div>
-                    <label className="text-xs font-mono uppercase text-[#1F0712]/70 block mb-1">Service Required</label>
+                    <label className="text-xs font-mono uppercase text-[#880E4F] font-semibold block mb-1">Service Required</label>
                     <select
                       value={formData.service}
                       onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                      className="w-full bg-[#FFF0F3] border border-[#1F0712]/15 rounded-xl p-3 text-sm text-[#1F0712] outline-none focus:border-[#D81B60]"
+                      className="w-full bg-white border border-[#F8BBD0] rounded-xl p-3 text-sm text-[#4A0E2E] outline-none focus:border-[#D81B60] shadow-sm"
                     >
                       <option value="Custom Tattoo">Custom Tattoo</option>
                       <option value="Bridal Mehndi Package">Bridal Mehndi Package</option>
@@ -210,11 +210,11 @@ export default function ContactPage() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-xs font-mono uppercase text-[#1F0712]/70 block mb-1">Preferred Location</label>
+                    <label className="text-xs font-mono uppercase text-[#880E4F] font-semibold block mb-1">Preferred Location</label>
                     <select
                       value={formData.location}
                       onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                      className="w-full bg-[#FFF0F3] border border-[#1F0712]/15 rounded-xl p-3 text-sm text-[#1F0712] outline-none focus:border-[#D81B60]"
+                      className="w-full bg-white border border-[#F8BBD0] rounded-xl p-3 text-sm text-[#4A0E2E] outline-none focus:border-[#D81B60] shadow-sm"
                     >
                       <option value="Vadodara Flagship Studio">Vadodara Flagship Studio</option>
                       <option value="Jaipur Royal Studio">Jaipur Royal Studio</option>
@@ -222,30 +222,30 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label className="text-xs font-mono uppercase text-[#1F0712]/70 block mb-1">Preferred Date</label>
+                    <label className="text-xs font-mono uppercase text-[#880E4F] font-semibold block mb-1">Preferred Date</label>
                     <input
                       type="date"
                       value={formData.date}
                       onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                      className="w-full bg-[#FFF0F3] border border-[#1F0712]/15 rounded-xl p-3 text-sm text-[#1F0712] outline-none focus:border-[#D81B60]"
+                      className="w-full bg-white border border-[#F8BBD0] rounded-xl p-3 text-sm text-[#4A0E2E] outline-none focus:border-[#D81B60] shadow-sm"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="text-xs font-mono uppercase text-[#1F0712]/70 block mb-1">Design Notes / Specific Requests</label>
+                  <label className="text-xs font-mono uppercase text-[#880E4F] font-semibold block mb-1">Design Notes / Specific Requests</label>
                   <textarea
                     rows={4}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Describe your design placement, tattoo size, or event requirements..."
-                    className="w-full bg-[#FFF0F3] border border-[#1F0712]/15 rounded-xl p-3 text-sm text-[#1F0712] outline-none focus:border-[#D81B60]"
+                    className="w-full bg-white border border-[#F8BBD0] rounded-xl p-3 text-sm text-[#4A0E2E] outline-none focus:border-[#D81B60] shadow-sm"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-full bg-[#1F0712] hover:bg-[#D81B60] text-white font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-lg"
+                  className="w-full py-4 rounded-full bg-gradient-to-r from-[#D81B60] via-[#E91E63] to-[#AD1457] hover:from-[#AD1457] hover:to-[#880E4F] text-white font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-lg"
                 >
                   <span>Submit Inquiry</span>
                   <Send className="w-4 h-4" />
@@ -253,18 +253,18 @@ export default function ContactPage() {
               </form>
             ) : (
               <div className="py-12 text-center space-y-4">
-                <div className="w-16 h-16 rounded-full bg-[#1F0712] text-[#F8C8DC] flex items-center justify-center mx-auto shadow-xl">
-                  <CheckCircle2 className="w-8 h-8" />
+                <div className="w-16 h-16 rounded-full bg-[#FCE4EC] border border-[#F8BBD0] text-[#D81B60] flex items-center justify-center mx-auto shadow-md">
+                  <CheckCircle2 className="w-8 h-8 text-[#D81B60]" />
                 </div>
-                <h3 className="font-serif-heading text-3xl font-bold text-[#1F0712]">
+                <h3 className="font-serif-heading text-3xl font-bold text-[#4A0E2E]">
                   Thank You!
                 </h3>
-                <p className="text-sm text-[#1F0712]/70 max-w-md mx-auto leading-relaxed">
+                <p className="text-sm text-[#4A0E2E]/80 max-w-md mx-auto leading-relaxed font-medium">
                   Your inquiry has been received. Vishambar Ji will reach out to you via WhatsApp within 2 hours.
                 </p>
                 <button
                   onClick={() => setFormSubmitted(false)}
-                  className="mt-4 px-6 py-2.5 rounded-full bg-[#1F0712] text-white text-xs font-bold uppercase tracking-wider"
+                  className="mt-4 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#D81B60] to-[#AD1457] text-white text-xs font-bold uppercase tracking-wider shadow-md"
                 >
                   Send Another Message
                 </button>
@@ -276,19 +276,19 @@ export default function ContactPage() {
       </section>
 
       {/* Interactive Map Showcase Card */}
-      <section className="py-16 bg-[#2B0B1D] text-white border-t border-white/5">
+      <section className="py-16 bg-[#FFF0F3] text-[#4A0E2E] border-t border-[#FCE4EC]">
         <div className="max-w-7xl mx-auto px-6 md:px-12 text-center space-y-6">
-          <span className="text-xs uppercase font-mono tracking-[0.3em] text-[#F8C8DC]">
+          <span className="text-xs uppercase font-mono tracking-[0.3em] text-[#D81B60] font-semibold">
             VISIT OUR STUDIO IN VADODARA
           </span>
-          <div className="relative w-full h-80 rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-gradient-to-br from-[#1F0712] via-[#2B0B1D] to-[#1F0712] flex flex-col items-center justify-center p-6 text-center space-y-4">
-            <div className="w-14 h-14 rounded-full bg-[#F8C8DC]/10 border border-[#F8C8DC]/40 flex items-center justify-center text-[#F8C8DC]">
+          <div className="relative w-full h-80 rounded-3xl overflow-hidden border border-[#FCE4EC] shadow-xl bg-white flex flex-col items-center justify-center p-6 text-center space-y-4">
+            <div className="w-14 h-14 rounded-full bg-[#FCE4EC] border border-[#F8BBD0] flex items-center justify-center text-[#D81B60] shadow-sm">
               <MapPin className="w-7 h-7" />
             </div>
-            <h3 className="font-serif-heading text-2xl font-bold text-white">
+            <h3 className="font-serif-heading text-2xl font-bold text-[#4A0E2E]">
               Rajasthan Mahendi Art & Body Piercing Studio
             </h3>
-            <p className="text-xs text-white/70 max-w-lg leading-relaxed">
+            <p className="text-xs text-[#4A0E2E]/80 max-w-lg leading-relaxed font-medium">
               Reliance Smart Bazaar, Gangam Plaza, Canal Road, Opp. McDonalds, Sama Savli Road, Vemali, Vadodara - 390024
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
@@ -296,13 +296,13 @@ export default function ContactPage() {
                 href="https://maps.google.com/?q=Reliance+Smart+Bazaar+Gangam+Plaza+Vemali+Vadodara"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-3 rounded-full bg-[#F8C8DC] text-[#1F0712] text-xs font-bold uppercase tracking-wider hover:bg-[#FFF0F5] transition-colors"
+                className="px-6 py-3 rounded-full bg-gradient-to-r from-[#D81B60] to-[#AD1457] text-white text-xs font-bold uppercase tracking-wider shadow-md hover:scale-105 transition-all"
               >
                 Open Studio Location in Google Maps
               </a>
               <a
                 href="tel:9537157153"
-                className="px-6 py-3 rounded-full border border-white/20 text-white hover:bg-white/10 text-xs font-bold uppercase tracking-wider transition-colors"
+                className="px-6 py-3 rounded-full bg-[#FCE4EC] border border-[#F8BBD0] text-[#880E4F] hover:bg-[#F8BBD0] text-xs font-bold uppercase tracking-wider transition-colors shadow-sm"
               >
                 Call Vishambar Ji: 95371 57153
               </a>
@@ -312,13 +312,13 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ Accordion Section */}
-      <section className="py-20 bg-[#FFF0F3] text-[#1F0712]">
+      <section className="py-20 bg-white text-[#4A0E2E]">
         <div className="max-w-4xl mx-auto px-6 md:px-12">
           <div className="text-center mb-12">
             <span className="text-xs uppercase font-mono tracking-[0.25em] text-[#D81B60] font-bold block mb-2">
               FREQUENTLY ASKED QUESTIONS
             </span>
-            <h2 className="font-serif-heading text-3xl sm:text-4xl font-bold text-[#1F0712]">
+            <h2 className="font-serif-heading text-3xl sm:text-4xl font-bold text-[#4A0E2E]">
               Everything You Need To Know
             </h2>
           </div>
@@ -327,11 +327,11 @@ export default function ContactPage() {
             {faqs.map((faq, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-2xl border border-[#1F0712]/10 shadow-sm overflow-hidden transition-all"
+                className="bg-[#FFF0F3] rounded-2xl border border-[#FCE4EC] shadow-sm overflow-hidden transition-all"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
-                  className="w-full p-6 text-left flex items-center justify-between gap-4 font-serif-heading text-lg font-bold text-[#1F0712]"
+                  className="w-full p-6 text-left flex items-center justify-between gap-4 font-serif-heading text-lg font-bold text-[#4A0E2E]"
                 >
                   <span>{faq.q}</span>
                   <ChevronDown
@@ -341,7 +341,7 @@ export default function ContactPage() {
                   />
                 </button>
                 {openFaq === idx && (
-                  <div className="px-6 pb-6 text-xs sm:text-sm text-[#1F0712]/75 leading-relaxed font-sans border-t border-[#1F0712]/5 pt-4">
+                  <div className="px-6 pb-6 text-xs sm:text-sm text-[#4A0E2E]/80 leading-relaxed font-sans border-t border-[#FCE4EC] pt-4 font-medium">
                     {faq.a}
                   </div>
                 )}
