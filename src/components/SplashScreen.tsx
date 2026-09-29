@@ -84,11 +84,12 @@ export default function SplashScreen() {
 
                 {/* Call Badge */}
                 <a
-                  href="tel:9537157153"
+                  href="tel:+919537157153"
+                  itemProp="telephone"
                   className="px-3.5 py-1.5 rounded-full bg-white/15 border border-white/30 text-white font-mono text-[11px] font-bold flex items-center gap-1.5 shadow-sm hover:bg-white hover:text-[#D81B60] transition-colors"
                 >
                   <Phone className="w-3 h-3 text-[#FFE082]" />
-                  <span>95371 57153</span>
+                  <span>+91 95371 57153</span>
                 </a>
               </div>
 

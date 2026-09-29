@@ -113,9 +113,9 @@ export default function ContactPage() {
                 <span>Reliance Smart Bazaar, Gangam Plaza, Canal Road, Opp. McDonalds, Sama Savli Road, Vemali, Vadodara - 390024</span>
               </p>
               <div className="pt-3 border-t border-[#FCE4EC] grid grid-cols-2 gap-3 text-xs font-mono text-[#4A0E2E]/80">
-                <a href="tel:9537157153" className="flex items-center gap-2 hover:text-[#D81B60]">
+                <a href="tel:+919537157153" itemProp="telephone" className="flex items-center gap-2 hover:text-[#D81B60]">
                   <Phone className="w-3.5 h-3.5 text-[#D81B60]" />
-                  <strong className="text-[#880E4F]">95371 57153</strong>
+                  <strong className="text-[#880E4F]">+91 95371 57153</strong>
                 </a>
                 <div className="flex items-center gap-2 font-semibold">
                   <Clock className="w-3.5 h-3.5 text-[#D81B60]" />
@@ -301,10 +301,11 @@ export default function ContactPage() {
                 Open Studio Location in Google Maps
               </a>
               <a
-                href="tel:9537157153"
+                href="tel:+919537157153"
+                itemProp="telephone"
                 className="px-6 py-3 rounded-full bg-[#FCE4EC] border border-[#F8BBD0] text-[#880E4F] hover:bg-[#F8BBD0] text-xs font-bold uppercase tracking-wider transition-colors shadow-sm"
               >
-                Call Vishambar Ji: 95371 57153
+                Call Vishambar Ji: +91 95371 57153
               </a>
             </div>
           </div>

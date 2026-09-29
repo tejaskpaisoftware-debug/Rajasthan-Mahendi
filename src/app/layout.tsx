@@ -84,6 +84,13 @@ const jsonLd = {
       "name": "Rajasthan Mahendi Art & Body Piercing",
       "url": "https://rajasthanmahendiartvadodara.com",
       "telephone": "+919537157153",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-9537157153",
+        "contactType": "customer service",
+        "areaServed": "IN",
+        "availableLanguage": ["Hindi", "Gujarati", "English"]
+      },
       "priceRange": "₹₹",
       "image": "https://rajasthanmahendiartvadodara.com/images/tejaskp-logo.jpg",
       "address": {

@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowRight, Play, Sparkles, Crown, ShieldCheck, Award, Heart, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Play, Sparkles, Crown, ShieldCheck, Award, Heart, CheckCircle2, Phone } from 'lucide-react';
 import { motion } from 'framer-motion';
 import RoyalHennaBackground from '@/components/ui/RoyalHennaBackground';
 
@@ -68,11 +68,12 @@ export default function Hero({ onOpenBooking }: HeroProps) {
             </button>
 
             <a
-              href="tel:9537157153"
+              href="tel:+919537157153"
+              itemProp="telephone"
               className="w-full sm:w-auto px-6 py-3.5 rounded-full liquid-glass-pill text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2.5 shadow-lg hover:scale-105 transition-all"
             >
-              <Play className="w-3.5 h-3.5 text-[#FFE082] fill-[#FFE082]" />
-              <span>Call Vishambar Ji: 95371 57153</span>
+              <Phone className="w-3.5 h-3.5 text-[#FFE082]" />
+              <span>Call Vishambar Ji: +91 95371 57153</span>
             </a>
           </div>
 

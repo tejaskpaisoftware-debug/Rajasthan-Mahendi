@@ -65,11 +65,14 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
         {/* Right CTA Buttons */}
         <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           <a
-            href="tel:9537157153"
+            href="tel:+919537157153"
+            itemProp="telephone"
+            title="Call Vishambar Ji Studio"
+            aria-label="Call +91 95371 57153"
             className="hidden sm:flex items-center gap-1.5 px-4 py-2 rounded-full liquid-glass-pill text-[#D81B60] text-xs font-bold uppercase tracking-wider transition-all hover:scale-105"
           >
             <Phone className="w-3.5 h-3.5 text-[#D81B60]" />
-            <span>95371 57153</span>
+            <span>+91 95371 57153</span>
           </a>
 
           <button
@@ -109,11 +112,12 @@ export default function Navbar({ onOpenBooking }: NavbarProps) {
 
           <div className="pt-2 flex flex-col gap-2.5">
             <a
-              href="tel:9537157153"
+              href="tel:+919537157153"
+              itemProp="telephone"
               className="w-full py-3 rounded-full liquid-glass-pill text-[#D81B60] font-bold text-xs uppercase tracking-widest flex items-center justify-center gap-2"
             >
               <Phone className="w-4 h-4 text-[#D81B60]" />
-              <span>Call Vishambar Ji: 95371 57153</span>
+              <span>Call Vishambar Ji: +91 95371 57153</span>
             </a>
 
             <button

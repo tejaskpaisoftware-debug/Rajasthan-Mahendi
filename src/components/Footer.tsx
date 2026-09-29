@@ -72,16 +72,16 @@ export default function Footer() {
               <h4 className="text-xs uppercase font-mono tracking-widest text-[#D81B60] font-bold">
                 Studio Location
               </h4>
-              <ul className="space-y-2.5 text-xs text-[#6B4C5E] font-medium">
+              <ul className="space-y-2.5 text-xs text-[#6B4C5E] font-medium" itemScope itemType="http://schema.org/LocalBusiness">
                 <li className="flex items-center gap-2">
                   <Phone className="w-3.5 h-3.5 text-[#D81B60] shrink-0" />
-                  <a href="tel:9537157153" className="hover:text-[#D81B60] font-bold text-[#3D0C20]">
-                    Vishambar ji: 95371 57153
+                  <a href="tel:+919537157153" itemProp="telephone" className="hover:text-[#D81B60] font-bold text-[#3D0C20]">
+                    Vishambar ji: +91 95371 57153
                   </a>
                 </li>
                 <li className="flex items-start gap-2">
                   <MapPin className="w-3.5 h-3.5 text-[#D81B60] shrink-0 mt-0.5" />
-                  <span className="leading-relaxed">
+                  <span className="leading-relaxed" itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
                     Reliance Smart Bazaar, Gangam Plaza, Canal Road, Opp. McDonalds, Sama Savli Road, Vemali, Vadodara - 390024
                   </span>
                 </li>
