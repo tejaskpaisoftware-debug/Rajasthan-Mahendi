@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface GalleryProps {
   onSelectItem: (item: any) => void;
@@ -60,13 +61,19 @@ export default function Gallery({ onSelectItem }: GalleryProps) {
       <div className="container-center-lock">
         
         {/* Header Bar */}
-        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-10">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-10"
+        >
           <div>
             <span className="text-xs uppercase tracking-[0.3em] font-mono text-[#C5A059] font-semibold block mb-2">
               OUR GALLERY
             </span>
             <h2 className="font-serif-heading text-3xl sm:text-5xl font-bold tracking-tight text-[#0F1015]">
-              Recent Work
+              Recent Masterpieces
             </h2>
           </div>
 
@@ -78,7 +85,7 @@ export default function Gallery({ onSelectItem }: GalleryProps) {
                 onClick={() => setActiveFilter(f)}
                 className={`px-4 py-2 rounded-full text-xs font-semibold tracking-wider transition-all duration-300 ${
                   activeFilter === f
-                    ? 'bg-[#0F1015] text-white shadow-md'
+                    ? 'bg-[#0F1015] text-[#E2C799] shadow-md scale-105'
                     : 'bg-white text-[#0F1015]/70 hover:bg-[#0F1015]/10 border border-[#0F1015]/10'
                 }`}
               >
@@ -89,19 +96,23 @@ export default function Gallery({ onSelectItem }: GalleryProps) {
 
           {/* View Full Gallery Link */}
           <a
-            href="#gallery"
+            href="/gallery"
             className="text-xs font-bold uppercase tracking-wider text-[#0F1015] hover:text-[#C5A059] transition-colors flex items-center gap-2 shrink-0"
           >
             <span>View Full Gallery</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </a>
-        </div>
+        </motion.div>
 
         {/* 6-Column Cards Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-          {filteredItems.map((item) => (
-            <div
+          {filteredItems.map((item, idx) => (
+            <motion.div
               key={item.id}
+              initial={{ opacity: 0, scale: 0.9, y: 30 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              viewport={{ once: false, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: idx * 0.08, ease: [0.22, 1, 0.36, 1] }}
               onClick={() => onSelectItem(item)}
               className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden group cursor-pointer border border-[#0F1015]/10 shadow-sm bg-gray-200"
             >
@@ -110,7 +121,7 @@ export default function Gallery({ onSelectItem }: GalleryProps) {
                 alt={item.title}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0F1015] via-transparent to-transparent opacity-0 group-hover:opacity-80 transition-opacity flex flex-col justify-end p-4 text-white">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0F1015] via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity flex flex-col justify-end p-4 text-white">
                 <span className="text-[9px] uppercase font-mono tracking-widest text-[#E2C799]">
                   {item.category}
                 </span>
@@ -118,7 +129,7 @@ export default function Gallery({ onSelectItem }: GalleryProps) {
                   {item.title}
                 </h4>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 

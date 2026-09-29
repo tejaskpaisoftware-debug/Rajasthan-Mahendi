@@ -1,6 +1,7 @@
 'use client';
 
-import { ArrowRight, Play, ArrowDown, Sparkles } from 'lucide-react';
+import { ArrowRight, Play, Sparkles } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface HeroProps {
   onOpenBooking: () => void;
@@ -14,19 +15,32 @@ export default function Hero({ onOpenBooking }: HeroProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
           
           {/* Left Column Content */}
-          <div className="lg:col-span-6 space-y-6 sm:space-y-8 z-10 text-left">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            className="lg:col-span-6 space-y-6 sm:space-y-8 z-10 text-left"
+          >
             
             {/* Tagline */}
-            <span className="text-[10px] sm:text-xs uppercase tracking-[0.25em] sm:tracking-[0.3em] font-mono text-[#E2C799] font-medium block">
+            <motion.span
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-[10px] sm:text-xs uppercase tracking-[0.25em] sm:tracking-[0.3em] font-mono text-[#E2C799] font-medium inline-flex items-center gap-2"
+            >
+              <Sparkles className="w-3.5 h-3.5 text-[#E2C799] animate-spin-slow" />
               MORE THAN INK • SINCE 2007
-            </span>
+            </motion.span>
 
             {/* Main Headline */}
             <div className="space-y-1">
               <h1 className="font-serif-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white uppercase leading-[1.08]">
                 TATTOOS & MEHNDI
               </h1>
-              <p className="font-script-accent text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-[#E2C799] font-normal pt-1">
+              <p className="font-script-accent text-2xl sm:text-4xl md:text-5xl lg:text-6xl gold-gradient-text font-normal pt-1">
                 That Tell Your Story
               </p>
             </div>
@@ -40,7 +54,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-6 pt-1 sm:pt-2">
               <button
                 onClick={onOpenBooking}
-                className="px-6 sm:px-7 py-3.5 rounded-full bg-[#E2C799] hover:bg-[#F0D8AA] text-[#0F1015] font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-3 shadow-lg hover:scale-105"
+                className="px-6 sm:px-7 py-3.5 rounded-full bg-gradient-to-r from-[#E2C799] to-[#C5A059] hover:from-[#F0D8AA] hover:to-[#E2C799] text-[#0F1015] font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-3 shadow-[0_0_20px_rgba(226,199,153,0.3)] hover:shadow-[0_0_30px_rgba(226,199,153,0.6)] hover:scale-105"
               >
                 <span>Book Appointment</span>
                 <ArrowRight className="w-4 h-4" />
@@ -59,42 +73,48 @@ export default function Hero({ onOpenBooking }: HeroProps) {
 
             {/* Stats Bar */}
             <div className="pt-6 sm:pt-8 border-t border-white/10 grid grid-cols-3 gap-2 sm:gap-4">
-              <div>
-                <h3 className="font-serif-heading text-lg sm:text-2xl font-bold text-white">1000+</h3>
+              <div className="p-3 rounded-2xl bg-white/[0.03] border border-white/5 backdrop-blur-sm">
+                <h3 className="font-serif-heading text-lg sm:text-2xl font-bold text-white gold-gradient-text">1000+</h3>
                 <p className="text-[9px] sm:text-[11px] text-white/60 uppercase tracking-wider">Happy Clients</p>
               </div>
-              <div>
-                <h3 className="font-serif-heading text-lg sm:text-2xl font-bold text-white">17+</h3>
+              <div className="p-3 rounded-2xl bg-white/[0.03] border border-white/5 backdrop-blur-sm">
+                <h3 className="font-serif-heading text-lg sm:text-2xl font-bold text-white gold-gradient-text">17+</h3>
                 <p className="text-[9px] sm:text-[11px] text-white/60 uppercase tracking-wider">Years Exp.</p>
               </div>
-              <div>
-                <h3 className="font-serif-heading text-lg sm:text-2xl font-bold text-white">100%</h3>
+              <div className="p-3 rounded-2xl bg-white/[0.03] border border-white/5 backdrop-blur-sm">
+                <h3 className="font-serif-heading text-lg sm:text-2xl font-bold text-white gold-gradient-text">100%</h3>
                 <p className="text-[9px] sm:text-[11px] text-white/60 uppercase tracking-wider">Stain Guarantee</p>
               </div>
             </div>
 
-          </div>
+          </motion.div>
 
           {/* Right Column Dynamic Animated Mehndi Image Banner */}
-          <div className="lg:col-span-6 relative mt-4 lg:mt-0">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.92, y: 40 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+            className="lg:col-span-6 relative mt-4 lg:mt-0"
+          >
             
             {/* Subtle Soft Ambient Backlight Aura Behind Box */}
-            <div className="absolute -inset-2 bg-gradient-to-tr from-[#E2C799]/20 via-white/30 to-[#E2C799]/20 rounded-[3rem] blur-2xl opacity-40 animate-soft-backlight pointer-events-none z-0" />
+            <div className="absolute -inset-2 bg-gradient-to-tr from-[#E2C799]/25 via-white/35 to-[#E2C799]/25 rounded-[3rem] blur-2xl opacity-50 animate-soft-backlight pointer-events-none z-0" />
 
             {/* Main Outer Box with Metallic Gold Dynamic Rotating Border */}
-            <div className="relative z-10 animated-white-border-wrapper shadow-lg">
+            <div className="relative z-10 animated-white-border-wrapper shadow-2xl">
               <div className="animated-white-border-content relative h-[360px] sm:h-[480px] md:h-[580px] w-full group">
                 <img
                   src="/images/home/hero-mehndi.jpg"
                   alt="Rajasthan Mahendi Royal Henna Art"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-1000 ease-out"
                 />
                 
                 {/* Subtle Bottom Vignette Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0F1015]/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0F1015]/70 via-transparent to-transparent" />
 
                 {/* Vertical Side Text Accent */}
-                <div className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 hidden sm:flex flex-col items-center opacity-70">
+                <div className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 hidden sm:flex flex-col items-center opacity-75">
                   <span className="text-[9px] sm:text-[10px] uppercase font-mono tracking-[0.4em] text-[#E2C799] rotate-90 whitespace-nowrap drop-shadow-md">
                     HERITAGE • MEHNDI • ART
                   </span>
@@ -102,7 +122,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
               </div>
             </div>
 
-          </div>
+          </motion.div>
 
         </div>
 

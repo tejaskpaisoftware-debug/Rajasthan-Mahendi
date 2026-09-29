@@ -1,6 +1,7 @@
 'use client';
 
 import { ArrowRight, Sparkles, Feather, Shield, HeartHandshake } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 interface ServicesProps {
   onOpenBooking: () => void;
@@ -43,7 +44,13 @@ export default function Services({ onOpenBooking }: ServicesProps) {
       <div className="container-center-lock">
         
         {/* Header Row */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.2 }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12"
+        >
           <div>
             <span className="text-xs uppercase tracking-[0.3em] font-mono text-[#C5A059] font-semibold block mb-2">
               OUR SERVICES
@@ -55,7 +62,7 @@ export default function Services({ onOpenBooking }: ServicesProps) {
 
           <div className="flex items-center gap-4">
             <p className="text-xs md:text-sm text-[#0F1015]/70 max-w-md font-sans">
-              From bold tattoos to elegant mehndi, we create designs that match your style and story.
+              From bold tattoos to elegant mehendi, we create designs that match your style and story.
             </p>
             <button
               onClick={onOpenBooking}
@@ -64,28 +71,32 @@ export default function Services({ onOpenBooking }: ServicesProps) {
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
-        </div>
+        </motion.div>
 
         {/* 4 Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {servicesList.map((service) => {
+          {servicesList.map((service, idx) => {
             const IconComponent = service.icon;
             return (
-              <div
+              <motion.div
                 key={service.id}
-                className="bg-white rounded-2xl overflow-hidden border border-[#0F1015]/10 shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col justify-between"
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.2 }}
+                transition={{ duration: 0.6, delay: idx * 0.12, ease: [0.22, 1, 0.36, 1] }}
+                className="bg-white rounded-2xl overflow-hidden border border-[#0F1015]/10 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group flex flex-col justify-between"
               >
                 <div>
                   {/* Image Container with Fixed Aspect Ratio & Floating Icon Badge */}
-                  <div className="relative w-full aspect-[4/3] overflow-hidden bg-gray-200">
+                  <div className="relative w-full aspect-[4/3] overflow-hidden bg-gray-200 image-zoom-container">
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                     />
                     
                     {/* Floating Circular Icon Badge on Bottom Left */}
-                    <div className="absolute bottom-3 left-3 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-[#0F1015] group-hover:bg-[#0F1015] group-hover:text-white transition-colors border border-gray-100">
+                    <div className="absolute bottom-3 left-3 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-[#0F1015] group-hover:bg-[#0F1015] group-hover:text-[#E2C799] transition-colors border border-gray-100">
                       <IconComponent className="w-4 h-4" />
                     </div>
                   </div>
@@ -108,10 +119,10 @@ export default function Services({ onOpenBooking }: ServicesProps) {
                     className="text-xs font-bold uppercase tracking-wider text-[#0F1015] group-hover:text-[#C5A059] transition-colors flex items-center gap-2"
                   >
                     <span>EXPLORE</span>
-                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform" />
                   </button>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
