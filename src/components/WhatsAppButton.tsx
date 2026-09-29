@@ -8,7 +8,7 @@ export default function WhatsAppButton() {
   return (
     <div className="fixed bottom-6 right-6 z-50 flex items-center gap-3 group">
       {/* Tooltip Label on Hover / Mobile */}
-      <span className="hidden sm:inline-block px-3.5 py-1.5 rounded-full bg-[#0F1015]/90 backdrop-blur-md text-[#FAF8F5] text-xs font-mono font-medium border border-[#25D366]/40 shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
+      <span className="hidden sm:inline-block px-3.5 py-1.5 rounded-full bg-[#1F0712]/90 backdrop-blur-md text-[#FFF0F5] text-xs font-mono font-medium border border-[#25D366]/40 shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap">
         Chat with Vishambar Ji: +91 95371 57153
       </span>
 

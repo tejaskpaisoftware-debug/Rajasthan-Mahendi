@@ -18,7 +18,7 @@ export default function GalleryPage() {
       id: 'g1',
       title: 'Lion Geometric Forearm Sleeve',
       category: 'Custom Tattoos',
-      artist: 'Rohan Sharma',
+      artist: 'Vishambar Ji',
       time: '6 Hours',
       image: 'https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&fit=crop&w=1000&q=80',
       description: 'Intricate hyperrealistic lion face blended with sacred geometry stenciling on upper arm.',
@@ -27,7 +27,7 @@ export default function GalleryPage() {
       id: 'g2',
       title: 'Royal Marwari Bridal Dulhan Set',
       category: 'Bridal Mehndi',
-      artist: 'Aanya Patel',
+      artist: 'Vishambar Ji',
       time: '5.5 Hours',
       image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1000&q=80',
       description: 'Elaborate wedding henna featuring ceremonial palanquin, baraat procession, and royal peacocks.',
@@ -54,7 +54,7 @@ export default function GalleryPage() {
       id: 'g5',
       title: 'Fine Line Lion & Botanical Chest Tattoo',
       category: 'Fine Line',
-      artist: 'Rohan Sharma',
+      artist: 'Vishambar Ji',
       time: '5 Hours',
       image: 'https://images.unsplash.com/photo-1568515045052-f9a854d70bfd?auto=format&fit=crop&w=1000&q=80',
       description: 'Micro-needle fine line artwork with delicate floral framing and organic curves.',
@@ -72,7 +72,7 @@ export default function GalleryPage() {
       id: 'g7',
       title: 'Rajasthani Elephant & Jharokha Palm',
       category: 'Rajasthani Mehndi',
-      artist: 'Aanya Patel',
+      artist: 'Vishambar Ji',
       time: '3 Hours',
       image: 'https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1000&q=80',
       description: 'Heritage Rajasthani architectural arch motifs, royal elephants, and detailed lattice filler.',
@@ -81,7 +81,7 @@ export default function GalleryPage() {
       id: 'g8',
       title: 'Dark Surrealism Sleeve Cover Up',
       category: 'Cover Ups',
-      artist: 'Rohan Sharma',
+      artist: 'Vishambar Ji',
       time: '8 Hours',
       image: 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853?auto=format&fit=crop&w=1000&q=80',
       description: 'High-contrast black & grey cover up transforming legacy work into a dramatic artistic sleeve.',
@@ -108,7 +108,7 @@ export default function GalleryPage() {
       id: 'g11',
       title: 'Grand Royal Sangeet Mehndi Pair',
       category: 'Bridal Mehndi',
-      artist: 'Aanya Patel',
+      artist: 'Vishambar Ji',
       time: '4.5 Hours',
       image: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1000&q=80',
       description: 'Full wrist-to-elbow henna with rich organic stain, traditional kalash, and doli motifs.',
@@ -117,7 +117,7 @@ export default function GalleryPage() {
       id: 'g12',
       title: 'Japanese Dragon Forearm Tattoo',
       category: 'Custom Tattoos',
-      artist: 'Rohan Sharma',
+      artist: 'Vishambar Ji',
       time: '7 Hours',
       image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=1000&q=80',
       description: 'Dynamic Irezumi dragon with atmospheric smoke clouds and deep obsidian linework.',
@@ -131,27 +131,27 @@ export default function GalleryPage() {
     : galleryData.filter((item) => item.category === activeFilter);
 
   return (
-    <main className="min-h-screen bg-[#0F1015] text-[#FAF8F5] pt-24">
+    <main className="min-h-screen bg-[#1F0712] text-[#FFF0F5] pt-24">
       <Navbar onOpenBooking={() => setBookingOpen(true)} />
 
       {/* Hero Header */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-[#161820] to-[#0F1015] border-b border-white/5 relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-[#2B0B1D] to-[#1F0712] border-b border-white/5 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10 text-center">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#E2C799]/10 border border-[#E2C799]/30 text-[#E2C799] text-xs font-mono uppercase tracking-[0.3em] mb-4">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#F8C8DC]/10 border border-[#F8C8DC]/30 text-[#F8C8DC] text-xs font-mono uppercase tracking-[0.3em] mb-4">
             <Sparkles className="w-3.5 h-3.5" />
             Curated Masterpiece Portfolio
           </span>
           <h1 className="font-serif-heading text-4xl sm:text-6xl font-bold tracking-tight text-white mb-6">
-            InkAura Art Gallery
+            Rajasthan Mahendi Art Gallery
           </h1>
           <p className="text-base sm:text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
-            Explore our curated showcase of custom ink tattoos and authentic organic henna creations crafted by our master artisans.
+            Explore our curated showcase of custom ink tattoos and authentic organic henna creations crafted by Vishambar Ji and master artisans.
           </p>
         </div>
       </section>
 
       {/* Gallery Showcase */}
-      <section className="py-16 bg-[#FAF8F5] text-[#0F1015]">
+      <section className="py-16 bg-[#FFF0F3] text-[#1F0712]">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           
           {/* Filters Bar */}
@@ -162,11 +162,11 @@ export default function GalleryPage() {
                 onClick={() => setActiveFilter(f)}
                 className={`px-5 py-2.5 rounded-full text-xs font-semibold tracking-wider transition-all duration-300 flex items-center gap-2 ${
                   activeFilter === f
-                    ? 'bg-[#0F1015] text-[#E2C799] shadow-lg scale-105'
-                    : 'bg-white text-[#0F1015]/80 hover:bg-[#0F1015]/10 border border-[#0F1015]/15'
+                    ? 'bg-[#1F0712] text-[#F8C8DC] shadow-lg scale-105'
+                    : 'bg-white text-[#1F0712]/80 hover:bg-[#1F0712]/10 border border-[#1F0712]/15'
                 }`}
               >
-                {activeFilter === f && <Filter className="w-3 h-3 text-[#E2C799]" />}
+                {activeFilter === f && <Filter className="w-3 h-3 text-[#F8C8DC]" />}
                 {f}
               </button>
             ))}
@@ -178,10 +178,10 @@ export default function GalleryPage() {
               <div
                 key={item.id}
                 onClick={() => setSelectedItem(item)}
-                className="group relative bg-white rounded-3xl overflow-hidden border border-[#0F1015]/10 shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer flex flex-col"
+                className="group relative bg-white rounded-3xl overflow-hidden border border-[#1F0712]/10 shadow-md hover:shadow-2xl transition-all duration-500 cursor-pointer flex flex-col"
               >
                 {/* Image Container */}
-                <div className="relative aspect-[4/5] w-full overflow-hidden bg-gray-200">
+                <div className="relative aspect-[4/5] w-full overflow-hidden bg-rose-50">
                   <img
                     src={item.image}
                     alt={item.title}
@@ -190,14 +190,14 @@ export default function GalleryPage() {
                   
                   {/* Category Pill */}
                   <div className="absolute top-4 left-4 z-10">
-                    <span className="px-3 py-1 rounded-full bg-[#0F1015]/80 backdrop-blur-md text-[#E2C799] text-[10px] uppercase font-mono tracking-widest font-semibold border border-[#E2C799]/30">
+                    <span className="px-3 py-1 rounded-full bg-[#1F0712]/80 backdrop-blur-md text-[#F8C8DC] text-[10px] uppercase font-mono tracking-widest font-semibold border border-[#F8C8DC]/30">
                       {item.category}
                     </span>
                   </div>
 
                   {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-[#0F1015]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <div className="w-12 h-12 rounded-full bg-[#E2C799] text-[#0F1015] flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-xl">
+                  <div className="absolute inset-0 bg-[#1F0712]/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-full bg-[#F8C8DC] text-[#1F0712] flex items-center justify-center transform scale-75 group-hover:scale-100 transition-transform duration-300 shadow-xl">
                       <Eye className="w-5 h-5" />
                     </div>
                   </div>
@@ -206,17 +206,17 @@ export default function GalleryPage() {
                 {/* Content */}
                 <div className="p-6 flex flex-col justify-between flex-1 bg-white">
                   <div>
-                    <h3 className="font-serif-heading text-xl font-bold text-[#0F1015] group-hover:text-[#C5A059] transition-colors">
+                    <h3 className="font-serif-heading text-xl font-bold text-[#1F0712] group-hover:text-[#D81B60] transition-colors">
                       {item.title}
                     </h3>
-                    <p className="text-xs text-[#0F1015]/70 font-sans mt-2 line-clamp-2 leading-relaxed">
+                    <p className="text-xs text-[#1F0712]/70 font-sans mt-2 line-clamp-2 leading-relaxed">
                       {item.description}
                     </p>
                   </div>
 
-                  <div className="mt-6 pt-4 border-t border-[#0F1015]/10 flex items-center justify-between text-xs text-[#0F1015]/60 font-mono">
-                    <span>Artist: <strong className="text-[#0F1015]">{item.artist}</strong></span>
-                    <span>Session: <strong className="text-[#0F1015]">{item.time}</strong></span>
+                  <div className="mt-6 pt-4 border-t border-[#1F0712]/10 flex items-center justify-between text-xs text-[#1F0712]/60 font-mono">
+                    <span>Artist: <strong className="text-[#1F0712]">{item.artist}</strong></span>
+                    <span>Session: <strong className="text-[#1F0712]">{item.time}</strong></span>
                   </div>
                 </div>
               </div>

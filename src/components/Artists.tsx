@@ -28,23 +28,23 @@ export default function Artists() {
   ];
 
   return (
-    <section id="artists" className="py-20 md:py-28 bg-[#FAF8F5] text-[#0F1015]">
+    <section id="artists" className="py-20 md:py-28 bg-[#FFF0F3] text-[#1F0712]">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         
         {/* Header Bar */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-12">
           <div>
-            <span className="text-xs uppercase tracking-[0.3em] font-mono text-[#C5A059] font-semibold block mb-2">
+            <span className="text-xs uppercase tracking-[0.3em] font-mono text-[#D81B60] font-semibold block mb-2">
               OUR ARTISTS
             </span>
-            <h2 className="font-serif-heading text-3xl sm:text-5xl font-bold tracking-tight text-[#0F1015]">
+            <h2 className="font-serif-heading text-3xl sm:text-5xl font-bold tracking-tight text-[#1F0712]">
               Meet The Creative Minds
             </h2>
           </div>
 
             <Link
               href="/artists"
-              className="w-10 h-10 rounded-full border border-[#0F1015]/20 flex items-center justify-center hover:bg-[#0F1015] hover:text-white transition-colors"
+              className="w-10 h-10 rounded-full border border-[#1F0712]/20 flex items-center justify-center hover:bg-[#D81B60] hover:text-white transition-colors"
               title="View All Artists"
             >
               <ArrowRight className="w-4 h-4" />
@@ -56,9 +56,9 @@ export default function Artists() {
           {artistsList.map((artist) => (
             <div
               key={artist.name}
-              className="bg-white rounded-2xl overflow-hidden border border-[#0F1015]/10 shadow-sm group hover:shadow-xl transition-all duration-300"
+              className="bg-white rounded-2xl overflow-hidden border border-[#D81B60]/10 shadow-sm group hover:shadow-xl transition-all duration-300"
             >
-              <div className="relative aspect-[3/4] w-full overflow-hidden bg-gray-100">
+              <div className="relative aspect-[3/4] w-full overflow-hidden bg-rose-50">
                 <img
                   src={artist.image}
                   alt={artist.name}
@@ -68,10 +68,10 @@ export default function Artists() {
 
               <div className="p-5 flex items-center justify-between">
                 <div>
-                  <h3 className="font-serif-heading text-lg font-bold text-[#0F1015]">
+                  <h3 className="font-serif-heading text-lg font-bold text-[#1F0712]">
                     {artist.name}
                   </h3>
-                  <p className="text-xs text-[#0F1015]/60 font-sans">
+                  <p className="text-xs text-[#1F0712]/60 font-sans">
                     {artist.role}
                   </p>
                 </div>
@@ -80,7 +80,7 @@ export default function Artists() {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-9 h-9 rounded-full bg-[#FAF8F5] border border-[#0F1015]/10 flex items-center justify-center text-[#0F1015] hover:bg-[#0F1015] hover:text-white transition-colors"
+                  className="w-9 h-9 rounded-full bg-[#FFF0F3] border border-[#1F0712]/10 flex items-center justify-center text-[#1F0712] hover:bg-[#D81B60] hover:text-white transition-colors"
                 >
                   <Instagram className="w-4 h-4" />
                 </a>

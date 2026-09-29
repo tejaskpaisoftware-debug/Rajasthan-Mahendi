@@ -23,7 +23,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
         particleCount: 80,
         spread: 60,
         origin: { y: 0.6 },
-        colors: ['#E2C799', '#FAF8F5', '#0F1015'],
+        colors: ['#F8C8DC', '#FFF0F5', '#1F0712'],
       });
     } catch (err) {}
   };
@@ -38,11 +38,11 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
       {/* Dark Backdrop */}
       <div
         onClick={onClose}
-        className="fixed inset-0 bg-[#0F1015]/80 backdrop-blur-md transition-opacity"
+        className="fixed inset-0 bg-[#1F0712]/80 backdrop-blur-md transition-opacity"
       />
 
       {/* Modal Container */}
-      <div className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto bg-[#161820] text-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl z-10 border border-white/10 shadow-2xl">
+      <div className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto bg-[#2B0B1D] text-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl z-10 border border-white/10 shadow-2xl">
         
         {/* Close Button */}
         <button
@@ -55,7 +55,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
         {!submitted ? (
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
-              <span className="text-[10px] uppercase font-mono tracking-[0.3em] text-[#E2C799] font-medium block mb-1">
+              <span className="text-[10px] uppercase font-mono tracking-[0.3em] text-[#F8C8DC] font-medium block mb-1">
                 RAJASTHAN MAHENDI ART • VISHAMBAR JI
               </span>
               <h3 className="font-serif-heading text-2xl font-bold text-white">
@@ -73,7 +73,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                   type="text"
                   required
                   placeholder="Your Name"
-                  className="w-full bg-[#0F1015] border border-white/15 rounded-xl p-3 text-sm text-white focus:border-[#E2C799] outline-none"
+                  className="w-full bg-[#1F0712] border border-white/15 rounded-xl p-3 text-sm text-white focus:border-[#F8C8DC] outline-none"
                 />
               </div>
 
@@ -83,7 +83,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                   type="tel"
                   required
                   placeholder="+91 95371 57153"
-                  className="w-full bg-[#0F1015] border border-white/15 rounded-xl p-3 text-sm text-white focus:border-[#E2C799] outline-none"
+                  className="w-full bg-[#1F0712] border border-white/15 rounded-xl p-3 text-sm text-white focus:border-[#F8C8DC] outline-none"
                 />
               </div>
 
@@ -92,7 +92,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                 <select
                   value={service}
                   onChange={(e) => setService(e.target.value)}
-                  className="w-full bg-[#0F1015] border border-white/15 rounded-xl p-3 text-sm text-white focus:border-[#E2C799] outline-none"
+                  className="w-full bg-[#1F0712] border border-white/15 rounded-xl p-3 text-sm text-white focus:border-[#F8C8DC] outline-none"
                 >
                   <option value="Special Bridal Dulhan Mehndi">Special Bridal Dulhan Mehndi</option>
                   <option value="Marwari & Rajwadi Mehndi">Marwari & Rajwadi Mehndi</option>
@@ -108,14 +108,14 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                 <input
                   type="date"
                   required
-                  className="w-full bg-[#0F1015] border border-white/15 rounded-xl p-3 text-sm text-white focus:border-[#E2C799] outline-none"
+                  className="w-full bg-[#1F0712] border border-white/15 rounded-xl p-3 text-sm text-white focus:border-[#F8C8DC] outline-none"
                 />
               </div>
             </div>
 
             <button
               type="submit"
-              className="w-full py-3.5 rounded-full bg-[#E2C799] hover:bg-[#F0D8AA] text-[#0F1015] font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-lg"
+              className="w-full py-3.5 rounded-full bg-[#F8C8DC] hover:bg-[#FFF0F5] text-[#1F0712] font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-lg"
             >
               <span>Confirm Booking with Vishambar Ji</span>
               <ArrowRight className="w-4 h-4" />
@@ -123,7 +123,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
           </form>
         ) : (
           <div className="py-8 text-center space-y-4">
-            <div className="w-14 h-14 rounded-full bg-[#E2C799]/20 border border-[#E2C799] flex items-center justify-center mx-auto text-[#E2C799]">
+            <div className="w-14 h-14 rounded-full bg-[#F8C8DC]/20 border border-[#F8C8DC] flex items-center justify-center mx-auto text-[#F8C8DC]">
               <Check className="w-7 h-7" />
             </div>
             <h3 className="font-serif-heading text-2xl font-bold text-white">
@@ -134,7 +134,7 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
             </p>
             <button
               onClick={handleReset}
-              className="mt-4 px-6 py-2.5 rounded-full bg-[#E2C799] text-[#0F1015] font-bold text-xs uppercase tracking-wider"
+              className="mt-4 px-6 py-2.5 rounded-full bg-[#F8C8DC] text-[#1F0712] font-bold text-xs uppercase tracking-wider"
             >
               Close
             </button>

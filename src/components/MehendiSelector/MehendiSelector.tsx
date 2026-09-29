@@ -45,11 +45,11 @@ export default function MehendiSelector() {
   const activeDesign: MehendiDesign | null = activeType ? MEHNDI_DESIGNS[activeType] : null;
 
   return (
-    <section className="py-16 md:py-24 bg-[#FAF8F5] text-[#2C1F17] relative overflow-hidden border-t border-b border-[#D2B48C]/30">
+    <section className="py-16 md:py-24 bg-[#FFF0F3] text-[#1F0712] relative overflow-hidden border-t border-b border-[#F8C8DC]/30">
       {/* Decorative Background Watermark */}
       <div className="absolute top-10 left-10 opacity-5 pointer-events-none">
         <svg width="250" height="250" viewBox="0 0 200 200">
-          <path d="M 100 20 C 40 20, 20 80, 60 140 C 100 200, 180 180, 160 100 C 140 20, 100 20, 100 20 Z" fill="#3D2612" />
+          <path d="M 100 20 C 40 20, 20 80, 60 140 C 100 200, 180 180, 160 100 C 140 20, 100 20, 100 20 Z" fill="#D81B60" />
         </svg>
       </div>
 
@@ -64,17 +64,17 @@ export default function MehendiSelector() {
           className="text-center max-w-2xl mx-auto mb-8 space-y-2"
         >
           <div className="inline-flex items-center gap-2">
-            <Sparkles className="w-4 h-4 text-[#C5A059]" />
-            <span className="text-xs uppercase tracking-[0.3em] font-mono text-[#C5A059] font-bold">
+            <Sparkles className="w-4 h-4 text-[#D81B60]" />
+            <span className="text-xs uppercase tracking-[0.3em] font-mono text-[#D81B60] font-bold">
               INTERACTIVE ARTISAN SIMULATOR
             </span>
           </div>
 
-          <h2 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#2C1F17]">
+          <h2 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#1F0712]">
             Choose Your Mehendi
           </h2>
 
-          <p className="font-script text-2xl text-[#C5A059] font-normal">
+          <p className="font-script text-2xl text-[#D81B60] font-normal">
             “Watch your design come to life stroke by stroke.”
           </p>
         </motion.div>

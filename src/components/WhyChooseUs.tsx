@@ -29,7 +29,7 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section className="py-20 md:py-28 bg-[#0F1015] text-[#FAF8F5] relative overflow-hidden">
+    <section className="py-20 md:py-28 bg-[#1F0712] text-[#FFF0F5] relative overflow-hidden">
       <div className="container-center-lock">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -42,14 +42,14 @@ export default function WhyChooseUs() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-5 relative"
           >
-            <div className="relative h-[360px] sm:h-[480px] w-full rounded-3xl overflow-hidden border border-[#E2C799]/30 shadow-2xl group">
+            <div className="relative h-[360px] sm:h-[480px] w-full rounded-3xl overflow-hidden border border-[#F8C8DC]/30 shadow-2xl group">
               <Image
                 src="/images/home/bridal-mehndi.jpg"
                 alt="Royal Bridal Dulhan Mehndi"
                 fill
                 className="object-cover brightness-90 group-hover:scale-105 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0F1015] via-transparent to-transparent opacity-60" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1F0712] via-transparent to-transparent opacity-60" />
             </div>
           </motion.div>
 
@@ -63,8 +63,8 @@ export default function WhyChooseUs() {
           >
             
             <div>
-              <span className="text-xs uppercase tracking-[0.3em] font-mono text-[#E2C799] font-medium block mb-2 inline-flex items-center gap-2">
-                <Sparkles className="w-3.5 h-3.5 text-[#E2C799]" />
+              <span className="text-xs uppercase tracking-[0.3em] font-mono text-[#F8C8DC] font-medium block mb-2 inline-flex items-center gap-2">
+                <Sparkles className="w-3.5 h-3.5 text-[#F8C8DC]" />
                 WHY CHOOSE RAJASTHAN MAHENDI ART
               </span>
               <h2 className="font-serif-heading text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight">
@@ -83,13 +83,13 @@ export default function WhyChooseUs() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.05 }}
                     transition={{ duration: 0.5, delay: idx * 0.08 }}
-                    className="p-6 rounded-2xl bg-[#161820]/90 border border-white/10 hover:border-[#E2C799]/50 transition-all duration-300 space-y-3 group shadow-md"
+                    className="p-6 rounded-2xl bg-[#2B0B1D]/90 border border-white/10 hover:border-[#F8C8DC]/50 transition-all duration-300 space-y-3 group shadow-md"
                   >
-                    <div className="w-10 h-10 rounded-xl bg-[#E2C799]/10 border border-[#E2C799]/30 flex items-center justify-center text-[#E2C799] group-hover:bg-[#E2C799] group-hover:text-[#0F1015] transition-colors">
+                    <div className="w-10 h-10 rounded-xl bg-[#F8C8DC]/10 border border-[#F8C8DC]/30 flex items-center justify-center text-[#F8C8DC] group-hover:bg-[#F8C8DC] group-hover:text-[#1F0712] transition-colors">
                       <IconComp className="w-5 h-5" />
                     </div>
                     <div>
-                      <h3 className="font-serif-heading text-base font-bold text-white mb-1 group-hover:text-[#E2C799] transition-colors">
+                      <h3 className="font-serif-heading text-base font-bold text-white mb-1 group-hover:text-[#F8C8DC] transition-colors">
                         {item.title}
                       </h3>
                       <p className="text-xs text-white/60 leading-relaxed font-sans font-light">

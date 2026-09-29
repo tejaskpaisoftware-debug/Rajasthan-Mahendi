@@ -229,23 +229,23 @@ export default function RealTimeHandCanvas() {
   };
 
   return (
-    <section className="py-16 md:py-24 bg-[#FAF8F5] text-[#2C1F17] relative overflow-hidden border-t border-b border-[#D2B48C]/30">
+    <section className="py-16 md:py-24 bg-[#FFF0F3] text-[#1F0712] relative overflow-hidden border-t border-b border-[#F8C8DC]/30">
       <div className="max-w-6xl mx-auto px-6 md:px-12 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-8 space-y-2">
           <div className="inline-flex items-center gap-2">
-            <Sparkles className="w-4 h-4 text-[#C5A059]" />
-            <span className="text-xs uppercase tracking-[0.3em] font-mono text-[#C5A059] font-bold">
+            <Sparkles className="w-4 h-4 text-[#D81B60]" />
+            <span className="text-xs uppercase tracking-[0.3em] font-mono text-[#D81B60] font-bold">
               REAL-TIME INTERACTIVE HAND STUDIO
             </span>
           </div>
 
-          <h2 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#2C1F17]">
+          <h2 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#1F0712]">
             Real-Time Mehendi Canvas
           </h2>
 
-          <p className="font-script text-2xl text-[#C5A059] font-normal">
+          <p className="font-script text-2xl text-[#D81B60] font-normal">
             “Draw live with your mouse or watch designs come to life in real-time.”
           </p>
         </div>

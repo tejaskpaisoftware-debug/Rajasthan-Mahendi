@@ -54,15 +54,15 @@ export default function ArtistsPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#0F1015] text-[#FAF8F5] pt-24">
+    <main className="min-h-screen bg-[#1F0712] text-[#FFF0F5] pt-24">
       <Navbar onOpenBooking={() => setBookingOpen(true)} />
 
       {/* Hero Header */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-[#161820] to-[#0F1015] border-b border-white/5 relative">
+      <section className="py-16 md:py-24 bg-gradient-to-b from-[#2B0B1D] to-[#1F0712] border-b border-white/5 relative">
         <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#E2C799]/10 border border-[#E2C799]/30 text-[#E2C799] text-xs font-mono uppercase tracking-[0.3em] mb-4">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#F8C8DC]/10 border border-[#F8C8DC]/30 text-[#F8C8DC] text-xs font-mono uppercase tracking-[0.3em] mb-4">
             <Sparkles className="w-3.5 h-3.5" />
-            The Craftsmen of InkAura
+            The Craftsmen of Rajasthan Mahendi Art
           </span>
           <h1 className="font-serif-heading text-4xl sm:text-6xl font-bold tracking-tight text-white mb-6">
             Meet Our Master Artists
@@ -74,24 +74,24 @@ export default function ArtistsPage() {
       </section>
 
       {/* Artist Profiles Section */}
-      <section className="py-20 bg-[#FAF8F5] text-[#0F1015]">
+      <section className="py-20 bg-[#FFF0F3] text-[#1F0712]">
         <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-16">
           {artists.map((artist, idx) => (
             <div
               key={artist.name}
-              className={`flex flex-col lg:flex-row items-center gap-10 lg:gap-16 bg-white p-8 md:p-12 rounded-3xl border border-[#0F1015]/10 shadow-lg ${
+              className={`flex flex-col lg:flex-row items-center gap-10 lg:gap-16 bg-white p-8 md:p-12 rounded-3xl border border-[#1F0712]/10 shadow-lg ${
                 idx % 2 === 1 ? 'lg:flex-row-reverse' : ''
               }`}
             >
               {/* Photo */}
-              <div className="w-full lg:w-5/12 aspect-[4/5] relative rounded-2xl overflow-hidden shadow-xl bg-gray-100 shrink-0">
+              <div className="w-full lg:w-5/12 aspect-[4/5] relative rounded-2xl overflow-hidden shadow-xl bg-rose-50 shrink-0">
                 <img
                   src={artist.image}
                   alt={artist.name}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="px-3.5 py-1.5 rounded-full bg-[#0F1015]/90 backdrop-blur-md text-[#E2C799] text-[10px] font-mono uppercase tracking-widest font-semibold">
+                  <span className="px-3.5 py-1.5 rounded-full bg-[#1F0712]/90 backdrop-blur-md text-[#F8C8DC] text-[10px] font-mono uppercase tracking-widest font-semibold">
                     {artist.experience}
                   </span>
                 </div>
@@ -100,29 +100,29 @@ export default function ArtistsPage() {
               {/* Bio & Details */}
               <div className="w-full lg:w-7/12 space-y-6">
                 <div>
-                  <span className="text-xs uppercase font-mono tracking-[0.25em] text-[#C5A059] font-bold block mb-1">
+                  <span className="text-xs uppercase font-mono tracking-[0.25em] text-[#D81B60] font-bold block mb-1">
                     {artist.role}
                   </span>
-                  <h2 className="font-serif-heading text-3xl sm:text-4xl font-bold text-[#0F1015]">
+                  <h2 className="font-serif-heading text-3xl sm:text-4xl font-bold text-[#1F0712]">
                     {artist.name}
                   </h2>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-[#FAF8F5] border border-[#0F1015]/10 font-mono text-xs text-[#0F1015]/80 space-y-1">
-                  <div><strong className="text-[#0F1015]">Specialty:</strong> {artist.specialty}</div>
+                <div className="p-4 rounded-2xl bg-[#FFF0F3] border border-[#1F0712]/10 font-mono text-xs text-[#1F0712]/80 space-y-1">
+                  <div><strong className="text-[#1F0712]">Specialty:</strong> {artist.specialty}</div>
                 </div>
 
-                <p className="text-sm sm:text-base text-[#0F1015]/75 leading-relaxed font-sans">
+                <p className="text-sm sm:text-base text-[#1F0712]/75 leading-relaxed font-sans">
                   {artist.bio}
                 </p>
 
                 {/* Awards */}
                 <div className="space-y-2">
-                  <span className="text-xs uppercase font-mono text-[#0F1015]/60 font-semibold block">Recognitions & Accolades:</span>
+                  <span className="text-xs uppercase font-mono text-[#1F0712]/60 font-semibold block">Recognitions & Accolades:</span>
                   <div className="flex flex-wrap gap-2">
                     {artist.awards.map((award) => (
-                      <span key={award} className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#0F1015]/5 text-[#0F1015] text-xs font-medium border border-[#0F1015]/10">
-                        <Award className="w-3.5 h-3.5 text-[#C5A059]" />
+                      <span key={award} className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#1F0712]/5 text-[#1F0712] text-xs font-medium border border-[#1F0712]/10">
+                        <Award className="w-3.5 h-3.5 text-[#D81B60]" />
                         {award}
                       </span>
                     ))}
@@ -130,10 +130,10 @@ export default function ArtistsPage() {
                 </div>
 
                 {/* Actions */}
-                <div className="pt-4 border-t border-[#0F1015]/10 flex flex-wrap items-center gap-4">
+                <div className="pt-4 border-t border-[#1F0712]/10 flex flex-wrap items-center gap-4">
                   <button
                     onClick={() => setBookingOpen(true)}
-                    className="px-6 py-3 rounded-full bg-[#0F1015] hover:bg-[#C5A059] text-white hover:text-[#0F1015] font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center gap-2 shadow-md"
+                    className="px-6 py-3 rounded-full bg-[#1F0712] hover:bg-[#D81B60] text-white font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center gap-2 shadow-md"
                   >
                     <span>Book Session With {artist.name.split(' ')[0]}</span>
                     <ArrowRight className="w-4 h-4" />
@@ -143,7 +143,7 @@ export default function ArtistsPage() {
                     href={artist.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-11 h-11 rounded-full border border-[#0F1015]/20 flex items-center justify-center text-[#0F1015] hover:bg-[#0F1015] hover:text-white transition-colors"
+                    className="w-11 h-11 rounded-full border border-[#1F0712]/20 flex items-center justify-center text-[#1F0712] hover:bg-[#1F0712] hover:text-white transition-colors"
                   >
                     <Instagram className="w-4 h-4" />
                   </a>
@@ -155,10 +155,10 @@ export default function ArtistsPage() {
       </section>
 
       {/* Safety & Hygiene Guarantee Section */}
-      <section className="py-20 bg-[#161820] text-white border-t border-white/5">
+      <section className="py-20 bg-[#2B0B1D] text-white border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="text-xs uppercase font-mono tracking-[0.3em] text-[#E2C799] font-medium block mb-2">
+            <span className="text-xs uppercase font-mono tracking-[0.3em] text-[#F8C8DC] font-medium block mb-2">
               UNCOMPROMISING STANDARDS
             </span>
             <h2 className="font-serif-heading text-3xl sm:text-4xl font-bold text-white">
@@ -167,8 +167,8 @@ export default function ArtistsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-8 rounded-3xl bg-[#0F1015] border border-white/10 space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-[#E2C799]/10 border border-[#E2C799]/30 flex items-center justify-center text-[#E2C799]">
+            <div className="p-8 rounded-3xl bg-[#1F0712] border border-white/10 space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-[#F8C8DC]/10 border border-[#F8C8DC]/30 flex items-center justify-center text-[#F8C8DC]">
                 <ShieldCheck className="w-6 h-6" />
               </div>
               <h3 className="font-serif-heading text-xl font-bold text-white">100% Sterile Medical Grade</h3>
@@ -177,8 +177,8 @@ export default function ArtistsPage() {
               </p>
             </div>
 
-            <div className="p-8 rounded-3xl bg-[#0F1015] border border-white/10 space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-[#E2C799]/10 border border-[#E2C799]/30 flex items-center justify-center text-[#E2C799]">
+            <div className="p-8 rounded-3xl bg-[#1F0712] border border-white/10 space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-[#F8C8DC]/10 border border-[#F8C8DC]/30 flex items-center justify-center text-[#F8C8DC]">
                 <Heart className="w-6 h-6" />
               </div>
               <h3 className="font-serif-heading text-xl font-bold text-white">100% Organic Rajasthani Henna</h3>
@@ -187,8 +187,8 @@ export default function ArtistsPage() {
               </p>
             </div>
 
-            <div className="p-8 rounded-3xl bg-[#0F1015] border border-white/10 space-y-4">
-              <div className="w-12 h-12 rounded-2xl bg-[#E2C799]/10 border border-[#E2C799]/30 flex items-center justify-center text-[#E2C799]">
+            <div className="p-8 rounded-3xl bg-[#1F0712] border border-white/10 space-y-4">
+              <div className="w-12 h-12 rounded-2xl bg-[#F8C8DC]/10 border border-[#F8C8DC]/30 flex items-center justify-center text-[#F8C8DC]">
                 <Calendar className="w-6 h-6" />
               </div>
               <h3 className="font-serif-heading text-xl font-bold text-white">1-on-1 Artist Consultations</h3>

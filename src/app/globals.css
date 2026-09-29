@@ -4,16 +4,17 @@
 
 @layer base {
   :root {
-    --bg-dark: #0F1015;
-    --bg-dark-card: #161820;
-    --bg-light: #FAF8F5;
+    --bg-dark: #1F0712;
+    --bg-dark-card: #2B0B1D;
+    --bg-light: #FFF0F3;
     --bg-light-card: #FFFFFF;
-    --accent-sand: #E2C799;
-    --accent-gold: #C5A059;
+    --accent-sand: #F8C8DC;
+    --accent-gold: #F48FB1;
+    --accent-rose: #D81B60;
   }
 
   * {
-    border-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(248, 200, 220, 0.15);
   }
 
   html {
@@ -24,8 +25,8 @@
   }
 
   body {
-    background-color: #0F1015;
-    color: #FAF8F5;
+    background-color: #1F0712;
+    color: #FFF0F5;
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
     overflow-x: hidden;
     width: 100%;
@@ -33,8 +34,8 @@
   }
 
   ::selection {
-    background-color: #E2C799;
-    color: #0F1015;
+    background-color: #F8C8DC;
+    color: #1F0712;
   }
 }
 
@@ -71,39 +72,39 @@
   font-family: 'Alex Brush', cursive !important;
 }
 
-/* Luxury Gold Metallic Gradients & Text */
+/* Luxury Pink & Rose Gold Gradients & Text */
 .gold-gradient-text {
-  background: linear-gradient(135deg, #FAF6E8 0%, #E2C799 45%, #C5A059 100%);
+  background: linear-gradient(135deg, #FFF0F5 0%, #F8C8DC 45%, #F48FB1 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .gold-gradient-bg {
-  background: linear-gradient(135deg, #E2C799 0%, #C5A059 100%);
+  background: linear-gradient(135deg, #F8C8DC 0%, #F48FB1 50%, #D81B60 100%);
 }
 
 .gold-gradient-border {
-  border-image: linear-gradient(135deg, #E2C799, #C5A059) 1;
+  border-image: linear-gradient(135deg, #F8C8DC, #F48FB1, #D81B60) 1;
 }
 
 /* Glassmorphism & Luxury Cards */
 .glass-panel-dark {
-  background: rgba(22, 24, 32, 0.85);
+  background: rgba(43, 11, 29, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(248, 200, 220, 0.15);
 }
 
 .glass-panel-light {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 240, 243, 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(15, 16, 21, 0.08);
+  border: 1px solid rgba(216, 27, 96, 0.08);
 }
 
 .gold-glow-hover:hover {
-  box-shadow: 0 0 25px rgba(226, 199, 153, 0.35);
-  border-color: rgba(226, 199, 153, 0.6);
+  box-shadow: 0 0 25px rgba(244, 143, 177, 0.35);
+  border-color: rgba(248, 200, 220, 0.6);
 }
 
 /* Shimmer & Glow Animations */
@@ -135,7 +136,7 @@
   transform: scale(1.08);
 }
 
-/* Dynamic Soft Metallic Gold & Warm Subtle Glow Mehndi Border Effect */
+/* Dynamic Soft Aesthetic Rose Pink Border Effect */
 @keyframes spin-gradient {
   0% {
     transform: rotate(0deg);
@@ -147,10 +148,10 @@
 
 @keyframes softGlowPulse {
   0%, 100% {
-    box-shadow: 0 0 15px rgba(226, 199, 153, 0.3), 0 0 30px rgba(197, 160, 89, 0.15);
+    box-shadow: 0 0 15px rgba(248, 200, 220, 0.3), 0 0 30px rgba(244, 143, 177, 0.2);
   }
   50% {
-    box-shadow: 0 0 25px rgba(226, 199, 153, 0.5), 0 0 45px rgba(226, 199, 153, 0.25);
+    box-shadow: 0 0 25px rgba(248, 200, 220, 0.5), 0 0 45px rgba(216, 27, 96, 0.3);
   }
 }
 
@@ -186,11 +187,11 @@
   height: 200%;
   background: conic-gradient(
     from 0deg,
-    #E2C799,
-    #C5A059,
-    #FAF6E8,
-    #C5A059,
-    #E2C799
+    #F8C8DC,
+    #F48FB1,
+    #FFF0F5,
+    #D81B60,
+    #F8C8DC
   );
   animation: spin-gradient 6s linear infinite;
   z-index: 0;
@@ -201,7 +202,7 @@
   z-index: 1;
   border-radius: 1.85rem;
   overflow: hidden;
-  background-color: #0F1015;
+  background-color: #1F0712;
 }
 
 /* Custom Premium Scrollbar */
@@ -209,14 +210,14 @@
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #0F1015;
+  background: #1F0712;
 }
 ::-webkit-scrollbar-thumb {
-  background: #E2C799;
+  background: #F48FB1;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #C5A059;
+  background: #D81B60;
 }
 
 

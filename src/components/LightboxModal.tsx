@@ -17,11 +17,11 @@ export default function LightboxModal({ item, onClose, onOpenBooking }: Lightbox
       {/* Dark Backdrop */}
       <div
         onClick={onClose}
-        className="fixed inset-0 bg-[#0F1015]/85 backdrop-blur-md"
+        className="fixed inset-0 bg-[#1F0712]/85 backdrop-blur-md"
       />
 
       {/* Modal Container */}
-      <div className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-[#161820] p-5 sm:p-8 rounded-2xl sm:rounded-3xl z-10 border border-white/10 shadow-2xl flex flex-col md:flex-row gap-6">
+      <div className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-[#2B0B1D] p-5 sm:p-8 rounded-2xl sm:rounded-3xl z-10 border border-white/10 shadow-2xl flex flex-col md:flex-row gap-6">
         
         {/* Close Button */}
         <button
@@ -32,7 +32,7 @@ export default function LightboxModal({ item, onClose, onOpenBooking }: Lightbox
         </button>
 
         {/* Image Display */}
-        <div className="relative w-full md:w-1/2 h-72 md:h-96 rounded-2xl overflow-hidden bg-gray-900 border border-white/10">
+        <div className="relative w-full md:w-1/2 h-72 md:h-96 rounded-2xl overflow-hidden bg-rose-950 border border-white/10">
           <Image
             src={item.image}
             alt={item.title}
@@ -44,14 +44,14 @@ export default function LightboxModal({ item, onClose, onOpenBooking }: Lightbox
         {/* Info */}
         <div className="w-full md:w-1/2 flex flex-col justify-between space-y-4 py-2">
           <div className="space-y-3">
-            <span className="text-[10px] uppercase font-mono tracking-widest px-3 py-1 rounded-full bg-[#E2C799] text-[#0F1015] font-bold inline-block">
+            <span className="text-[10px] uppercase font-mono tracking-widest px-3 py-1 rounded-full bg-[#F8C8DC] text-[#1F0712] font-bold inline-block">
               {item.category}
             </span>
             <h3 className="font-serif-heading text-2xl font-bold text-white">
               {item.title}
             </h3>
             <p className="text-xs text-white/70 leading-relaxed font-sans">
-              Handcrafted with surgical precision by InkAura master artists. Custom stencils, medical-grade hygiene, and premium pigments.
+              Handcrafted with surgical precision by Rajasthan Mahendi Art master artists. Custom stencils, medical-grade hygiene, and premium organic henna.
             </p>
           </div>
 
@@ -61,7 +61,7 @@ export default function LightboxModal({ item, onClose, onOpenBooking }: Lightbox
                 onClose();
                 onOpenBooking();
               }}
-              className="w-full py-3 rounded-full bg-[#E2C799] text-[#0F1015] font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-[#F0D8AA] transition-colors"
+              className="w-full py-3 rounded-full bg-[#F8C8DC] text-[#1F0712] font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-[#FFF0F5] transition-colors"
             >
               <span>Get Similar Custom Piece</span>
               <ArrowRight className="w-4 h-4" />

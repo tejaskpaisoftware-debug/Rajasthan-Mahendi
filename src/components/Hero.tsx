@@ -9,7 +9,7 @@ interface HeroProps {
 
 export default function Hero({ onOpenBooking }: HeroProps) {
   return (
-    <section id="home" className="relative pt-24 sm:pt-28 md:pt-36 pb-12 sm:pb-16 md:pb-24 bg-[#0F1015] overflow-hidden">
+    <section id="home" className="relative pt-24 sm:pt-28 md:pt-36 pb-12 sm:pb-16 md:pb-24 bg-[#1F0712] overflow-hidden">
       <div className="container-center-lock">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-12 items-center">
@@ -27,9 +27,9 @@ export default function Hero({ onOpenBooking }: HeroProps) {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-[10px] sm:text-xs uppercase tracking-[0.25em] sm:tracking-[0.3em] font-mono text-[#E2C799] font-medium inline-flex items-center gap-2"
+              className="text-[10px] sm:text-xs uppercase tracking-[0.25em] sm:tracking-[0.3em] font-mono text-[#F8C8DC] font-medium inline-flex items-center gap-2"
             >
-              <Sparkles className="w-3.5 h-3.5 text-[#E2C799] animate-spin-slow" />
+              <Sparkles className="w-3.5 h-3.5 text-[#F8C8DC] animate-spin-slow" />
               MORE THAN INK • SINCE 2007
             </motion.span>
 
@@ -52,7 +52,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-6 pt-1 sm:pt-2">
               <button
                 onClick={onOpenBooking}
-                className="px-6 sm:px-7 py-3.5 rounded-full bg-gradient-to-r from-[#E2C799] to-[#C5A059] hover:from-[#F0D8AA] hover:to-[#E2C799] text-[#0F1015] font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-3 shadow-[0_0_20px_rgba(226,199,153,0.3)] hover:shadow-[0_0_30px_rgba(226,199,153,0.6)] hover:scale-105"
+                className="px-6 sm:px-7 py-3.5 rounded-full bg-gradient-to-r from-[#F8C8DC] via-[#F48FB1] to-[#D81B60] hover:from-[#FFF0F5] hover:to-[#F8C8DC] text-[#1F0712] font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-3 shadow-[0_0_20px_rgba(248,200,220,0.3)] hover:shadow-[0_0_30px_rgba(248,200,220,0.6)] hover:scale-105"
               >
                 <span>Book Appointment</span>
                 <ArrowRight className="w-4 h-4" />
@@ -60,10 +60,10 @@ export default function Hero({ onOpenBooking }: HeroProps) {
 
               <a
                 href="tel:9537157153"
-                className="flex items-center justify-center gap-3 text-xs uppercase tracking-wider text-white hover:text-[#E2C799] transition-colors py-2 group"
+                className="flex items-center justify-center gap-3 text-xs uppercase tracking-wider text-white hover:text-[#F8C8DC] transition-colors py-2 group"
               >
-                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/30 group-hover:border-[#E2C799] flex items-center justify-center transition-colors shrink-0">
-                  <Play className="w-3.5 h-3.5 text-white group-hover:text-[#E2C799] fill-white group-hover:fill-[#E2C799] ml-0.5" />
+                <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-white/30 group-hover:border-[#F8C8DC] flex items-center justify-center transition-colors shrink-0">
+                  <Play className="w-3.5 h-3.5 text-white group-hover:text-[#F8C8DC] fill-white group-hover:fill-[#F8C8DC] ml-0.5" />
                 </div>
                 <span className="font-medium">Call Vishambar Ji</span>
               </a>
@@ -96,7 +96,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
           >
             
             {/* Subtle Soft Ambient Backlight Aura Behind Box */}
-            <div className="absolute -inset-2 bg-gradient-to-tr from-[#E2C799]/25 via-white/35 to-[#E2C799]/25 rounded-[3rem] blur-2xl opacity-50 animate-soft-backlight pointer-events-none z-0" />
+            <div className="absolute -inset-2 bg-gradient-to-tr from-[#F8C8DC]/30 via-white/35 to-[#F48FB1]/30 rounded-[3rem] blur-2xl opacity-50 animate-soft-backlight pointer-events-none z-0" />
 
             {/* Main Outer Box with Metallic Gold Dynamic Rotating Border */}
             <div className="relative z-10 animated-white-border-wrapper shadow-2xl">
@@ -108,11 +108,11 @@ export default function Hero({ onOpenBooking }: HeroProps) {
                 />
                 
                 {/* Subtle Bottom Vignette Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0F1015]/70 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1F0712]/70 via-transparent to-transparent" />
 
                 {/* Vertical Side Text Accent */}
                 <div className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 hidden sm:flex flex-col items-center opacity-75">
-                  <span className="text-[9px] sm:text-[10px] uppercase font-mono tracking-[0.4em] text-[#E2C799] rotate-90 whitespace-nowrap drop-shadow-md">
+                  <span className="text-[9px] sm:text-[10px] uppercase font-mono tracking-[0.4em] text-[#F8C8DC] rotate-90 whitespace-nowrap drop-shadow-md">
                     HERITAGE • MEHNDI • ART
                   </span>
                 </div>

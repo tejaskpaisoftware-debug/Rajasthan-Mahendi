@@ -57,7 +57,7 @@ export default function Gallery({ onSelectItem }: GalleryProps) {
     : galleryItems.filter(item => item.category === activeFilter);
 
   return (
-    <section id="gallery" className="py-20 md:py-28 bg-[#FAF8F5] text-[#0F1015]">
+    <section id="gallery" className="py-20 md:py-28 bg-[#FFF0F3] text-[#1F0712]">
       <div className="container-center-lock">
         
         {/* Header Bar */}
@@ -69,10 +69,10 @@ export default function Gallery({ onSelectItem }: GalleryProps) {
           className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-10"
         >
           <div>
-            <span className="text-xs uppercase tracking-[0.3em] font-mono text-[#C5A059] font-semibold block mb-2">
+            <span className="text-xs uppercase tracking-[0.3em] font-mono text-[#D81B60] font-semibold block mb-2">
               OUR GALLERY
             </span>
-            <h2 className="font-serif-heading text-3xl sm:text-5xl font-bold tracking-tight text-[#0F1015]">
+            <h2 className="font-serif-heading text-3xl sm:text-5xl font-bold tracking-tight text-[#1F0712]">
               Recent Masterpieces
             </h2>
           </div>
@@ -85,8 +85,8 @@ export default function Gallery({ onSelectItem }: GalleryProps) {
                 onClick={() => setActiveFilter(f)}
                 className={`px-4 py-2 rounded-full text-xs font-semibold tracking-wider transition-all duration-300 ${
                   activeFilter === f
-                    ? 'bg-[#0F1015] text-[#E2C799] shadow-md scale-105'
-                    : 'bg-white text-[#0F1015]/70 hover:bg-[#0F1015]/10 border border-[#0F1015]/10'
+                    ? 'bg-[#1F0712] text-[#F8C8DC] shadow-md scale-105'
+                    : 'bg-white text-[#1F0712]/70 hover:bg-[#1F0712]/10 border border-[#1F0712]/10'
                 }`}
               >
                 {f}
@@ -97,7 +97,7 @@ export default function Gallery({ onSelectItem }: GalleryProps) {
           {/* View Full Gallery Link */}
           <a
             href="/gallery"
-            className="text-xs font-bold uppercase tracking-wider text-[#0F1015] hover:text-[#C5A059] transition-colors flex items-center gap-2 shrink-0"
+            className="text-xs font-bold uppercase tracking-wider text-[#1F0712] hover:text-[#D81B60] transition-colors flex items-center gap-2 shrink-0"
           >
             <span>View Full Gallery</span>
             <ArrowRight className="w-3.5 h-3.5" />
@@ -114,15 +114,15 @@ export default function Gallery({ onSelectItem }: GalleryProps) {
               viewport={{ once: true, amount: 0.05 }}
               transition={{ duration: 0.5, delay: idx * 0.06, ease: [0.22, 1, 0.36, 1] }}
               onClick={() => onSelectItem(item)}
-              className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden group cursor-pointer border border-[#0F1015]/10 shadow-sm bg-gray-200"
+              className="relative aspect-[3/4] w-full rounded-2xl overflow-hidden group cursor-pointer border border-[#1F0712]/10 shadow-sm bg-rose-50"
             >
               <img
                 src={item.image}
                 alt={item.title}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0F1015] via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity flex flex-col justify-end p-4 text-white">
-                <span className="text-[9px] uppercase font-mono tracking-widest text-[#E2C799]">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1F0712] via-transparent to-transparent opacity-0 group-hover:opacity-90 transition-opacity flex flex-col justify-end p-4 text-white">
+                <span className="text-[9px] uppercase font-mono tracking-widest text-[#F8C8DC]">
                   {item.category}
                 </span>
                 <h4 className="font-serif-heading text-xs font-bold leading-tight mt-0.5">

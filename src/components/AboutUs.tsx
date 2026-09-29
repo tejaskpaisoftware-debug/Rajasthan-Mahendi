@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 export default function AboutUs() {
   return (
-    <section id="about" className="py-20 md:py-28 bg-[#0F1015] text-[#FAF8F5] relative overflow-hidden">
+    <section id="about" className="py-20 md:py-28 bg-[#1F0712] text-[#FFF0F5] relative overflow-hidden">
       <div className="container-center-lock">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -20,8 +20,8 @@ export default function AboutUs() {
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-6 space-y-6"
           >
-            <span className="text-xs uppercase tracking-[0.3em] font-mono text-[#E2C799] font-medium inline-flex items-center gap-2">
-              <Sparkles className="w-3.5 h-3.5 text-[#E2C799]" />
+            <span className="text-xs uppercase tracking-[0.3em] font-mono text-[#F8C8DC] font-medium inline-flex items-center gap-2">
+              <Sparkles className="w-3.5 h-3.5 text-[#F8C8DC]" />
               ABOUT RAJASTHAN MAHENDI ART
             </span>
 
@@ -36,7 +36,7 @@ export default function AboutUs() {
             <div className="pt-2">
               <Link
                 href="/about"
-                className="px-7 py-3.5 rounded-full border border-[#E2C799]/40 bg-[#E2C799]/10 hover:bg-[#E2C799] text-[#E2C799] hover:text-[#0F1015] text-xs uppercase tracking-wider font-bold transition-all duration-300 inline-flex items-center gap-2 group shadow-lg"
+                className="px-7 py-3.5 rounded-full border border-[#F8C8DC]/40 bg-[#F8C8DC]/10 hover:bg-[#F8C8DC] text-[#F8C8DC] hover:text-[#1F0712] text-xs uppercase tracking-wider font-bold transition-all duration-300 inline-flex items-center gap-2 group shadow-lg"
               >
                 <span>Read Vishambar Ji's Story</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
@@ -61,14 +61,14 @@ export default function AboutUs() {
                 fill
                 className="object-cover brightness-75"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0F1015] via-transparent to-transparent opacity-80" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1F0712] via-transparent to-transparent opacity-80" />
             </div>
 
             {/* Overlapping Floating Polaroid Cards on the Right */}
             <div className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 flex flex-col gap-3 sm:gap-4 z-20">
               
               {/* Card 1: Mehndi Detail */}
-              <div className="w-28 sm:w-44 h-36 sm:h-56 rounded-xl sm:rounded-2xl overflow-hidden border-2 border-[#E2C799]/40 shadow-2xl rotate-6 hover:rotate-0 transition-transform duration-500 relative">
+              <div className="w-28 sm:w-44 h-36 sm:h-56 rounded-xl sm:rounded-2xl overflow-hidden border-2 border-[#F8C8DC]/40 shadow-2xl rotate-6 hover:rotate-0 transition-transform duration-500 relative">
                 <Image
                   src="/images/home/bridal-mehndi.jpg"
                   alt="Bridal Dulhan Mehndi"
@@ -78,7 +78,7 @@ export default function AboutUs() {
               </div>
 
               {/* Card 2: Calligraphy Tattoo */}
-              <div className="w-28 sm:w-44 h-36 sm:h-56 rounded-xl sm:rounded-2xl overflow-hidden border-2 border-[#E2C799]/40 shadow-2xl -rotate-6 hover:rotate-0 transition-transform duration-500 relative -mt-12 sm:-mt-20 self-end">
+              <div className="w-28 sm:w-44 h-36 sm:h-56 rounded-xl sm:rounded-2xl overflow-hidden border-2 border-[#F8C8DC]/40 shadow-2xl -rotate-6 hover:rotate-0 transition-transform duration-500 relative -mt-12 sm:-mt-20 self-end">
                 <Image
                   src="/images/tattoos/calligraphy.jpg"
                   alt="Sanskrit Calligraphy Tattoo"
@@ -87,7 +87,7 @@ export default function AboutUs() {
                 />
                 
                 {/* Script Sticker Accent */}
-                <div className="absolute bottom-1.5 right-1.5 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full bg-black/80 backdrop-blur-md border border-[#E2C799]/40 text-[8px] sm:text-[10px] font-script-accent text-[#E2C799]">
+                <div className="absolute bottom-1.5 right-1.5 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full bg-[#1F0712]/80 backdrop-blur-md border border-[#F8C8DC]/40 text-[8px] sm:text-[10px] font-script-accent text-[#F8C8DC]">
                   Heritage Art
                 </div>
               </div>
