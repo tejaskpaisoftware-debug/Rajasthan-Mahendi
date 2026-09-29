@@ -7,6 +7,7 @@ import Services from '@/components/Services';
 import AboutUs from '@/components/AboutUs';
 import Gallery from '@/components/Gallery';
 import WhyChooseUs from '@/components/WhyChooseUs';
+import VadodaraLocalSEO from '@/components/sections/VadodaraLocalSEO';
 import CTABanner from '@/components/CTABanner';
 import Footer from '@/components/Footer';
 import BookingModal from '@/components/BookingModal';
@@ -36,7 +37,10 @@ export default function Home() {
       {/* 6. Why Choose Us Section ("A Premium Experience —") */}
       <WhyChooseUs />
 
-      {/* 7. Call To Action Banner ("Book Your Appointment") */}
+      {/* 7. Local Vadodara SEO & Google Business Profile Section */}
+      <VadodaraLocalSEO />
+
+      {/* 8. Call To Action Banner ("Book Your Appointment") */}
       <CTABanner onOpenBooking={() => setIsBookingOpen(true)} />
 
       {/* 9. Footer */}
