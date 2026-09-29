@@ -112,9 +112,11 @@ export default function Footer() {
               className="inline-flex items-center gap-2.5 px-6 py-2 rounded-full liquid-glass-pill hover:scale-105 transition-all duration-300 text-[11px] font-mono tracking-[0.2em] text-[#3D0C20] font-bold shadow-md border border-white/80 group"
             >
               <span className="text-[#6B4C5E] group-hover:text-[#3D0C20]">POWERED BY</span>
-              <div className="w-5 h-5 rounded-md bg-gradient-to-tr from-[#D81B60] via-[#E91E63] to-[#FFD54F] text-white flex items-center justify-center shadow-sm group-hover:rotate-12 transition-transform">
-                <Sun className="w-3.5 h-3.5 text-white fill-white" />
-              </div>
+              <img
+                src="/images/tejaskp-logo.jpg"
+                alt="TEJASKP AI SOFTWARE Logo"
+                className="w-6 h-6 rounded-full object-cover shadow-md border border-[#FFD700]/70 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300"
+              />
               <span className="text-[#D81B60] group-hover:text-[#C2185B]">TEJASKP AI SOFTWARE</span>
             </a>
           </div>
