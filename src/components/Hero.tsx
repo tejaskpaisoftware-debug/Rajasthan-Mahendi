@@ -2,6 +2,7 @@
 
 import { ArrowRight, Play, Sparkles, Crown, ShieldCheck, Award } from 'lucide-react';
 import { motion } from 'framer-motion';
+import RoyalHennaBackground from '@/components/ui/RoyalHennaBackground';
 
 interface HeroProps {
   onOpenBooking: () => void;
@@ -11,11 +12,8 @@ export default function Hero({ onOpenBooking }: HeroProps) {
   return (
     <section id="home" className="relative pt-36 sm:pt-40 md:pt-48 pb-16 sm:pb-20 md:pb-28 bg-gradient-to-b from-[#C2185B] via-[#D81B60] to-[#AD1457] text-white overflow-hidden">
       
-      {/* Royal Palatial Radial Ambient Background & Watermark */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[850px] h-[850px] bg-gradient-to-br from-[#FFE082]/25 via-white/20 to-transparent rounded-full blur-[150px] pointer-events-none" />
-
-      {/* Floating Royal Gold Particles Animation */}
-      <div className="absolute inset-0 bg-[radial-gradient(#FFE082_1px,transparent_1px)] [background-size:32px_32px] opacity-15 pointer-events-none" />
+      {/* Royal Animated Henna Mandalas & Sparkles Background */}
+      <RoyalHennaBackground />
 
       <div className="container-center-lock relative z-10">
         
