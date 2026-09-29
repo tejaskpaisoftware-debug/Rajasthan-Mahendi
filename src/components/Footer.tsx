@@ -104,20 +104,24 @@ export default function Footer() {
           </div>
 
           {/* Powered By TejasKP AI Software Attribution */}
-          <div className="pt-4 border-t border-[#D81B60]/15 flex justify-center">
+          <div className="pt-4 border-t border-[#D81B60]/15 flex justify-center" itemScope itemType="http://schema.org/Organization">
             <a
               href="https://tejaskpaisoftware.com/"
               target="_blank"
               rel="noopener noreferrer"
+              itemProp="url"
+              title="TEJASKP AI SOFTWARE - Next-Gen AI & Web Development Studio"
+              aria-label="TEJASKP AI SOFTWARE Official Website"
               className="inline-flex items-center gap-2.5 px-6 py-2 rounded-full liquid-glass-pill hover:scale-105 transition-all duration-300 text-[11px] font-mono tracking-[0.2em] text-[#3D0C20] font-bold shadow-md border border-white/80 group"
             >
               <span className="text-[#6B4C5E] group-hover:text-[#3D0C20]">POWERED BY</span>
               <img
                 src="/images/tejaskp-logo.jpg"
-                alt="TEJASKP AI SOFTWARE Logo"
+                alt="TEJASKP AI SOFTWARE Official Emblem"
+                itemProp="logo"
                 className="w-6 h-6 rounded-full object-cover shadow-md border border-[#FFD700]/70 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300"
               />
-              <span className="text-[#D81B60] group-hover:text-[#C2185B]">TEJASKP AI SOFTWARE</span>
+              <span itemProp="name" className="text-[#D81B60] group-hover:text-[#C2185B]">TEJASKP AI SOFTWARE</span>
             </a>
           </div>
 
