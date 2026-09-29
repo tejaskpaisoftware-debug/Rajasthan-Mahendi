@@ -2,6 +2,7 @@
 
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
+import RoyalHennaBackground from '@/components/ui/RoyalHennaBackground';
 
 interface CTABannerProps {
   onOpenBooking: () => void;
@@ -9,8 +10,11 @@ interface CTABannerProps {
 
 export default function CTABanner({ onOpenBooking }: CTABannerProps) {
   return (
-    <section className="py-12 bg-[#D81B60] text-white">
-      <div className="container-center-lock">
+    <section className="py-12 bg-[#D81B60] text-white relative overflow-hidden">
+      {/* Royal Animated Henna Background */}
+      <RoyalHennaBackground variant="cta" />
+
+      <div className="container-center-lock relative z-10">
         
         <motion.div
           initial={{ opacity: 0, scale: 0.96, y: 20 }}

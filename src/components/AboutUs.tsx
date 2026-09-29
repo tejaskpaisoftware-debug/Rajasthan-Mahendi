@@ -4,11 +4,15 @@ import { ArrowRight, Sparkles } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import RoyalHennaBackground from '@/components/ui/RoyalHennaBackground';
 
 export default function AboutUs() {
   return (
     <section id="about" className="py-20 md:py-28 bg-[#C2185B] text-white relative overflow-hidden">
-      <div className="container-center-lock">
+      {/* Royal Animated Henna Background */}
+      <RoyalHennaBackground variant="about" />
+
+      <div className="container-center-lock relative z-10">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           

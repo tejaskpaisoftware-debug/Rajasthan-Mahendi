@@ -3,6 +3,7 @@
 import { UserCheck, ShieldCheck, Palette, Heart, Sparkles } from 'lucide-react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import RoyalHennaBackground from '@/components/ui/RoyalHennaBackground';
 
 export default function WhyChooseUs() {
   const features = [
@@ -30,8 +31,8 @@ export default function WhyChooseUs() {
 
   return (
     <section className="py-20 md:py-28 bg-[#D81B60] text-white relative overflow-hidden">
-      {/* Liquid Background Spotlights */}
-      <div className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-white/10 rounded-full blur-[140px] pointer-events-none" />
+      {/* Royal Animated Henna Background */}
+      <RoyalHennaBackground variant="why" />
 
       <div className="container-center-lock relative z-10">
         

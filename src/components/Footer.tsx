@@ -1,11 +1,15 @@
 'use client';
 
 import { Phone, MapPin, Instagram } from 'lucide-react';
+import RoyalHennaBackground from '@/components/ui/RoyalHennaBackground';
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-[#D81B60] text-white py-12">
-      <div className="container-center-lock">
+    <footer id="contact" className="bg-[#D81B60] text-white py-12 relative overflow-hidden">
+      {/* Royal Animated Henna Background */}
+      <RoyalHennaBackground variant="footer" />
+
+      <div className="container-center-lock relative z-10">
         
         {/* Floating iOS Liquid Glass Footer Container */}
         <div className="liquid-glass-card rounded-[2.5rem] p-8 sm:p-12 text-[#3D0C20] border-2 border-white/80 shadow-2xl">

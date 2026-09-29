@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import RoyalHennaBackground from '@/components/ui/RoyalHennaBackground';
 
 interface GalleryProps {
   onSelectItem: (item: any) => void;
@@ -57,8 +58,11 @@ export default function Gallery({ onSelectItem }: GalleryProps) {
     : galleryItems.filter(item => item.category === activeFilter);
 
   return (
-    <section id="gallery" className="py-20 md:py-28 bg-[#C2185B] text-white">
-      <div className="container-center-lock">
+    <section id="gallery" className="py-20 md:py-28 bg-[#C2185B] text-white relative overflow-hidden">
+      {/* Royal Animated Henna Background */}
+      <RoyalHennaBackground variant="gallery" />
+
+      <div className="container-center-lock relative z-10">
         
         {/* Header Bar */}
         <motion.div

@@ -2,6 +2,7 @@
 
 import { ArrowRight, Sparkles, Feather, Shield, HeartHandshake } from 'lucide-react';
 import { motion } from 'framer-motion';
+import RoyalHennaBackground from '@/components/ui/RoyalHennaBackground';
 
 interface ServicesProps {
   onOpenBooking: () => void;
@@ -41,8 +42,8 @@ export default function Services({ onOpenBooking }: ServicesProps) {
 
   return (
     <section id="services" className="py-20 md:py-28 bg-[#E91E63] text-white relative overflow-hidden">
-      {/* Soft Liquid Mesh Ambient Background */}
-      <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-white/10 rounded-full blur-[120px] pointer-events-none" />
+      {/* Royal Animated Henna Background */}
+      <RoyalHennaBackground variant="services" />
 
       <div className="container-center-lock relative z-10">
         
