@@ -44,7 +44,7 @@ export default function InstagramSection() {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-10 pb-6 border-b border-white/10">
           <div>
             <span className="text-xs font-mono uppercase tracking-widest text-[#D4AF37] flex items-center gap-2">
-              <Instagram className="w-4 h-4" /> @RAJMARU.ATELIER
+              <Instagram className="w-4 h-4" /> @rajasthan_mahendi_art_vadodara
             </span>
             <h2 className="font-serif text-2xl sm:text-3xl font-bold gold-text-gradient">
               INSTAGRAM SOCIAL GALLERY
@@ -52,12 +52,12 @@ export default function InstagramSection() {
           </div>
 
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/rajasthan_mahendi_art_vadodara?utm_source=qr&stkn=MTMwMWNndmdnbGl3NQ=="
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-2 rounded-full liquid-glass-gold border border-[#D4AF37]/40 text-xs font-semibold uppercase tracking-wider text-white hover:text-[#D4AF37] transition-all flex items-center gap-2 shadow-gold-glow"
           >
-            <span>Follow Atelier Feed</span>
+            <span>Follow Instagram Feed</span>
             <ExternalLink className="w-3.5 h-3.5 text-[#D4AF37]" />
           </a>
         </div>

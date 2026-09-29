@@ -89,7 +89,7 @@ export default function Footer() {
 
               {/* Social Icons */}
               <div className="flex items-center gap-3 pt-2">
-                <a href="https://instagram.com" target="_blank" rel="noreferrer" className="w-9 h-9 rounded-full liquid-glass-pill flex items-center justify-center text-[#D81B60] hover:scale-105 transition-all shadow-sm">
+                <a href="https://www.instagram.com/rajasthan_mahendi_art_vadodara?utm_source=qr&stkn=MTMwMWNndmdnbGl3NQ==" target="_blank" rel="noopener noreferrer" title="Follow Rajasthan Mahendi Art on Instagram" aria-label="Rajasthan Mahendi Art Instagram" className="w-9 h-9 rounded-full liquid-glass-pill flex items-center justify-center text-[#D81B60] hover:scale-110 transition-all shadow-sm">
                   <Instagram className="w-4 h-4 text-[#D81B60]" />
                 </a>
               </div>

@@ -18,7 +18,7 @@ export default function ArtistsPage() {
       specialty: 'Special Bridal Dulhan, Marwari, Rajwadi, Afghani, Arabic, Body & Ear Piercing',
       bio: 'Master Vishambar Ji founded Rajasthan Mahendi Art & Piercing in 2007 in Vadodara. Renowned across Gujarat and Rajasthan for authentic Dulhan wedding figures, 100% natural stain color guarantees, and gentle gun piercing.',
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1000&q=80',
-      instagram: 'https://instagram.com',
+      instagram: 'https://www.instagram.com/rajasthan_mahendi_art_vadodara?utm_source=qr&stkn=MTMwMWNndmdnbGl3NQ==',
       awards: ['Master Henna Artist Since 2007', 'Color & Design Stain Guarantee', 'Free Home Service Specialist'],
     },
     {
@@ -28,7 +28,7 @@ export default function ArtistsPage() {
       specialty: 'Royal Rajasthani, Marwari Heritage, Bridal Dulhan',
       bio: 'Hailing from Rajasthan, Aanya carries forward generations of royal court henna traditions. Her signature style incorporates intricate portrait figures, baraat scenes, and micro-detailed lattice filler.',
       image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=80',
-      instagram: 'https://instagram.com',
+      instagram: 'https://www.instagram.com/rajasthan_mahendi_art_vadodara?utm_source=qr&stkn=MTMwMWNndmdnbGl3NQ==',
       awards: ['Royal Heritage Henna Award 2022', 'Featured in Vogue Weddings'],
     },
     {
@@ -38,7 +38,7 @@ export default function ArtistsPage() {
       specialty: 'Fine Line, Micro-realism, Neo-Traditional',
       bio: 'Karan is celebrated for his surgical fine-line precision and botanical dotwork tattoos. His pieces combine delicate aesthetics with long-lasting structural longevity.',
       image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1000&q=80',
-      instagram: 'https://instagram.com',
+      instagram: 'https://www.instagram.com/rajasthan_mahendi_art_vadodara?utm_source=qr&stkn=MTMwMWNndmdnbGl3NQ==',
       awards: ['Fine Line Perfection Award 2024'],
     },
     {
@@ -48,7 +48,7 @@ export default function ArtistsPage() {
       specialty: 'Indo-Arabic Fusion, Geometric Mandala, Minimalist',
       bio: 'Meera brings a modern luxury touch to classical henna. Known for high-contrast negative space flow and organic eucalyptus oil stain techniques that last up to 3 weeks.',
       image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=1000&q=80',
-      instagram: 'https://instagram.com',
+      instagram: 'https://www.instagram.com/rajasthan_mahendi_art_vadodara?utm_source=qr&stkn=MTMwMWNndmdnbGl3NQ==',
       awards: ['Modern Henna Innovator 2023'],
     },
   ];

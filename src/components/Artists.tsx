@@ -77,7 +77,7 @@ export default function Artists() {
                 </div>
 
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/rajasthan_mahendi_art_vadodara?utm_source=qr&stkn=MTMwMWNndmdnbGl3NQ=="
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-9 h-9 rounded-full bg-[#FFF0F3] border border-[#1F0712]/10 flex items-center justify-center text-[#1F0712] hover:bg-[#D81B60] hover:text-white transition-colors"
