@@ -1,6 +1,6 @@
 'use client';
 
-import { Phone, MapPin, Instagram } from 'lucide-react';
+import { Phone, MapPin, Instagram, Sun } from 'lucide-react';
 import RoyalHennaBackground from '@/components/ui/RoyalHennaBackground';
 
 export default function Footer() {
@@ -98,9 +98,25 @@ export default function Footer() {
           </div>
 
           {/* Bottom Copyright Bar */}
-          <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-[#6B4C5E] font-mono font-semibold">
+          <div className="pt-6 pb-4 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-[#6B4C5E] font-mono font-semibold">
             <p>© 2026 Rajasthan Mahendi Art & Piercing. All Rights Reserved.</p>
             <p className="text-[#D81B60] font-bold">Since 2007 • Master Artist Vishambar Ji (Vadodara)</p>
+          </div>
+
+          {/* Powered By TejasKP AI Software Attribution */}
+          <div className="pt-4 border-t border-[#D81B60]/15 flex justify-center">
+            <a
+              href="https://tejaskpaisoftware.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 px-6 py-2 rounded-full liquid-glass-pill hover:scale-105 transition-all duration-300 text-[11px] font-mono tracking-[0.2em] text-[#3D0C20] font-bold shadow-md border border-white/80 group"
+            >
+              <span className="text-[#6B4C5E] group-hover:text-[#3D0C20]">POWERED BY</span>
+              <div className="w-5 h-5 rounded-md bg-gradient-to-tr from-[#D81B60] via-[#E91E63] to-[#FFD54F] text-white flex items-center justify-center shadow-sm group-hover:rotate-12 transition-transform">
+                <Sun className="w-3.5 h-3.5 text-white fill-white" />
+              </div>
+              <span className="text-[#D81B60] group-hover:text-[#C2185B]">TEJASKP AI SOFTWARE</span>
+            </a>
           </div>
 
         </div>
