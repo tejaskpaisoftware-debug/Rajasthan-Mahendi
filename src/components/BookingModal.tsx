@@ -98,7 +98,9 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                   <option value="Marwari & Rajwadi Mehndi">Marwari & Rajwadi Mehndi</option>
                   <option value="Afghani & Arabic Style">Afghani & Arabic Style</option>
                   <option value="Bombay Style & Colourful Henna">Bombay Style & Colourful Henna</option>
-                  <option value="Ear & Nose Body Piercing">Ear & Nose Body Piercing (Gun Piercing)</option>
+                  <option value="Ear Body Piercing (Sterile Gun)">Ear Body Piercing (Lobe, Helix, Tragus)</option>
+                  <option value="Nose & Septum Piercing">Nose Pin & Septum Piercing</option>
+                  <option value="Stomach & Navel Piercing">Stomach / Navel Belly Button Piercing</option>
                   <option value="Marriage Party & Sangeet (Free Home Service)">Marriage Party & Sangeet (Free Home Service)</option>
                 </select>
               </div>

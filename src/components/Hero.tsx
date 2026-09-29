@@ -33,22 +33,22 @@ export default function Hero({ onOpenBooking }: HeroProps) {
               className="text-[10px] sm:text-xs uppercase tracking-[0.25em] sm:tracking-[0.3em] font-mono text-[#F8C8DC] font-semibold inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20"
             >
               <Sparkles className="w-3.5 h-3.5 text-[#F8C8DC] animate-spin-slow" />
-              MORE THAN INK • SINCE 2007
+              RAJASTHAN MAHENDI & PIERCING • SINCE 2007
             </motion.span>
 
             {/* Main Headline */}
             <div className="space-y-1">
               <h1 className="font-serif-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white uppercase leading-[1.08]">
-                TATTOOS & MEHNDI
+                MEHNDI & BODY PIERCING
               </h1>
               <p className="font-script-accent text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#F8C8DC] font-normal pt-1 drop-shadow-md">
-                That Tell Your Story
+                Ear, Nose & Navel Piercing • Since 2007
               </p>
             </div>
 
             {/* Subtext */}
             <p className="text-xs sm:text-sm md:text-base text-white/90 max-w-lg leading-relaxed font-sans font-medium">
-              Custom designs, skilled master artists, and a luxury studio space in Vadodara where body art meets your finest memories.
+              Special Dulhan Mehndi, Marwari, Rajwadi, Afghani, Arabic, and 100% sterile gun body piercing (Ear, Nose & Stomach/Belly Button) by Vishambar Ji in Vadodara.
             </p>
 
             {/* Action Buttons */}

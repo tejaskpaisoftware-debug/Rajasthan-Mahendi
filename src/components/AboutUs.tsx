@@ -30,7 +30,7 @@ export default function AboutUs() {
             </h2>
 
             <p className="text-sm md:text-base text-white/90 max-w-lg leading-relaxed font-sans font-medium">
-              Founded in 2007 by master artist Vishambar Ji, we believe tattoos and mehendi are more than just art — they are living expressions of your journey, royal heritage, and individuality. We provide a sterile, welcoming, and luxury studio environment across Vadodara.
+              Founded in 2007 by master artist Vishambar Ji, we believe mehendi art and body piercing (Ear, Nose & Stomach) are sacred expressions of your journey, royal heritage, and elegance. We provide a sterile, welcoming studio with 100% color & design guarantee.
             </p>
 
             <div className="pt-2">

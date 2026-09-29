@@ -14,8 +14,8 @@ export default function Gallery({ onSelectItem }: GalleryProps) {
   const galleryItems = [
     {
       id: 'g1',
-      title: 'Fine Line Floral Tattoo',
-      category: 'Tattoos',
+      title: 'Ear Lobe & Helix Piercing',
+      category: 'Ear Piercing',
       image: '/images/tattoos/fine-line.jpg',
     },
     {
@@ -26,8 +26,8 @@ export default function Gallery({ onSelectItem }: GalleryProps) {
     },
     {
       id: 'g3',
-      title: 'Sacred Geometry Mandala',
-      category: 'Minimal',
+      title: 'Delicate Nose Pin Piercing',
+      category: 'Nose Piercing',
       image: '/images/tattoos/geometry.jpg',
     },
     {
@@ -38,19 +38,19 @@ export default function Gallery({ onSelectItem }: GalleryProps) {
     },
     {
       id: 'g5',
-      title: 'Master Tattoo Stencil Craft',
-      category: 'Tattoos',
+      title: 'Stomach & Belly Button Piercing',
+      category: 'Stomach Piercing',
       image: '/images/home/studio-craft.jpg',
     },
     {
       id: 'g6',
-      title: 'Flawless Lion Cover-Up Tattoo',
-      category: 'Cover Up',
+      title: 'Rajwadi Dulhan Henna Art',
+      category: 'Bridal Mehndi',
       image: '/images/tattoos/cover-up.jpg',
     },
   ];
 
-  const filters = ['All', 'Tattoos', 'Bridal Mehndi', 'Arabic Mehndi', 'Minimal', 'Cover Up'];
+  const filters = ['All', 'Bridal Mehndi', 'Ear Piercing', 'Nose Piercing', 'Stomach Piercing', 'Arabic Mehndi'];
 
   const filteredItems = activeFilter === 'All'
     ? galleryItems

@@ -19,7 +19,7 @@ export default function WhyChooseUs() {
     {
       icon: Palette,
       title: 'Custom Rajasthani Motifs',
-      desc: 'Bespoke Doli, Baraat, Radha-Krishna portraits & fine-line tattoos mapped to you.',
+      desc: 'Bespoke Doli, Baraat, Radha-Krishna portraits & ear, nose, stomach body piercing.',
     },
     {
       icon: Heart,

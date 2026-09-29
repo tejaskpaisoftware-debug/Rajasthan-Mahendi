@@ -27,7 +27,7 @@ export default function Footer() {
             </div>
 
             <p className="text-xs text-white/90 leading-relaxed font-sans max-w-sm font-medium">
-              Special Dulhan Mehndi, Marwari, Rajwadi, Afghani, Arabic, Bombay Style & Ear/Nose Body Piercing. Colour & Design Full Guarantee with Free Home Service.
+              Special Dulhan Mehndi, Marwari, Rajwadi, Afghani, Arabic, Bombay Style & Ear, Nose, Stomach Body Piercing. Colour & Design Full Guarantee with Free Home Service.
             </p>
           </div>
 
@@ -39,6 +39,7 @@ export default function Footer() {
             <ul className="space-y-2 text-xs text-white/85 font-medium">
               <li><a href="/" className="hover:text-white transition-colors">Home</a></li>
               <li><a href="/about" className="hover:text-white transition-colors">About Vishambar Ji</a></li>
+              <li><a href="/piercing" className="hover:text-white transition-colors">Body Piercing</a></li>
               <li><a href="/mehndi" className="hover:text-white transition-colors">Mehndi Styles</a></li>
               <li><a href="/gallery" className="hover:text-white transition-colors">Gallery</a></li>
               <li><a href="/contact" className="hover:text-white transition-colors">Contact Studio</a></li>
@@ -54,7 +55,7 @@ export default function Footer() {
               <li><span className="hover:text-white">Special Dulhan Mehndi</span></li>
               <li><span className="hover:text-white">Marwari & Rajwadi Design</span></li>
               <li><span className="hover:text-white">Afghani & Arabic Style</span></li>
-              <li><span className="hover:text-white">Ear & Nose Piercing</span></li>
+              <li><span className="hover:text-white">Ear, Nose & Stomach Piercing</span></li>
               <li><span className="hover:text-white">Free Home Service</span></li>
             </ul>
           </div>

@@ -10,31 +10,31 @@ interface ServicesProps {
 export default function Services({ onOpenBooking }: ServicesProps) {
   const servicesList = [
     {
-      id: 'custom-tattoos',
-      title: 'Custom Tattoos',
-      desc: 'Unique and meaningful single-needle and geometric designs.',
-      image: '/images/tattoos/fine-line.jpg',
-      icon: Feather,
-    },
-    {
       id: 'bridal-mehndi',
       title: 'Bridal Dulhan Mehndi',
-      desc: 'Traditional Marwari and Rajwadi royal dulhan wedding henna.',
+      desc: 'Traditional Marwari & Rajwadi royal dulhan wedding henna.',
       image: '/images/home/bridal-mehndi.jpg',
       icon: Sparkles,
     },
     {
-      id: 'cover-up-tattoos',
-      title: 'Cover Up Tattoos',
-      desc: 'Transform old tattoos with bold black-and-grey creative art.',
-      image: '/images/tattoos/cover-up.jpg',
+      id: 'ear-piercing',
+      title: 'Ear Body Piercing',
+      desc: 'Pain-free sterile gun ear lobe, tragus & helix piercing with gold studs.',
+      image: '/images/home/event-mehndi.jpg',
       icon: Shield,
     },
     {
-      id: 'mehndi-events',
-      title: 'Mehndi for Events',
-      desc: 'Afghani & Arabic floral henna for weddings and celebrations.',
-      image: '/images/home/event-mehndi.jpg',
+      id: 'nose-piercing',
+      title: 'Nose Pin & Ring Piercing',
+      desc: 'Delicate nostril pin, ring & septum piercing with medical grade hygiene.',
+      image: '/images/tattoos/fine-line.jpg',
+      icon: Feather,
+    },
+    {
+      id: 'stomach-piercing',
+      title: 'Stomach & Navel Piercing',
+      desc: 'Belly button body piercing with 100% sterile medical precision.',
+      image: '/images/tattoos/cover-up.jpg',
       icon: HeartHandshake,
     },
   ];
