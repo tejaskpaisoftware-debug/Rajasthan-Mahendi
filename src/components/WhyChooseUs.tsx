@@ -30,7 +30,10 @@ export default function WhyChooseUs() {
 
   return (
     <section className="py-20 md:py-28 bg-[#D81B60] text-white relative overflow-hidden">
-      <div className="container-center-lock">
+      {/* Liquid Background Spotlights */}
+      <div className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-white/10 rounded-full blur-[140px] pointer-events-none" />
+
+      <div className="container-center-lock relative z-10">
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
@@ -42,7 +45,7 @@ export default function WhyChooseUs() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-5 relative"
           >
-            <div className="relative h-[360px] sm:h-[480px] w-full rounded-3xl overflow-hidden border-4 border-white shadow-2xl group">
+            <div className="relative h-[360px] sm:h-[480px] w-full rounded-3xl overflow-hidden border-4 border-white/60 shadow-2xl group ring-4 ring-white/30">
               <Image
                 src="/images/home/bridal-mehndi.jpg"
                 alt="Royal Bridal Dulhan Mehndi"
@@ -63,8 +66,8 @@ export default function WhyChooseUs() {
           >
             
             <div>
-              <span className="text-xs uppercase tracking-[0.3em] font-mono text-[#F8C8DC] font-semibold block mb-2 inline-flex items-center gap-2">
-                <Sparkles className="w-3.5 h-3.5 text-[#F8C8DC]" />
+              <span className="text-xs uppercase tracking-[0.3em] font-mono text-[#D81B60] font-bold block mb-2 inline-flex items-center gap-2 px-4 py-1.5 rounded-full liquid-glass-pill shadow-lg">
+                <Sparkles className="w-3.5 h-3.5 text-[#D81B60]" />
                 WHY CHOOSE RAJASTHAN MAHENDI ART
               </span>
               <h2 className="font-serif-heading text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight">
@@ -72,7 +75,7 @@ export default function WhyChooseUs() {
               </h2>
             </div>
 
-            {/* 4 Crisp White Feature Boxes Grid */}
+            {/* 4 iOS Liquid Glass Feature Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {features.map((item, idx) => {
                 const IconComp = item.icon;
@@ -83,9 +86,9 @@ export default function WhyChooseUs() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, amount: 0.05 }}
                     transition={{ duration: 0.5, delay: idx * 0.08 }}
-                    className="p-6 rounded-2xl bg-white text-[#3D0C20] border border-white/40 shadow-xl space-y-3 group hover:-translate-y-1 transition-all duration-300"
+                    className="p-6 rounded-3xl liquid-glass-card text-[#3D0C20] space-y-3 group"
                   >
-                    <div className="w-10 h-10 rounded-xl bg-[#D81B60] text-white flex items-center justify-center group-hover:bg-[#880E4F] transition-colors shadow-md">
+                    <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-[#D81B60] to-[#E91E63] text-white flex items-center justify-center shadow-lg border border-white/60">
                       <IconComp className="w-5 h-5 text-white" />
                     </div>
                     <div>
