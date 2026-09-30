@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { X, Check, ArrowRight, Sparkles } from 'lucide-react';
+import { X, Check, ArrowRight, Sparkles, Loader2 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 interface BookingModalProps {
@@ -11,25 +11,57 @@ interface BookingModalProps {
 
 export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
   const [submitted, setSubmitted] = useState(false);
-  const [service, setService] = useState('Custom Tattoos');
+  const [loading, setLoading] = useState(false);
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [service, setService] = useState('Special Bridal Dulhan Mehndi');
+  const [date, setDate] = useState('');
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+
     try {
-      confetti({
-        particleCount: 80,
-        spread: 60,
-        origin: { y: 0.6 },
-        colors: ['#F8C8DC', '#FFF0F5', '#1F0712'],
+      // Send inquiry email directly to rajasthanmahendiandpiercing@gmail.com
+      await fetch("https://formsubmit.co/ajax/rajasthanmahendiandpiercing@gmail.com", {
+        method: "POST",
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: `New Booking Inquiry from ${name} (Rajasthan Mahendi Art)`,
+          _captcha: "false",
+          "Customer Name": name,
+          "Phone / WhatsApp": phone,
+          "Requested Service": service,
+          "Preferred Date": date,
+          "Submitted At": new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
+        })
       });
-    } catch (err) {}
+    } catch (err) {
+      console.error("Form submission error:", err);
+    } finally {
+      setLoading(false);
+      setSubmitted(true);
+      try {
+        confetti({
+          particleCount: 80,
+          spread: 60,
+          origin: { y: 0.6 },
+          colors: ['#F8C8DC', '#FFF0F5', '#D81B60'],
+        });
+      } catch (err) {}
+    }
   };
 
   const handleReset = () => {
     setSubmitted(false);
+    setName('');
+    setPhone('');
+    setDate('');
     onClose();
   };
 
@@ -68,20 +100,24 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
 
             <div className="space-y-3">
               <div>
-                <label className="text-[11px] uppercase font-mono text-[#880E4F] font-semibold block mb-1">Full Name</label>
+                <label className="text-[11px] uppercase font-mono text-[#880E4F] font-semibold block mb-1">Full Name *</label>
                 <input
                   type="text"
                   required
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   placeholder="Your Name"
                   className="w-full bg-white border border-[#F8BBD0] rounded-xl p-3 text-sm text-[#4A0E2E] focus:border-[#D81B60] outline-none shadow-sm"
                 />
               </div>
 
               <div>
-                <label className="text-[11px] uppercase font-mono text-[#880E4F] font-semibold block mb-1">Phone / WhatsApp Number</label>
+                <label className="text-[11px] uppercase font-mono text-[#880E4F] font-semibold block mb-1">Phone / WhatsApp Number *</label>
                 <input
                   type="tel"
                   required
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
                   placeholder="+91 95371 57153"
                   className="w-full bg-white border border-[#F8BBD0] rounded-xl p-3 text-sm text-[#4A0E2E] focus:border-[#D81B60] outline-none shadow-sm"
                 />
@@ -106,10 +142,12 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
               </div>
 
               <div>
-                <label className="text-[11px] uppercase font-mono text-[#880E4F] font-semibold block mb-1">Preferred Date</label>
+                <label className="text-[11px] uppercase font-mono text-[#880E4F] font-semibold block mb-1">Preferred Date *</label>
                 <input
                   type="date"
                   required
+                  value={date}
+                  onChange={(e) => setDate(e.target.value)}
                   className="w-full bg-white border border-[#F8BBD0] rounded-xl p-3 text-sm text-[#4A0E2E] focus:border-[#D81B60] outline-none shadow-sm"
                 />
               </div>
@@ -117,10 +155,20 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
 
             <button
               type="submit"
-              className="w-full py-3.5 rounded-full bg-gradient-to-r from-[#D81B60] via-[#E91E63] to-[#AD1457] hover:from-[#AD1457] hover:to-[#880E4F] text-white font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-md hover:shadow-lg"
+              disabled={loading}
+              className="w-full py-3.5 rounded-full bg-gradient-to-r from-[#D81B60] via-[#E91E63] to-[#AD1457] hover:from-[#AD1457] hover:to-[#880E4F] text-white font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-md hover:shadow-lg disabled:opacity-75"
             >
-              <span>Confirm Booking with Vishambar Ji</span>
-              <ArrowRight className="w-4 h-4" />
+              {loading ? (
+                <>
+                  <Loader2 className="w-4 h-4 animate-spin text-white" />
+                  <span>Sending Inquiry to Mail...</span>
+                </>
+              ) : (
+                <>
+                  <span>Confirm Booking with Vishambar Ji</span>
+                  <ArrowRight className="w-4 h-4" />
+                </>
+              )}
             </button>
           </form>
         ) : (
@@ -129,10 +177,10 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
               <Check className="w-7 h-7" />
             </div>
             <h3 className="font-serif-heading text-2xl font-bold text-[#4A0E2E]">
-              Booking Request Received!
+              Booking Inquiry Sent!
             </h3>
             <p className="text-xs text-[#4A0E2E]/80 max-w-xs mx-auto leading-relaxed font-medium">
-              Thank you! Vishambar Ji will call or WhatsApp you at your number shortly to confirm time and design details.
+              Thank you {name}! Your inquiry has been sent to <strong className="text-[#D81B60]">rajasthanmahendiandpiercing@gmail.com</strong>. Vishambar Ji will call or WhatsApp you shortly.
             </p>
             <button
               onClick={handleReset}

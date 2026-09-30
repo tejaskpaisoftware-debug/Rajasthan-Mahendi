@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BookingModal from '@/components/BookingModal';
-import { Sparkles, MapPin, Phone, Mail, Clock, MessageSquare, Send, CheckCircle2, ChevronDown } from 'lucide-react';
+import { Sparkles, MapPin, Phone, Mail, Clock, MessageSquare, Send, CheckCircle2, ChevronDown, Loader2 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 export default function ContactPage() {
@@ -22,17 +22,46 @@ export default function ContactPage() {
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setFormSubmitted(true);
+    setLoading(true);
+
     try {
-      confetti({
-        particleCount: 80,
-        spread: 60,
-        origin: { y: 0.6 },
-        colors: ['#F8C8DC', '#FFF0F5', '#1F0712'],
+      await fetch("https://formsubmit.co/ajax/rajasthanmahendiandpiercing@gmail.com", {
+        method: "POST",
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: `New Contact Inquiry from ${formData.name} (Rajasthan Mahendi Art)`,
+          _captcha: "false",
+          "Client Name": formData.name,
+          "Phone / WhatsApp": formData.phone,
+          "Client Email": formData.email || "Not Provided",
+          "Service Required": formData.service,
+          "Preferred Location": formData.location,
+          "Preferred Date": formData.date || "Not Specified",
+          "Notes / Message": formData.message || "No additional message",
+          "Submitted At": new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
+        })
       });
-    } catch (err) {}
+    } catch (err) {
+      console.error("Form submission error:", err);
+    } finally {
+      setLoading(false);
+      setFormSubmitted(true);
+      try {
+        confetti({
+          particleCount: 80,
+          spread: 60,
+          origin: { y: 0.6 },
+          colors: ['#F8C8DC', '#FFF0F5', '#D81B60'],
+        });
+      } catch (err) {}
+    }
   };
 
   const faqs = [
@@ -245,10 +274,20 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-full bg-gradient-to-r from-[#D81B60] via-[#E91E63] to-[#AD1457] hover:from-[#AD1457] hover:to-[#880E4F] text-white font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-lg"
+                  disabled={loading}
+                  className="w-full py-4 rounded-full bg-gradient-to-r from-[#D81B60] via-[#E91E63] to-[#AD1457] hover:from-[#AD1457] hover:to-[#880E4F] text-white font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-lg disabled:opacity-75"
                 >
-                  <span>Submit Inquiry</span>
-                  <Send className="w-4 h-4" />
+                  {loading ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin text-white" />
+                      <span>Sending Inquiry to Mail...</span>
+                    </>
+                  ) : (
+                    <>
+                      <span>Submit Inquiry</span>
+                      <Send className="w-4 h-4" />
+                    </>
+                  )}
                 </button>
               </form>
             ) : (
@@ -257,8 +296,11 @@ export default function ContactPage() {
                   <CheckCircle2 className="w-8 h-8 text-[#D81B60]" />
                 </div>
                 <h3 className="font-serif-heading text-3xl font-bold text-[#4A0E2E]">
-                  Thank You!
+                  Inquiry Sent Successfully!
                 </h3>
+                <p className="text-xs text-[#4A0E2E]/80 max-w-sm mx-auto leading-relaxed font-medium">
+                  Your message has been delivered to <strong className="text-[#D81B60]">rajasthanmahendiandpiercing@gmail.com</strong>. Master Vishambar Ji will review your details and contact you via phone or WhatsApp shortly.
+                </p>
                 <p className="text-sm text-[#4A0E2E]/80 max-w-md mx-auto leading-relaxed font-medium">
                   Your inquiry has been received. Vishambar Ji will reach out to you via WhatsApp within 2 hours.
                 </p>
