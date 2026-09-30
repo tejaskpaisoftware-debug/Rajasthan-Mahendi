@@ -172,7 +172,17 @@ export default function ContactPage() {
           {/* Right Column: Interactive Form */}
           <div className="lg:col-span-7 bg-[#FFF0F3] p-8 md:p-12 rounded-3xl border border-[#FCE4EC] shadow-xl">
             {!formSubmitted ? (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form
+                action="https://formsubmit.co/rajasthanmahendiandpiercing@gmail.com"
+                method="POST"
+                className="space-y-6"
+              >
+                {/* FormSubmit Configuration Hidden Fields */}
+                <input type="hidden" name="_subject" value="New Contact Inquiry - Rajasthan Mahendi Art" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_next" value="https://rajasthanmahendiartvadodara.com/contact?success=true" />
+
                 <div>
                   <span className="text-xs uppercase font-mono tracking-[0.25em] text-[#D81B60] font-bold block mb-1">
                     APPOINTMENT & INQUIRY
@@ -187,6 +197,7 @@ export default function ContactPage() {
                     <label className="text-xs font-mono uppercase text-[#880E4F] font-semibold block mb-1">Full Name *</label>
                     <input
                       type="text"
+                      name="Full Name"
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -199,6 +210,7 @@ export default function ContactPage() {
                     <label className="text-xs font-mono uppercase text-[#880E4F] font-semibold block mb-1">Phone / WhatsApp *</label>
                     <input
                       type="tel"
+                      name="Phone / WhatsApp"
                       required
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -213,6 +225,7 @@ export default function ContactPage() {
                     <label className="text-xs font-mono uppercase text-[#880E4F] font-semibold block mb-1">Email Address</label>
                     <input
                       type="email"
+                      name="Email Address"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="name@domain.com"
@@ -223,14 +236,15 @@ export default function ContactPage() {
                   <div>
                     <label className="text-xs font-mono uppercase text-[#880E4F] font-semibold block mb-1">Service Required</label>
                     <select
+                      name="Service Required"
                       value={formData.service}
                       onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                       className="w-full bg-white border border-[#F8BBD0] rounded-xl p-3 text-sm text-[#4A0E2E] outline-none focus:border-[#D81B60] shadow-sm"
                     >
-                      <option value="Custom Tattoo">Custom Tattoo</option>
-                      <option value="Bridal Mehndi Package">Bridal Mehndi Package</option>
-                      <option value="Event Henna">Event / Group Mehndi</option>
-                      <option value="Tattoo Cover Up">Tattoo Cover Up</option>
+                      <option value="Special Bridal Dulhan Mehndi">Special Bridal Dulhan Mehndi</option>
+                      <option value="Marwari & Rajwadi Mehndi">Marwari & Rajwadi Mehndi</option>
+                      <option value="Ear, Nose & Body Piercing">Ear, Nose & Body Piercing</option>
+                      <option value="Event Henna & Group Service">Event Henna & Group Service</option>
                     </select>
                   </div>
                 </div>
@@ -239,12 +253,13 @@ export default function ContactPage() {
                   <div>
                     <label className="text-xs font-mono uppercase text-[#880E4F] font-semibold block mb-1">Preferred Location</label>
                     <select
+                      name="Preferred Location"
                       value={formData.location}
                       onChange={(e) => setFormData({ ...formData, location: e.target.value })}
                       className="w-full bg-white border border-[#F8BBD0] rounded-xl p-3 text-sm text-[#4A0E2E] outline-none focus:border-[#D81B60] shadow-sm"
                     >
-                      <option value="Vadodara Flagship Studio">Vadodara Flagship Studio</option>
-                      <option value="Jaipur Royal Studio">Jaipur Royal Studio</option>
+                      <option value="Vadodara Studio (Gangam Plaza)">Vadodara Studio (Gangam Plaza)</option>
+                      <option value="Free Home Service (Vadodara)">Free Home Service (Vadodara)</option>
                     </select>
                   </div>
 
@@ -252,6 +267,7 @@ export default function ContactPage() {
                     <label className="text-xs font-mono uppercase text-[#880E4F] font-semibold block mb-1">Preferred Date</label>
                     <input
                       type="date"
+                      name="Preferred Date"
                       value={formData.date}
                       onChange={(e) => setFormData({ ...formData, date: e.target.value })}
                       className="w-full bg-white border border-[#F8BBD0] rounded-xl p-3 text-sm text-[#4A0E2E] outline-none focus:border-[#D81B60] shadow-sm"
@@ -263,30 +279,33 @@ export default function ContactPage() {
                   <label className="text-xs font-mono uppercase text-[#880E4F] font-semibold block mb-1">Design Notes / Specific Requests</label>
                   <textarea
                     rows={4}
+                    name="Design Notes"
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Describe your design placement, tattoo size, or event requirements..."
+                    placeholder="Describe your design placement, event requirements..."
                     className="w-full bg-white border border-[#F8BBD0] rounded-xl p-3 text-sm text-[#4A0E2E] outline-none focus:border-[#D81B60] shadow-sm"
                   />
                 </div>
 
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="w-full py-4 rounded-full bg-gradient-to-r from-[#D81B60] via-[#E91E63] to-[#AD1457] hover:from-[#AD1457] hover:to-[#880E4F] text-white font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-lg disabled:opacity-75"
-                >
-                  {loading ? (
-                    <>
-                      <Loader2 className="w-4 h-4 animate-spin text-white" />
-                      <span>Sending Inquiry to Mail...</span>
-                    </>
-                  ) : (
-                    <>
-                      <span>Submit Inquiry</span>
-                      <Send className="w-4 h-4" />
-                    </>
-                  )}
-                </button>
+                <div className="space-y-2">
+                  <button
+                    type="submit"
+                    className="w-full py-4 rounded-full bg-gradient-to-r from-[#D81B60] via-[#E91E63] to-[#AD1457] hover:from-[#AD1457] hover:to-[#880E4F] text-white font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-lg"
+                  >
+                    <span>Submit Message to Email</span>
+                    <Send className="w-4 h-4" />
+                  </button>
+
+                  <a
+                    href={`https://wa.me/919537157153?text=${encodeURIComponent(`Hello Vishambar Ji, I am submitting an inquiry:\n\n*Name:* ${formData.name || 'Customer'}\n*Phone:* ${formData.phone || 'N/A'}\n*Email:* ${formData.email || 'N/A'}\n*Service:* ${formData.service}\n*Location:* ${formData.location}\n*Date:* ${formData.date || 'N/A'}\n*Notes:* ${formData.message || 'None'}`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-3.5 rounded-full bg-gradient-to-r from-[#128C7E] to-[#25D366] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg hover:scale-105 transition-transform"
+                  >
+                    <span>Send Message via WhatsApp</span>
+                    <Send className="w-4 h-4" />
+                  </a>
+                </div>
               </form>
             ) : (
               <div className="py-12 text-center space-y-4">
