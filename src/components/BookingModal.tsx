@@ -24,16 +24,14 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
     setLoading(true);
 
     try {
-      // Send inquiry email directly to rajasthanmahendiandpiercing@gmail.com
-      await fetch("https://formsubmit.co/ajax/rajasthanmahendiandpiercing@gmail.com", {
+      // Send inquiry email via server-side API to rajasthanmahendiandpiercing@gmail.com
+      await fetch("/api/contact", {
         method: "POST",
         headers: { 
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
           _subject: `New Booking Inquiry from ${name} (Rajasthan Mahendi Art)`,
-          _captcha: "false",
           "Customer Name": name,
           "Phone / WhatsApp": phone,
           "Requested Service": service,

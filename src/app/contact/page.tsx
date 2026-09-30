@@ -29,15 +29,13 @@ export default function ContactPage() {
     setLoading(true);
 
     try {
-      await fetch("https://formsubmit.co/ajax/rajasthanmahendiandpiercing@gmail.com", {
+      await fetch("/api/contact", {
         method: "POST",
         headers: { 
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
           _subject: `New Contact Inquiry from ${formData.name} (Rajasthan Mahendi Art)`,
-          _captcha: "false",
           "Client Name": formData.name,
           "Phone / WhatsApp": formData.phone,
           "Client Email": formData.email || "Not Provided",
