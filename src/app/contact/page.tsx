@@ -296,20 +296,30 @@ export default function ContactPage() {
                   <CheckCircle2 className="w-8 h-8 text-[#D81B60]" />
                 </div>
                 <h3 className="font-serif-heading text-3xl font-bold text-[#4A0E2E]">
-                  Inquiry Sent Successfully!
+                  Inquiry Submitted!
                 </h3>
                 <p className="text-xs text-[#4A0E2E]/80 max-w-sm mx-auto leading-relaxed font-medium">
-                  Your message has been delivered to <strong className="text-[#D81B60]">rajasthanmahendiandpiercing@gmail.com</strong>. Master Vishambar Ji will review your details and contact you via phone or WhatsApp shortly.
+                  Your details have been submitted to <strong className="text-[#D81B60]">rajasthanmahendiandpiercing@gmail.com</strong>.
                 </p>
-                <p className="text-sm text-[#4A0E2E]/80 max-w-md mx-auto leading-relaxed font-medium">
-                  Your inquiry has been received. Vishambar Ji will reach out to you via WhatsApp within 2 hours.
-                </p>
-                <button
-                  onClick={() => setFormSubmitted(false)}
-                  className="mt-4 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#D81B60] to-[#AD1457] text-white text-xs font-bold uppercase tracking-wider shadow-md"
-                >
-                  Send Another Message
-                </button>
+
+                <div className="pt-3 max-w-sm mx-auto flex flex-col gap-3">
+                  <a
+                    href={`https://wa.me/919537157153?text=${encodeURIComponent(`Hello Vishambar Ji, I submitted an inquiry on your website:\n\n*Name:* ${formData.name}\n*Phone:* ${formData.phone}\n*Email:* ${formData.email || 'N/A'}\n*Service:* ${formData.service}\n*Location:* ${formData.location}\n*Date:* ${formData.date || 'N/A'}\n*Notes:* ${formData.message || 'None'}`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full py-3.5 rounded-full bg-gradient-to-r from-[#128C7E] to-[#25D366] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg hover:scale-105 transition-transform"
+                  >
+                    <span>Send Message via WhatsApp</span>
+                    <Send className="w-4 h-4" />
+                  </a>
+
+                  <button
+                    onClick={() => setFormSubmitted(false)}
+                    className="w-full py-3 rounded-full bg-slate-100 hover:bg-slate-200 text-[#4A0E2E] font-bold text-xs uppercase tracking-wider transition-colors"
+                  >
+                    Send Another Message
+                  </button>
+                </div>
               </div>
             )}
           </div>

@@ -177,17 +177,30 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
               <Check className="w-7 h-7" />
             </div>
             <h3 className="font-serif-heading text-2xl font-bold text-[#4A0E2E]">
-              Booking Inquiry Sent!
+              Booking Inquiry Submitted!
             </h3>
             <p className="text-xs text-[#4A0E2E]/80 max-w-xs mx-auto leading-relaxed font-medium">
-              Thank you {name}! Your inquiry has been sent to <strong className="text-[#D81B60]">rajasthanmahendiandpiercing@gmail.com</strong>. Vishambar Ji will call or WhatsApp you shortly.
+              Thank you {name}! Your inquiry has been routed to <strong className="text-[#D81B60]">rajasthanmahendiandpiercing@gmail.com</strong>.
             </p>
-            <button
-              onClick={handleReset}
-              className="mt-4 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#D81B60] to-[#AD1457] text-white font-bold text-xs uppercase tracking-wider shadow-md"
-            >
-              Close
-            </button>
+
+            <div className="pt-2 flex flex-col gap-2.5">
+              <a
+                href={`https://wa.me/919537157153?text=${encodeURIComponent(`Hello Vishambar Ji, I have submitted a booking inquiry on your website:\n\n*Name:* ${name}\n*Phone:* ${phone}\n*Service:* ${service}\n*Preferred Date:* ${date}`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3 rounded-full bg-gradient-to-r from-[#128C7E] to-[#25D366] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg hover:scale-105 transition-transform"
+              >
+                <span>Send Directly via WhatsApp</span>
+                <ArrowRight className="w-4 h-4" />
+              </a>
+
+              <button
+                onClick={handleReset}
+                className="w-full py-2.5 rounded-full bg-slate-100 hover:bg-slate-200 text-[#4A0E2E] font-bold text-xs uppercase tracking-wider transition-colors"
+              >
+                Done / Close
+              </button>
+            </div>
           </div>
         )}
 
