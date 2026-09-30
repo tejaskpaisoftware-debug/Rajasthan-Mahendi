@@ -256,64 +256,73 @@ export default function ContactPage() {
                   />
                 </div>
 
-                <div className="space-y-2">
+                <div className="space-y-3 pt-2">
                   <button
                     type="submit"
-                    className="w-full py-4 rounded-full bg-gradient-to-r from-[#D81B60] via-[#E91E63] to-[#AD1457] hover:from-[#AD1457] hover:to-[#880E4F] text-white font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-lg"
+                    className="w-full py-4 rounded-full bg-gradient-to-r from-[#D81B60] via-[#E91E63] to-[#AD1457] hover:from-[#AD1457] hover:to-[#880E4F] text-white font-bold text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform active:scale-98"
                   >
-                    <span>1. Submit Form Online</span>
+                    <span>Submit & Open Email (rajasthanmahendiandpiercing@gmail.com)</span>
                     <Send className="w-4 h-4" />
                   </button>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
                     <a
-                      href={`mailto:rajasthanmahendiandpiercing@gmail.com?subject=${encodeURIComponent(`Inquiry from ${formData.name || 'Customer'}`)}&body=${encodeURIComponent(`Hello Vishambar Ji,\n\nI am contacting you from your website:\n\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nService: ${formData.service}\nLocation: ${formData.location}\nDate: ${formData.date}\nNotes: ${formData.message}`)}`}
-                      className="py-3 px-3 rounded-full bg-[#3D0C20] hover:bg-[#5A1230] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md transition-all text-center"
+                      href={`mailto:rajasthanmahendiandpiercing@gmail.com?subject=${encodeURIComponent(`Inquiry from ${formData.name || 'Customer'}`)}&body=${encodeURIComponent(`Hello Vishambar Ji,\n\nI am contacting you from your website:\n\nName: ${formData.name || 'N/A'}\nPhone: ${formData.phone || 'N/A'}\nEmail: ${formData.email || 'N/A'}\nService: ${formData.service}\nLocation: ${formData.location}\nDate: ${formData.date || 'N/A'}\nNotes: ${formData.message || 'None'}`)}`}
+                      className="py-3 px-4 rounded-full bg-[#3D0C20] hover:bg-[#5A1230] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md transition-all text-center border border-[#F8BBD0]/20"
                     >
                       <Mail className="w-4 h-4 text-[#FFE082]" />
-                      <span>2. Open Email App</span>
+                      <span>Open Email App</span>
                     </a>
 
                     <a
                       href={`https://wa.me/919537157153?text=${encodeURIComponent(`Hello Vishambar Ji, I am submitting an inquiry:\n\n*Name:* ${formData.name || 'Customer'}\n*Phone:* ${formData.phone || 'N/A'}\n*Email:* ${formData.email || 'N/A'}\n*Service:* ${formData.service}\n*Location:* ${formData.location}\n*Date:* ${formData.date || 'N/A'}\n*Notes:* ${formData.message || 'None'}`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="py-3 px-3 rounded-full bg-gradient-to-r from-[#128C7E] to-[#25D366] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md hover:scale-105 transition-transform text-center"
+                      className="py-3 px-4 rounded-full bg-gradient-to-r from-[#128C7E] to-[#25D366] hover:from-[#0f776b] hover:to-[#20bd5a] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md hover:scale-102 transition-transform text-center"
                     >
                       <MessageSquare className="w-4 h-4 text-white" />
-                      <span>3. Send WhatsApp</span>
+                      <span>Chat on WhatsApp</span>
                     </a>
                   </div>
                 </div>
               </form>
             ) : (
-              <div className="py-12 text-center space-y-4">
+              <div className="py-12 text-center space-y-5">
                 <div className="w-16 h-16 rounded-full bg-[#FCE4EC] border border-[#F8BBD0] text-[#D81B60] flex items-center justify-center mx-auto shadow-md">
                   <CheckCircle2 className="w-8 h-8 text-[#D81B60]" />
                 </div>
                 <h3 className="font-serif-heading text-3xl font-bold text-[#4A0E2E]">
-                  Inquiry Submitted!
+                  Inquiry Ready & Pre-filled!
                 </h3>
-                <p className="text-xs text-[#4A0E2E]/80 max-w-sm mx-auto leading-relaxed font-medium">
-                  Your details have been submitted to <strong className="text-[#D81B60]">rajasthanmahendiandpiercing@gmail.com</strong>.
+                <p className="text-xs sm:text-sm text-[#4A0E2E]/80 max-w-md mx-auto leading-relaxed font-medium">
+                  Your inquiry details have been formatted for <strong className="text-[#D81B60]">rajasthanmahendiandpiercing@gmail.com</strong> and WhatsApp <strong className="text-[#128C7E]">+91 95371 57153</strong>.
                 </p>
 
-                <div className="pt-3 max-w-sm mx-auto flex flex-col gap-3">
+                <div className="pt-2 max-w-sm mx-auto flex flex-col gap-3">
                   <a
                     href={`https://wa.me/919537157153?text=${encodeURIComponent(`Hello Vishambar Ji, I submitted an inquiry on your website:\n\n*Name:* ${formData.name}\n*Phone:* ${formData.phone}\n*Email:* ${formData.email || 'N/A'}\n*Service:* ${formData.service}\n*Location:* ${formData.location}\n*Date:* ${formData.date || 'N/A'}\n*Notes:* ${formData.message || 'None'}`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full py-3.5 rounded-full bg-gradient-to-r from-[#128C7E] to-[#25D366] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg hover:scale-105 transition-transform"
                   >
-                    <span>Send Message via WhatsApp</span>
-                    <Send className="w-4 h-4" />
+                    <MessageSquare className="w-4 h-4 text-white" />
+                    <span>Send via WhatsApp (+91 95371 57153)</span>
+                  </a>
+
+                  <a
+                    href={`mailto:rajasthanmahendiandpiercing@gmail.com?subject=${encodeURIComponent(`Inquiry from ${formData.name || 'Customer'}`)}&body=${encodeURIComponent(`Hello Vishambar Ji,\n\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nService: ${formData.service}\nLocation: ${formData.location}\nDate: ${formData.date}\nNotes: ${formData.message}`)}`}
+                    className="w-full py-3.5 rounded-full bg-[#3D0C20] hover:bg-[#5A1230] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg transition-colors"
+                  >
+                    <Mail className="w-4 h-4 text-[#FFE082]" />
+                    <span>Send via Email Client</span>
                   </a>
 
                   <button
+                    type="button"
                     onClick={() => setFormSubmitted(false)}
-                    className="w-full py-3 rounded-full bg-slate-100 hover:bg-slate-200 text-[#4A0E2E] font-bold text-xs uppercase tracking-wider transition-colors"
+                    className="w-full py-2.5 rounded-full bg-slate-100 hover:bg-slate-200 text-[#4A0E2E] font-bold text-xs uppercase tracking-wider transition-colors mt-2"
                   >
-                    Send Another Message
+                    Edit / Send Another Message
                   </button>
                 </div>
               </div>

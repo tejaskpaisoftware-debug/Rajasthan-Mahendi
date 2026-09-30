@@ -133,19 +133,19 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
               </div>
             </div>
 
-            <div className="space-y-2 pt-2">
+            <div className="space-y-3 pt-2">
               <button
                 type="submit"
-                className="w-full py-3.5 rounded-full bg-gradient-to-r from-[#D81B60] via-[#E91E63] to-[#AD1457] hover:from-[#AD1457] hover:to-[#880E4F] text-white font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-md hover:shadow-lg"
+                className="w-full py-3.5 rounded-full bg-gradient-to-r from-[#D81B60] via-[#E91E63] to-[#AD1457] hover:from-[#AD1457] hover:to-[#880E4F] text-white font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-md hover:shadow-lg transform active:scale-98"
               >
-                <span>Send Booking Inquiry</span>
+                <span>Submit & Open Email (rajasthanmahendiandpiercing@gmail.com)</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
 
               <div className="grid grid-cols-2 gap-2">
                 <a
                   href={mailtoUrl}
-                  className="py-3 px-3 rounded-full bg-[#3D0C20] hover:bg-[#5A1230] text-white font-bold text-[11px] uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-md transition-all text-center"
+                  className="py-3 px-3 rounded-full bg-[#3D0C20] hover:bg-[#5A1230] text-white font-bold text-[11px] uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-md transition-all text-center border border-[#F8BBD0]/20"
                 >
                   <Mail className="w-3.5 h-3.5 text-[#FFE082]" />
                   <span>Open Email App</span>
@@ -155,10 +155,10 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="py-3 px-3 rounded-full bg-gradient-to-r from-[#128C7E] to-[#25D366] text-white font-bold text-[11px] uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-md transition-all text-center"
+                  className="py-3 px-3 rounded-full bg-gradient-to-r from-[#128C7E] to-[#25D366] hover:from-[#0f776b] hover:to-[#20bd5a] text-white font-bold text-[11px] uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-md transition-all text-center"
                 >
                   <MessageSquare className="w-3.5 h-3.5 text-white" />
-                  <span>Send WhatsApp</span>
+                  <span>Chat on WhatsApp</span>
                 </a>
               </div>
             </div>
