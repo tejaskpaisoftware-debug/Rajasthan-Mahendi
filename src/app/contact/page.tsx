@@ -24,42 +24,21 @@ export default function ContactPage() {
 
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
-
+    setFormSubmitted(true);
     try {
-      await fetch("/api/contact", {
-        method: "POST",
-        headers: { 
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          _subject: `New Contact Inquiry from ${formData.name} (Rajasthan Mahendi Art)`,
-          "Client Name": formData.name,
-          "Phone / WhatsApp": formData.phone,
-          "Client Email": formData.email || "Not Provided",
-          "Service Required": formData.service,
-          "Preferred Location": formData.location,
-          "Preferred Date": formData.date || "Not Specified",
-          "Notes / Message": formData.message || "No additional message",
-          "Submitted At": new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
-        })
+      confetti({
+        particleCount: 80,
+        spread: 60,
+        origin: { y: 0.6 },
+        colors: ['#F8C8DC', '#FFF0F5', '#D81B60'],
       });
-    } catch (err) {
-      console.error("Form submission error:", err);
-    } finally {
-      setLoading(false);
-      setFormSubmitted(true);
-      try {
-        confetti({
-          particleCount: 80,
-          spread: 60,
-          origin: { y: 0.6 },
-          colors: ['#F8C8DC', '#FFF0F5', '#D81B60'],
-        });
-      } catch (err) {}
-    }
+    } catch (err) {}
+
+    const mailtoUrl = `mailto:rajasthanmahendiandpiercing@gmail.com?subject=${encodeURIComponent(`Inquiry from ${formData.name || 'Customer'}`)}&body=${encodeURIComponent(`Hello Vishambar Ji,\n\nI am contacting you from your website:\n\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nService: ${formData.service}\nLocation: ${formData.location}\nDate: ${formData.date}\nNotes: ${formData.message}`)}`;
+
+    window.location.href = mailtoUrl;
   };
 
   const faqs = [
@@ -172,17 +151,7 @@ export default function ContactPage() {
           {/* Right Column: Interactive Form */}
           <div className="lg:col-span-7 bg-[#FFF0F3] p-8 md:p-12 rounded-3xl border border-[#FCE4EC] shadow-xl">
             {!formSubmitted ? (
-              <form
-                action="https://formsubmit.co/rajasthanmahendiandpiercing@gmail.com"
-                method="POST"
-                className="space-y-6"
-              >
-                {/* FormSubmit Configuration Hidden Fields */}
-                <input type="hidden" name="_subject" value="New Contact Inquiry - Rajasthan Mahendi Art" />
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="hidden" name="_template" value="table" />
-                <input type="hidden" name="_next" value="https://rajasthanmahendiartvadodara.com/contact?success=true" />
-
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <span className="text-xs uppercase font-mono tracking-[0.25em] text-[#D81B60] font-bold block mb-1">
                     APPOINTMENT & INQUIRY
