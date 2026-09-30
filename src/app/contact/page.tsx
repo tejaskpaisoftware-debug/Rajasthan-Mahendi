@@ -292,19 +292,29 @@ export default function ContactPage() {
                     type="submit"
                     className="w-full py-4 rounded-full bg-gradient-to-r from-[#D81B60] via-[#E91E63] to-[#AD1457] hover:from-[#AD1457] hover:to-[#880E4F] text-white font-bold text-xs uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-lg"
                   >
-                    <span>Submit Message to Email</span>
+                    <span>1. Submit Form Online</span>
                     <Send className="w-4 h-4" />
                   </button>
 
-                  <a
-                    href={`https://wa.me/919537157153?text=${encodeURIComponent(`Hello Vishambar Ji, I am submitting an inquiry:\n\n*Name:* ${formData.name || 'Customer'}\n*Phone:* ${formData.phone || 'N/A'}\n*Email:* ${formData.email || 'N/A'}\n*Service:* ${formData.service}\n*Location:* ${formData.location}\n*Date:* ${formData.date || 'N/A'}\n*Notes:* ${formData.message || 'None'}`)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full py-3.5 rounded-full bg-gradient-to-r from-[#128C7E] to-[#25D366] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg hover:scale-105 transition-transform"
-                  >
-                    <span>Send Message via WhatsApp</span>
-                    <Send className="w-4 h-4" />
-                  </a>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <a
+                      href={`mailto:rajasthanmahendiandpiercing@gmail.com?subject=${encodeURIComponent(`Inquiry from ${formData.name || 'Customer'}`)}&body=${encodeURIComponent(`Hello Vishambar Ji,\n\nI am contacting you from your website:\n\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nService: ${formData.service}\nLocation: ${formData.location}\nDate: ${formData.date}\nNotes: ${formData.message}`)}`}
+                      className="py-3 px-3 rounded-full bg-[#3D0C20] hover:bg-[#5A1230] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md transition-all text-center"
+                    >
+                      <Mail className="w-4 h-4 text-[#FFE082]" />
+                      <span>2. Open Email App</span>
+                    </a>
+
+                    <a
+                      href={`https://wa.me/919537157153?text=${encodeURIComponent(`Hello Vishambar Ji, I am submitting an inquiry:\n\n*Name:* ${formData.name || 'Customer'}\n*Phone:* ${formData.phone || 'N/A'}\n*Email:* ${formData.email || 'N/A'}\n*Service:* ${formData.service}\n*Location:* ${formData.location}\n*Date:* ${formData.date || 'N/A'}\n*Notes:* ${formData.message || 'None'}`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="py-3 px-3 rounded-full bg-gradient-to-r from-[#128C7E] to-[#25D366] text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md hover:scale-105 transition-transform text-center"
+                    >
+                      <MessageSquare className="w-4 h-4 text-white" />
+                      <span>3. Send WhatsApp</span>
+                    </a>
+                  </div>
                 </div>
               </form>
             ) : (
