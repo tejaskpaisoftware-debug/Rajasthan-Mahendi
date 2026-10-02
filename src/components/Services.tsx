@@ -56,7 +56,7 @@ export default function Services({ onOpenBooking }: ServicesProps) {
           className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12"
         >
           <div>
-            <span className="text-xs uppercase tracking-[0.3em] font-mono text-[#F8C8DC] font-bold block mb-2 inline-flex items-center gap-2 px-3 py-1 rounded-full liquid-glass-pill">
+            <span className="text-xs uppercase tracking-[0.3em] font-mono text-[#D81B60] font-black block mb-2 inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/95 shadow-md">
               <Sparkles className="w-3.5 h-3.5 text-[#D81B60]" />
               OUR SPECIALTIES
             </span>

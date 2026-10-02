@@ -70,9 +70,9 @@ export default function Hero({ onOpenBooking }: HeroProps) {
             <a
               href="tel:+919537157153"
               itemProp="telephone"
-              className="w-full sm:w-auto px-6 py-3.5 rounded-full liquid-glass-pill text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2.5 shadow-lg hover:scale-105 transition-all"
+              className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-white hover:bg-[#FFF0F5] text-[#D81B60] font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2.5 shadow-xl hover:scale-105 transition-all border-2 border-white/80"
             >
-              <Phone className="w-3.5 h-3.5 text-[#FFE082]" />
+              <Phone className="w-4 h-4 text-[#D81B60]" />
               <span>Call Vishambar Ji: +91 95371 57153</span>
             </a>
           </div>
