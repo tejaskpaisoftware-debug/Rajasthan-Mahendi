@@ -95,6 +95,8 @@ export default function Hero({ onOpenBooking }: HeroProps) {
                 <img
                   src="/images/home/bridal-mehndi.jpg"
                   alt="Royal Bridal Dulhan Mehndi"
+                  loading="eager"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-1000 ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#3D0C20]/80 via-transparent to-transparent" />
@@ -132,6 +134,8 @@ export default function Hero({ onOpenBooking }: HeroProps) {
                 <img
                   src="/images/tattoos/fine-line.jpg"
                   alt="Ear, Nose & Stomach Body Piercing"
+                  loading="eager"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-1000 ease-out"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#3D0C20]/80 via-transparent to-transparent" />

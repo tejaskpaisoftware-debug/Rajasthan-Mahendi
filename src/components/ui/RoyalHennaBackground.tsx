@@ -11,19 +11,19 @@ export default function RoyalHennaBackground({ variant = 'hero', className = '' 
   return (
     <div className={`absolute inset-0 overflow-hidden pointer-events-none z-0 ${className}`}>
       
-      {/* Ambient Radial Soft Glow */}
-      <div className="absolute top-1/4 left-1/4 w-[650px] h-[650px] bg-gradient-to-tr from-[#FFE082]/25 via-white/20 to-transparent rounded-full blur-[140px] opacity-75 animate-pulse" />
-      <div className="absolute bottom-10 right-10 w-[600px] h-[600px] bg-gradient-to-tr from-[#FFF0F5]/25 via-white/20 to-transparent rounded-full blur-[130px] opacity-60" />
+      {/* Ambient Radial Soft Glow - Lightweight CSS */}
+      <div className="absolute top-1/4 left-1/4 w-[400px] sm:w-[650px] h-[400px] sm:h-[650px] bg-gradient-to-tr from-[#FFE082]/20 via-white/10 to-transparent rounded-full blur-2xl opacity-60" />
+      <div className="absolute bottom-10 right-10 w-[350px] sm:w-[600px] h-[350px] sm:h-[600px] bg-gradient-to-tr from-[#FFF0F5]/20 via-white/10 to-transparent rounded-full blur-2xl opacity-50" />
 
       {/* VARIANT 1: HERO / DEFAULT - 16-Petal Lotus & Peacock Star Mandala */}
       {(variant === 'hero' || variant === 'default') && (
         <>
           <motion.div
             animate={{ rotate: 360 }}
-            transition={{ repeat: Infinity, duration: 65, ease: 'linear' }}
-            className="absolute -top-32 -left-32 w-[520px] h-[520px] sm:w-[680px] sm:h-[680px] text-[#FFE082]/30 opacity-90"
+            transition={{ repeat: Infinity, duration: 90, ease: 'linear' }}
+            className="absolute -top-32 -left-32 w-[380px] h-[380px] sm:w-[680px] sm:h-[680px] text-[#FFE082]/25 opacity-80 transform-gpu will-change-transform"
           >
-            <svg viewBox="0 0 400 400" className="w-full h-full drop-shadow-[0_0_20px_rgba(255,224,130,0.35)]">
+            <svg viewBox="0 0 400 400" className="w-full h-full">
               <circle cx="200" cy="200" r="185" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="6 6" />
               <circle cx="200" cy="200" r="150" fill="none" stroke="currentColor" strokeWidth="2" />
               <circle cx="200" cy="200" r="120" fill="none" stroke="currentColor" strokeWidth="1" strokeDasharray="4 4" />
@@ -47,10 +47,10 @@ export default function RoyalHennaBackground({ variant = 'hero', className = '' 
 
           <motion.div
             animate={{ rotate: -360 }}
-            transition={{ repeat: Infinity, duration: 80, ease: 'linear' }}
-            className="absolute -bottom-40 -right-40 w-[550px] h-[550px] sm:w-[720px] sm:h-[720px] text-[#FFE082]/25 opacity-80"
+            transition={{ repeat: Infinity, duration: 110, ease: 'linear' }}
+            className="absolute -bottom-40 -right-40 w-[400px] h-[400px] sm:w-[720px] sm:h-[720px] text-[#FFE082]/20 opacity-70 transform-gpu will-change-transform"
           >
-            <svg viewBox="0 0 400 400" className="w-full h-full drop-shadow-[0_0_20px_rgba(255,224,130,0.3)]">
+            <svg viewBox="0 0 400 400" className="w-full h-full">
               <circle cx="200" cy="200" r="190" fill="none" stroke="currentColor" strokeWidth="1" strokeDasharray="8 8" />
               <circle cx="200" cy="200" r="160" fill="none" stroke="currentColor" strokeWidth="2" />
               {[...Array(12)].map((_, i) => (
@@ -69,10 +69,10 @@ export default function RoyalHennaBackground({ variant = 'hero', className = '' 
         <>
           <motion.div
             animate={{ rotate: 360 }}
-            transition={{ repeat: Infinity, duration: 70, ease: 'linear' }}
-            className="absolute -top-24 right-10 w-[500px] h-[500px] text-white/20 opacity-80"
+            transition={{ repeat: Infinity, duration: 95, ease: 'linear' }}
+            className="absolute -top-24 right-10 w-[350px] sm:w-[500px] h-[350px] sm:h-[500px] text-white/15 opacity-70 transform-gpu will-change-transform"
           >
-            <svg viewBox="0 0 400 400" className="w-full h-full drop-shadow-md">
+            <svg viewBox="0 0 400 400" className="w-full h-full">
               <circle cx="200" cy="200" r="170" fill="none" stroke="currentColor" strokeWidth="2" strokeDasharray="5 5" />
               <circle cx="200" cy="200" r="130" fill="none" stroke="currentColor" strokeWidth="1.5" />
               {[...Array(12)].map((_, i) => (
@@ -86,8 +86,8 @@ export default function RoyalHennaBackground({ variant = 'hero', className = '' 
 
           <motion.div
             animate={{ rotate: -360 }}
-            transition={{ repeat: Infinity, duration: 85, ease: 'linear' }}
-            className="absolute -bottom-24 -left-20 w-[520px] h-[520px] text-white/20 opacity-75"
+            transition={{ repeat: Infinity, duration: 110, ease: 'linear' }}
+            className="absolute -bottom-24 -left-20 w-[350px] sm:w-[520px] h-[350px] sm:h-[520px] text-white/15 opacity-65 transform-gpu will-change-transform"
           >
             <svg viewBox="0 0 400 400" className="w-full h-full">
               <circle cx="200" cy="200" r="180" fill="none" stroke="currentColor" strokeWidth="1.5" />
@@ -106,8 +106,8 @@ export default function RoyalHennaBackground({ variant = 'hero', className = '' 
       {variant === 'about' && (
         <motion.div
           animate={{ rotate: 360 }}
-          transition={{ repeat: Infinity, duration: 90, ease: 'linear' }}
-          className="absolute -top-32 left-1/2 -translate-x-1/2 w-[600px] h-[600px] text-white/25 opacity-80"
+          transition={{ repeat: Infinity, duration: 120, ease: 'linear' }}
+          className="absolute -top-32 left-1/2 -translate-x-1/2 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] text-white/20 opacity-70 transform-gpu will-change-transform"
         >
           <svg viewBox="0 0 400 400" className="w-full h-full">
             <circle cx="200" cy="200" r="185" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 4" />
@@ -132,8 +132,8 @@ export default function RoyalHennaBackground({ variant = 'hero', className = '' 
       {variant === 'why' && (
         <motion.div
           animate={{ rotate: -360 }}
-          transition={{ repeat: Infinity, duration: 65, ease: 'linear' }}
-          className="absolute -bottom-28 right-0 w-[550px] h-[550px] text-white/25 opacity-85"
+          transition={{ repeat: Infinity, duration: 90, ease: 'linear' }}
+          className="absolute -bottom-28 right-0 w-[400px] sm:w-[550px] h-[400px] sm:h-[550px] text-white/20 opacity-75 transform-gpu will-change-transform"
         >
           <svg viewBox="0 0 400 400" className="w-full h-full">
             <circle cx="200" cy="200" r="175" fill="none" stroke="currentColor" strokeWidth="2" />
@@ -151,8 +151,8 @@ export default function RoyalHennaBackground({ variant = 'hero', className = '' 
       {variant === 'gallery' && (
         <motion.div
           animate={{ rotate: 360 }}
-          transition={{ repeat: Infinity, duration: 80, ease: 'linear' }}
-          className="absolute top-10 left-10 w-[450px] h-[450px] text-white/20 opacity-75"
+          transition={{ repeat: Infinity, duration: 110, ease: 'linear' }}
+          className="absolute top-10 left-10 w-[350px] sm:w-[450px] h-[350px] sm:h-[450px] text-white/15 opacity-65 transform-gpu will-change-transform"
         >
           <svg viewBox="0 0 400 400" className="w-full h-full">
             <circle cx="200" cy="200" r="160" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="6 6" />
@@ -169,8 +169,8 @@ export default function RoyalHennaBackground({ variant = 'hero', className = '' 
       {variant === 'cta' && (
         <motion.div
           animate={{ rotate: -360 }}
-          transition={{ repeat: Infinity, duration: 55, ease: 'linear' }}
-          className="absolute -right-20 -top-20 w-[400px] h-[400px] text-[#D81B60]/20 opacity-80"
+          transition={{ repeat: Infinity, duration: 80, ease: 'linear' }}
+          className="absolute -right-20 -top-20 w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] text-[#D81B60]/20 opacity-70 transform-gpu will-change-transform"
         >
           <svg viewBox="0 0 400 400" className="w-full h-full">
             <circle cx="200" cy="200" r="170" fill="none" stroke="currentColor" strokeWidth="2" />
@@ -185,8 +185,8 @@ export default function RoyalHennaBackground({ variant = 'hero', className = '' 
       {variant === 'footer' && (
         <motion.div
           animate={{ rotate: 360 }}
-          transition={{ repeat: Infinity, duration: 90, ease: 'linear' }}
-          className="absolute -left-20 -bottom-20 w-[450px] h-[450px] text-white/20 opacity-75"
+          transition={{ repeat: Infinity, duration: 120, ease: 'linear' }}
+          className="absolute -left-20 -bottom-20 w-[350px] sm:w-[450px] h-[350px] sm:h-[450px] text-white/15 opacity-65 transform-gpu will-change-transform"
         >
           <svg viewBox="0 0 400 400" className="w-full h-full">
             <circle cx="200" cy="200" r="180" fill="none" stroke="currentColor" strokeWidth="2" strokeDasharray="10 5" />
@@ -195,33 +195,8 @@ export default function RoyalHennaBackground({ variant = 'hero', className = '' 
         </motion.div>
       )}
 
-      {/* Floating Sparkle Dust Particle Stream */}
-      {[...Array(10)].map((_, i) => (
-        <motion.div
-          key={i}
-          initial={{
-            x: Math.random() * 1000 - 300,
-            y: Math.random() * 800 - 100,
-            scale: Math.random() * 0.6 + 0.4,
-            opacity: Math.random() * 0.4 + 0.2,
-          }}
-          animate={{
-            y: [0, -35, 0],
-            opacity: [0.2, 0.75, 0.2],
-            scale: [1, 1.25, 1],
-          }}
-          transition={{
-            repeat: Infinity,
-            duration: 4 + Math.random() * 4,
-            delay: i * 0.3,
-            ease: 'easeInOut',
-          }}
-          className="absolute w-3 h-3 rounded-full bg-[#FFE082] shadow-[0_0_12px_#FFE082,0_0_20px_#FFD54F]"
-        />
-      ))}
-
       {/* Delicate Henna Mesh Grid */}
-      <div className="absolute inset-0 bg-[radial-gradient(#FFE082_1.2px,transparent_1.2px)] [background-size:28px_28px] opacity-20" />
+      <div className="absolute inset-0 bg-[radial-gradient(#FFE082_1px,transparent_1px)] [background-size:32px_32px] opacity-15" />
 
     </div>
   );
