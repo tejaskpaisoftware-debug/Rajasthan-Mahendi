@@ -85,6 +85,48 @@ export default function Gallery({ onSelectItem }: GalleryProps) {
       category: 'Bridal Mehndi',
       image: '/images/mehndi/gal-11.jpg',
     },
+    {
+      id: 'g13',
+      title: 'Tragus & Conch Cartilage Piercing',
+      category: 'Ear Piercing',
+      image: '/images/piercing/tragus-piercing.jpg',
+    },
+    {
+      id: 'g14',
+      title: 'Traditional Gold Septum Piercing',
+      category: 'Nose Piercing',
+      image: '/images/piercing/septum-piercing.jpg',
+    },
+    {
+      id: 'g15',
+      title: 'Designer Saree Belly Button Piercing',
+      category: 'Stomach Piercing',
+      image: '/images/piercing/belly-piercing.jpg',
+    },
+    {
+      id: 'g16',
+      title: "Men's Traditional Bali & Earlobe Piercing",
+      category: 'Ear Piercing',
+      image: '/images/piercing/men-ear-piercing.jpg',
+    },
+    {
+      id: 'g17',
+      title: 'Destination Wedding Canada & India Monogram',
+      category: 'Bridal Mehndi',
+      image: '/images/mehndi/gal-18.jpg',
+    },
+    {
+      id: 'g18',
+      title: 'Royal Chhatri & Peacock Bridal Feet Set',
+      category: 'Bridal Mehndi',
+      image: '/images/mehndi/gal-19.jpg',
+    },
+    {
+      id: 'g19',
+      title: 'Marwari Lotus Jharokha Bridal Pair',
+      category: 'Bridal Mehndi',
+      image: '/images/mehndi/gal-20.jpg',
+    },
   ];
 
   const filters = ['All', 'Bridal Mehndi', 'Ear Piercing', 'Nose Piercing', 'Stomach Piercing', 'Bridal Piercing'];

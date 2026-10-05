@@ -14,16 +14,28 @@ export default function PiercingPage() {
 
   const piercingServices = [
     {
-      title: 'Ear Body Piercing',
-      desc: 'Ear Lobe, Tragus, Helix, Conch & Industrial piercing performed with 100% sterile gun and gold studs.',
+      title: 'Ear Lobe & Helix Piercing',
+      desc: 'Traditional earlobe & modern helix piercing performed with 100% painless sterile equipment and 22k gold studs.',
       image: '/images/piercing/ear-piercing.jpg',
       category: 'Ear Piercing',
     },
     {
-      title: 'Nose Pin & Ring Piercing',
-      desc: 'Delicate nostril pin, nose ring & septum piercing with medical-grade hygiene and painless precision.',
+      title: 'Tragus & Conch Piercing',
+      desc: 'Precision cartilage tragus & conch styling with sparkling diamond studs, matched with traditional Indian jhumkas.',
+      image: '/images/piercing/tragus-piercing.jpg',
+      category: 'Ear Piercing',
+    },
+    {
+      title: 'Diamond Nose Pin & Ring',
+      desc: 'Delicate nostril pin & elegant gold hoop piercing with hospital-grade hygiene and painless gentle technique.',
       image: '/images/piercing/nose-piercing.jpg',
       category: 'Nose Piercing',
+    },
+    {
+      title: 'Traditional Septum Piercing',
+      desc: 'Ethnic gold septum ring & modern clicker piercing done by experienced specialists with zero irritation guarantee.',
+      image: '/images/piercing/septum-piercing.jpg',
+      category: 'Septum Piercing',
     },
     {
       title: 'Stomach & Navel Piercing',
@@ -32,10 +44,22 @@ export default function PiercingPage() {
       category: 'Stomach Piercing',
     },
     {
-      title: 'Special Dulhan Piercing & Henna',
-      desc: 'Complete bridal jewelry piercing set and matching Rajwadi dulhan mehendi packages.',
+      title: 'Saree Belly Button Piercing',
+      desc: 'Designer floral crystal navel piercing crafted to complement royal Indian sarees and bridal lehengas flawlessly.',
+      image: '/images/piercing/belly-piercing.jpg',
+      category: 'Belly Piercing',
+    },
+    {
+      title: 'Special Dulhan Nath & Piercing',
+      desc: 'Complete bridal jewelry piercing set and matching Rajwadi dulhan mehendi packages for weddings.',
       image: '/images/piercing/bridal-piercing.jpg',
       category: 'Bridal Package',
+    },
+    {
+      title: "Men's Traditional Bali & Earlobe",
+      desc: "Authentic Indian men's ear piercing with classic gold bali hoops and diamond studs, quick and 100% antiseptic.",
+      image: '/images/piercing/men-ear-piercing.jpg',
+      category: "Men's Piercing",
     },
   ];
 

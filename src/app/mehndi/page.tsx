@@ -184,6 +184,36 @@ export default function MehndiPage() {
       description: 'Intricate Rajput royal prince and princess portraits with dense Marwari lattice, dancing peacocks, and floral jharokha frames.',
       highlights: ['Rajput Dulha-Dulhan Figures', 'Dancing Peacock Motifs', '100% Organic Henna Stain'],
     },
+    {
+      id: 'm18',
+      title: 'Destination Wedding Canada & India Monogram',
+      category: 'Bridal Dulhan',
+      artist: 'Vishambar Ji',
+      time: '5 Hours',
+      image: '/images/mehndi/gal-18.jpg',
+      description: 'Custom NRI destination wedding henna with custom initial monograms, Toronto & Indian skylines, Ganeshji blessings, and intricate jaal filler.',
+      highlights: ['NRI Destination Wedding Customization', 'Canada & India Skyline Portraits', 'Personalized Couple Monogram'],
+    },
+    {
+      id: 'm19',
+      title: 'Royal Chhatri & Peacock Bridal Feet Set',
+      category: 'Feet & Anklet',
+      artist: 'Vishambar Ji',
+      time: '4 Hours',
+      image: '/images/mehndi/gal-19.jpg',
+      description: 'Grand bridal feet mehendi featuring palace Chhatri pavilions, dancing peacocks, payal lace anklets, and delicate floral toe vines.',
+      highlights: ['Royal Palace Chhatri Pavilions', 'Dancing Peacocks & Payal Chains', 'Deep Rich Organic Feet Stain'],
+    },
+    {
+      id: 'm20',
+      title: 'Marwari Lotus Jharokha Bridal Pair',
+      category: 'Marwari & Rajwadi',
+      artist: 'Vishambar Ji',
+      time: '5.5 Hours',
+      image: '/images/mehndi/gal-20.jpg',
+      description: 'Symmetrical Marwari bridal forearm masterpiece with blooming lotus domes, haveli window jharokhas, and royal swan motifs.',
+      highlights: ['Symmetrical Lotus Bloom Domes', 'Haveli Window Jharokha Lattice', 'Dark Stain Color Guarantee'],
+    },
   ];
 
   const filters = ['All', 'Bridal Dulhan', 'Marwari & Rajwadi', 'Afghani & Arabic', 'Bombay & Colourful', 'Sangeet & Party', 'Feet & Anklet', 'Mandala & Minimalist'];
