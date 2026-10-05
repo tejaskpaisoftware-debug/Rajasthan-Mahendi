@@ -16,25 +16,25 @@ export default function PiercingPage() {
     {
       title: 'Ear Body Piercing',
       desc: 'Ear Lobe, Tragus, Helix, Conch & Industrial piercing performed with 100% sterile gun and gold studs.',
-      image: '/images/home/event-mehndi.jpg',
+      image: '/images/piercing/ear-piercing.jpg',
       category: 'Ear Piercing',
     },
     {
       title: 'Nose Pin & Ring Piercing',
       desc: 'Delicate nostril pin, nose ring & septum piercing with medical-grade hygiene and painless precision.',
-      image: '/images/tattoos/fine-line.jpg',
+      image: '/images/piercing/nose-piercing.jpg',
       category: 'Nose Piercing',
     },
     {
       title: 'Stomach & Navel Piercing',
       desc: 'Stylish belly button / stomach piercing using surgical titanium studs and hospital-grade sterilization.',
-      image: '/images/tattoos/cover-up.jpg',
+      image: '/images/piercing/navel-piercing.jpg',
       category: 'Stomach Piercing',
     },
     {
       title: 'Special Dulhan Piercing & Henna',
       desc: 'Complete bridal jewelry piercing set and matching Rajwadi dulhan mehendi packages.',
-      image: '/images/home/bridal-mehndi.jpg',
+      image: '/images/piercing/bridal-piercing.jpg',
       category: 'Bridal Package',
     },
   ];

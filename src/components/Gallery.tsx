@@ -17,41 +17,77 @@ export default function Gallery({ onSelectItem }: GalleryProps) {
       id: 'g1',
       title: 'Ear Lobe & Helix Piercing',
       category: 'Ear Piercing',
-      image: '/images/tattoos/fine-line.jpg',
+      image: '/images/piercing/ear-piercing.jpg',
     },
     {
       id: 'g2',
       title: 'Royal Bridal Dulhan Mehndi',
       category: 'Bridal Mehndi',
-      image: '/images/home/bridal-mehndi.jpg',
+      image: '/images/mehndi/gal-1.jpg',
     },
     {
       id: 'g3',
       title: 'Delicate Nose Pin Piercing',
       category: 'Nose Piercing',
-      image: '/images/tattoos/geometry.jpg',
+      image: '/images/piercing/nose-piercing.jpg',
     },
     {
       id: 'g4',
-      title: 'Arabic Floral Vine Mehndi',
-      category: 'Arabic Mehndi',
-      image: '/images/home/event-mehndi.jpg',
+      title: 'Traditional Temple Haveli Henna',
+      category: 'Bridal Mehndi',
+      image: '/images/mehndi/gal-3.jpg',
     },
     {
       id: 'g5',
       title: 'Stomach & Belly Button Piercing',
       category: 'Stomach Piercing',
-      image: '/images/home/studio-craft.jpg',
+      image: '/images/piercing/navel-piercing.jpg',
     },
     {
       id: 'g6',
-      title: 'Rajwadi Dulhan Henna Art',
+      title: 'Royal Bridal Nath & Jhumka Set',
+      category: 'Bridal Piercing',
+      image: '/images/piercing/bridal-piercing.jpg',
+    },
+    {
+      id: 'g7',
+      title: 'Varmala Wedding Story Henna',
       category: 'Bridal Mehndi',
-      image: '/images/tattoos/cover-up.jpg',
+      image: '/images/mehndi/gal-13.jpg',
+    },
+    {
+      id: 'g8',
+      title: 'Lotus Bloom Bridal Feet Mehndi',
+      category: 'Bridal Mehndi',
+      image: '/images/mehndi/gal-5.jpg',
+    },
+    {
+      id: 'g9',
+      title: 'Backhand Lotus Jaal Henna',
+      category: 'Bridal Mehndi',
+      image: '/images/mehndi/gal-10.jpg',
+    },
+    {
+      id: 'g10',
+      title: 'Royal Gathbandhan Bridal Henna',
+      category: 'Bridal Mehndi',
+      image: '/images/mehndi/gal-14.jpg',
+    },
+    {
+      id: 'g11',
+      title: 'Shubh Vivah Mandap Ceremony Henna',
+      category: 'Bridal Mehndi',
+      image: '/images/mehndi/gal-15.jpg',
+    },
+    {
+      id: 'g12',
+      title: 'Peacock Jharokha Bridal Set',
+      category: 'Bridal Mehndi',
+      image: '/images/mehndi/gal-11.jpg',
     },
   ];
 
-  const filters = ['All', 'Bridal Mehndi', 'Ear Piercing', 'Nose Piercing', 'Stomach Piercing', 'Arabic Mehndi'];
+  const filters = ['All', 'Bridal Mehndi', 'Ear Piercing', 'Nose Piercing', 'Stomach Piercing', 'Bridal Piercing'];
 
   const filteredItems = activeFilter === 'All'
     ? galleryItems

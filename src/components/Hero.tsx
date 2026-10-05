@@ -132,7 +132,7 @@ export default function Hero({ onOpenBooking }: HeroProps) {
             <div className="p-2.5 bg-gradient-to-b from-[#FFE082] via-[#FFD54F] to-[#FFC107] rounded-t-[8rem] rounded-b-[2rem] shadow-[0_25px_60px_rgba(0,0,0,0.4)] border-2 border-white">
               <div className="relative h-[340px] sm:h-[440px] w-full rounded-t-[7.5rem] rounded-b-[1.6rem] overflow-hidden bg-[#3D0C20]">
                 <img
-                  src="/images/tattoos/fine-line.jpg"
+                  src="/images/piercing/ear-piercing.jpg"
                   alt="Ear, Nose & Stomach Body Piercing"
                   loading="eager"
                   decoding="async"
